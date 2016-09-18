@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> <!-- CDN's (bibliotecas do Boostrap) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/home.css"/>
+</head>
+<body>
+	
+	<!-- Barra do menu -->
+	<nav class="navbar navbar-inverse" brand="Faculdade" inverse="true" fixed="top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand"><img src="imagens/logo3.jpg"></a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navBar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">HOME</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ALUNO<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">MATRÍCULA</a></li>
+							<li><a href="#">HORÁRIO</a></li>
+						</ul>
+					</li>
+
+					<li><a href="#">CONTROLE ACADÊMICO</a></li>
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CURSOS<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">GRADUAÇÃO</a></li>
+							<li><a href="#">EXTENSÃO</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">BIBLIOTECA<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">CONSULTA AO ACERVO</a></li>	
+							<li><a href="#">REGULAMENTO</a></li>	
+						</ul>					
+					</li>
+
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">INSTITUCIONAL<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">HISTÓRIA</a></li>
+						</ul>
+					</li>					
+
+					<li><a href="#">CONTATO</a></li>									
+				</ul>
+
+
+				<!-- Botão de login -->
+				<ul class="nav navbar navbar-right">
+					<li class="dropdown" id="login">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							LOGIN
+							<b class="caret"></b>
+						</a>
+						<div class="dropdown-menu">
+							<form style="margin: 0px" method="post">
+								<div style="margin:0; padding:0; display:inline">
+									<input type="hidden" value="" />
+								</div>
+								<fieldset class="textbox" style="padding:10px">
+									<input type="text" name="usuario" placeholder="usuario" style="margin-top: 8px" />
+									<input type="password" name="senha" placeholder="senha" style="margin-top: 8px" />
+									<input type="submit" class="btn-primary" name="botao" value="Entrar" style="margin-top: 8px"/>
+								</fieldset>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>	<!-- collapse navbar-collapse -->	
+		</div> 	<!-- container-fluid -->
+	</nav>	
+	
+	<div id="carrossel">
+		<div class="container">
+
+			<!-- Carrossel de slides -->
+			<div class="banner carousel slide" id="meuCarrossel" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="meuCarrossel" data-slide-to="0" class="active"></li>
+					<li data-target="meuCarrossel" data-slide-to="1" class="active"></li>
+					<li data-target="meuCarrossel" data-slide-to="2" class="active"></li>
+				</ol>
+
+		<div class="collapse navbar-collapse" id="navBar">
+		    <ul class="nav navbar-nav">
+			<li class="active"><a href="#">HOME</a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ALUNO<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+			    <li><a href="#">MATRÍCULA</a></li>
+			    <li><a href="#">HORÁRIO</a></li>
+			</ul>
+			</li>
+
+			<li><a href="#">CONTROLE ACADÊMICO</a></li>
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CURSOS<span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+			        <li><a href="#">GRADUAÇÃO</a></li>
+			        <li><a href="#">EXTENSÃO</a></li>
+			   </ul>
+			</li>
+
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">BIBLIOTECA<span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+			    	<li><a href="#">CONSULTA AO ACERVO</a></li>	
+			    	<li><a href="#">REGULAMENTO</a></li>	
+			    </ul>					
+			</li>
+
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">INSTITUCIONAL<span class="caret"></span></a>
+			    <ul class="dropdown-menu">
+			        <li><a href="#">HISTÓRIA</a></li>
+			    </ul>
+			</li>					
+			
+			<li><a href="#">CONTATO</a></li>									
+		  </ul>
+			
+		    <!-- Botão de login -->
+		    <ul class="nav navbar navbar-right">
+		        <li class="dropdown" id="login">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="#">LOGIN<b class="caret"></b></a>
+			        <div class="dropdown-menu">
+				    <form style="margin: 0px" method="post">
+				        <div style="margin:0; padding:0; display:inline">
+					    <input type="hidden" value="" />
+					</div>
+					<fieldset class="textbox" style="padding:10px">
+					    <input type="text" name="usuario" placeholder="usuario" style="margin-top: 8px" />
+					    <input type="password" name="senha" placeholder="senha" style="margin-top: 8px" />
+					    <input type="submit" class="btn-primary" name="botao" value="Entrar" style="margin-top: 8px"/>
+					</fieldset>
+				    </form>
+				</div>
+			</li>
+		    </ul>
+	        </div><!-- collapse navbar-collapse -->	
+	    </div><!-- container-fluid -->
+       </nav>	
+
+	<div class="container">
+
+		<!-- Carrossel de slides -->
+		<div class="banner carousel slide" id="meuCarrossel" data-ride="carousel">
+		    <ol class="carousel-indicators">
+		        <li data-target="meuCarrossel" data-slide-to="0" class="active"></li>
+			<li data-target="meuCarrossel" data-slide-to="1" class="active"></li>
+			<li data-target="meuCarrossel" data-slide-to="2" class="active"></li>
+		    </ol>
+		    <div class="slides carousel-inner">
+		        <div class="item active">
+			    <img src="imagens/estudantes-1-menor.jpg" class="foto_menor" alt="esudantes" />
+			    <div class="banner_caption">
+			        <div class="container">
+				    <div class="row">
+				        <div class="col-xs-12">
+					    <div class="caption_inner animated fadeInUp">
+														
+				            </div> <!-- caption-inner -->
+				    	</div>
+				    </div> <!-- row -->
+				</div> <!-- container -->
+			     </div> <!-- banner_caption -->					
+			</div> <!-- item-active -->
+
+			<div class="item">
+			    <img src="imagens/estudantes-2-menor.jpg" class="foto_menor" alt="universitarios" />
+			    <div class="banner_caption">
+				<div class="container">
+					<div class="row">
+					    <div class="col-xs-12">
+				  	        <div class="caption_inner animated fadeInUp">
+									
+						</div>	<!-- caption-inner -->
+					    </div><!-- col-xs-12 -->								
+					</div>	<!-- row -->
+				</div>	<!-- cotainer -->
+			    </div><!-- banner-caption -->
+			</div>	<!-- item-active -->
+
+				
+				<div class="slides carousel-inner">
+					<div class="item active">
+						<img src="imagens/estudantes-1-menor.jpg" class="foto_menor" alt="esudantes" />
+						<div class="banner_caption">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="caption_inner animated fadeInUp">
+
+										</div> <!-- caption-inner -->
+									</div>
+								</div> <!-- row -->
+							</div> <!-- container -->
+						</div> <!-- banner_caption -->					
+					</div> <!-- item-active -->
+
+					<div class="item">
+						<img src="imagens/estudantes-2-menor.jpg" class="foto_menor" alt="universitarios" />
+						<div class="banner_caption">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="caption_inner animated fadeInUp">
+
+										</div>	<!-- caption-inner -->
+									</div>	<!-- col-xs-12 -->								
+								</div>	<!-- row -->
+							</div>	<!-- cotainer -->
+						</div>	<!-- banner-caption -->
+					</div>	<!-- item-active -->
+					
+					<div class="item">
+						<img src="imagens/bg-slide1.jpg" alt="trabalho" />
+						<div class="banner_caption">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="caption-inner animated fadeInUp">
+											
+										</div> <!-- caption-inner -->
+									</div><!-- col-xs-12 -->								
+								</div><!-- row -->
+							</div><!-- cotainer -->
+						</div><!-- banner-caption -->
+					</div><!-- item-active -->
+
+				</div> <!-- slides carousel-inner -->
+
+				<!-- Imagens das setas da direita e esquerda (slides) -->
+
+				<a href="#meuCarrossel" class="left carousel-control" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				</a>
+				<a href="#meuCarrossel" class="right carousel-control" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				</a>
+
+			</div> <!-- banner carousel slide -->
+		</div><!-- container -->
+	</div> <!-- #carrossel -->
+
+	<br/>
+
+	<!-- notícias -->
+	<div id="noticias">
+		<div class="container-fluid">
+			<div class="row">			
+
+				<div class="col-sm-3" style="background-color: #F5F5F5">
+					<h4>SEMANA DA COMPUTAÇÃO</h4>
+					<p>
+						XX Semana da computação.<br/>
+						Cursos, seminários, palestras, visita de <br/> 
+						profissionais e muito mais!
+					</p>	
+				</div>
+
+				<div class="col-sm-3">
+					<h4>CARREIRA E ESTÁGIO</h4>	
+					<p>
+						O Centro de estágio do Ceará está com vagas
+						abertas para diversas áreas. <br/>
+						<a href="#">Saiba Mais</a> 
+					</p>
+				</div>			
+
+				<div class="col-sm-3" style="background-color: #F5F5F5">
+					<h4>CURSOS DE EXTENSÃO</h4>
+					<p>Confira a programação <a href="#">aqui</a></p>
+				</div>
+
+				<div class="col-sm-3">
+					<h4>VESTIBULAR</h4>
+					<p>Inscrições abertas. Prova 31/02/2050</p>
+					<p>Estude na maior particular de Fortaleza</p>
+				</div>
+
+			</div><!-- .row -->
+		</div> <!-- container fluid -->
+	</div><!-- noticias -->
+	
+	<!-- Rodapé -->
+	<footer class="site-footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="bottom-footer">
+					2016 | Fortaleza | Faculdade Controle Acadêmico - All Rights Reserved
+				</div>
+			</div>			
+		</div>
+	</footer>
+
+</body>
+</html>
