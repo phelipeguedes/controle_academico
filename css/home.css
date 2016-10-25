@@ -1,46 +1,96 @@
 @charset="UTF-8";
 
-.no-margin{
-	margin: 0px;
+/* Barra do menu */
+
+nav.navbar-inverse{
+	background: #000;
 }
 
-.no-padding{
-	padding: 0px;
+/* Links contidos na barra */
+
+#navBar li a{
+	color: #8C8C8C;
+	font-weight: bold;
 }
 
-/* tela maior ou igual a 1400 pixels */
+/* submenu*/
 
-@media (min-width: 1400px){
-	.site-footer{
-		background-color: #222222;
-		color: #9D9D9D;
-		margin-top: 183px;
-		padding-top: 10px;
-		width: 100%;
-		height: 45px;
-	}
+#navBar ul.dropdown-menu li a{
+	color: #696969;
 }
 
-/* tela menor ou igual a 1400 pixels */
+ul#nav li a:hover{
+	color: #fff;
+}
 
-@media (max-width: 1400px){
-	.site-footer{
-		background-color: #222222;
-		color: #9D9D9D;
-		margin-top: 10px;
-		padding-top: 10px;
-		width: 100%;
-	}
+ul#nav ul.dropdown-menu li a:hover{
+	color: #000;
+}
+
+li#login{
+	top: 3px;
+}
+
+/* Container dos campos de login */
+
+fieldset input{
+	width: 200px;
+}
+
+div#carrossel{
+	margin-top: 1%;
+}
+
+div#noticias{
+	margin-top: 1%;
 }
 
 div.row{
 	text-align: center;
 }
 
-div#carrossel{
-	margin-top: 10px;
+div#noticias #cor1, #cor2{
+	background-color: #F5F5F5;
 }
 
-div#noticias{
-	margin-top: 10px;
+label#colaborador{
+	font-size: 9px;
+	color: red;
+	text-align: center;
+	margin-left: 22px;
 }
+
+/* tela maior ou igual a 1500 pixels */
+
+@media screen and (min-width: 1900px){
+	
+	/* Rodapé */
+
+	.footer{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		background-color: #000;
+	}
+}
+
+.footer{
+	margin-top: 25px;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+
+.footer > .container{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/* Texto do rodapé */
+
+.container .text-muted{
+	margin: 20px 0;
+	text-align: center;
+}	

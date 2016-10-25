@@ -1,0 +1,11 @@
+main{
+	margin-top: 50px;
+}
+
+body{
+	//background: url("img/aspnet.jpg");
+	background: url("img/aspnet.jpg");
+	//background: #000;
+	color: #fff;
+	text-align: center;
+}

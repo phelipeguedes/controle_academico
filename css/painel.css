@@ -1,0 +1,25 @@
+@charset="UTF-8";
+
+/* Cor: snow 2 */
+
+div.jumbotron{
+	margin-top: -38px;
+	background-color: #EEE9E9;
+}
+
+body{
+	background: url("../imagens/wallpaper-FCA.png");
+	background-size: 100%;
+}
+
+div#fundo{
+	position: absolute;
+	overflow: hidden;
+
+}
+
+#fundo img{
+	width: 100%;
+	//position: absolute;
+}
+

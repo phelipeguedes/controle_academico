@@ -1,0 +1,110 @@
+@charset="UTF-8";
+
+div#conteudo{
+	margin: 1px auto;
+}
+
+/* Telas menor ou igual a 768px */
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* Telas maior ou igual a 768px */
+
+@media screen and (min-width: 1366px) {
+	img{
+		width: 980px;		
+
+	}
+}
+img{
+	width: 1000px;
+	margin: 2% auto;
+}
+
+/* Tirando o arredondamento das bordas */
+
+nav.navbar{
+	border-radius: none;
+}
+
+nav.navbar-inverse{
+	background: #000;
+}
+
+a.navbar-brand{
+	font-weight: bold;
+}
+
+/* O link 'Matricula Online' flutua à direita*/
+
+ul.navbar-right li a{
+	right: 20px;
+}
+
+hr{
+	border:  1px solid;
+}
+
+ul{
+	font-weight: bold;
+}
+
+a#centro{
+	top:50%;
+	left: 50%;
+	display: block;
+	position: relative;
+}
+
+h5#centro{
+	color: #696969;
+	font-weight: bold;
+	text-align: center;
+	margin: 17px auto;
+	margin-left: 470px;
+}
+
+.btn{			
+	background: #0075CF;
+	padding: 2px;
+	color: #fff;			
+}
+
+p{
+	text-align: justify;
+}
+
+/* Rodapé */
+
+/* tela maior ou igual a 1900 pixels */
+
+@media screen and (min-width: 1900px){
+
+	.footer{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		background-color: #000;
+	}
+}
+
+.footer{
+	margin-top: 25px;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+
+.footer > .container{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.container .text-muted{
+	margin: 20px 0;
+	text-align: center;
+}
