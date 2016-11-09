@@ -1,0 +1,121 @@
+@charset="UTF-8";
+
+/* Barra do menu */
+
+nav.navbar-inverse{
+	background: #000;
+}
+
+/* Links contidos na barra */
+
+#navBar li a{
+	color: #8C8C8C;
+	font-weight: bold;
+}
+
+/* submenu*/
+
+#navBar ul.dropdown-menu li a{
+	color: #696969;
+}
+
+ul#nav li a:hover{
+	color: #fff;
+}
+
+ul#nav ul.dropdown-menu li a:hover{
+	color: #000;
+}
+
+li#login{
+	top: 3px;
+}
+
+/* Container dos campos de login */
+
+fieldset input{
+	width: 200px;
+}
+
+div#carrossel{
+	margin-top: 1%;
+}
+
+div#noticias{
+	margin-top: 1%;
+}
+
+div.row{
+	text-align: center;
+}
+
+div#noticias #cor1, #cor2{
+	background-color: #F5F5F5;
+}
+
+label#colaborador{
+	font-size: 9px;
+	color: red;
+	text-align: center;
+	margin-left: 22px;
+}
+
+span{
+	margin-left: 170px;
+}
+nav{
+	height: 60px;
+}
+p{
+	margin-bottom: 40px;
+}
+
+button.btn{
+	margin-top: 5px;
+	width: 110px;
+	padding: 4px;
+	background: #0075CF;
+}
+
+button#btn-envia{
+	margin-left: 5px;
+}
+
+button#btn-cancela{
+	margin-left: -600px;
+}
+
+/* tela maior ou igual a 1500 pixels */
+
+@media screen and (min-width: 1900px){
+	
+	/* Rodapé */
+
+	.footer{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		background-color: #000;
+	}
+}
+
+.footer{
+	margin-top: 25px;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+}
+
+.footer > .container{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+/* Texto do rodapé */
+
+.container .text-muted{
+	margin: 20px 0;
+	text-align: center;
+}	
