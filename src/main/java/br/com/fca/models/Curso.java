@@ -3,21 +3,18 @@ package br.com.fca.models;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) // somente as classes concretas (que herdam) serão geradas no banco
+//@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) // somente as classes concretas (que herdam) serão geradas no banco
 public class Curso implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -34,14 +31,14 @@ public class Curso implements Serializable {
 	@JoinColumn(name = "coordenador_id")
 	private Administrador administrador;
 	
-	@OneToMany(mappedBy = "curso")
+	@OneToMany(mappedBy = "curso", fetch = FetchType.LAZY)
 	private List <Aluno> alunos;
 	
-	@OneToMany(mappedBy = "curso")
+	@OneToMany(mappedBy = "curso", fetch = FetchType.LAZY)
 	private List<Professor> professores;
 	
-	@OneToMany(mappedBy = "curso")
-	private List <Disciplina> disciplinas;
+	@OneToMany(mappedBy = "curso", fetch = FetchType.LAZY)
+	private List<Disciplina> disciplinas;
 	
 	
 	public Integer getCodigo() {
@@ -70,28 +67,28 @@ public class Curso implements Serializable {
 		this.administrador = administrador;
 	}
 	
-	@OneToMany(mappedBy = "alunos", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	/*@OneToMany(mappedBy = "alunos", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	public List<Aluno> getAlunos() {
 		return alunos;
 	}
 	
 	public void setAlunos(List<Aluno> alunos) {
 		this.alunos = alunos;
-	}	
+	}*/	
 	
-	@OneToMany(mappedBy = "professores", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	/*@OneToMany(mappedBy = "professores", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	public List<Professor> getProfessores() {
 		return professores;
 	}
 
 	public void setProfessores(List<Professor> professores) {
 		this.professores = professores;
-	}
+	} */
 	
-	@OneToMany(mappedBy = "disciplinas", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	/*@OneToMany(mappedBy = "disciplinas", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	public List<Disciplina> getDisciplinas() {
 		return disciplinas;
-	}
+	}*/
 	
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;

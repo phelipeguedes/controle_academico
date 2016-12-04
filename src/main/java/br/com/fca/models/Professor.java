@@ -9,8 +9,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import br.com.fca.autenticacao.AutenticaFuncionario;
-
 @Entity
 @Table(name = "professores")
 public class Professor extends UsuarioFuncionario {

@@ -1,21 +1,14 @@
 package br.com.fca.models;
 
 import java.io.Serializable;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Disciplina implements Serializable{
@@ -28,6 +21,9 @@ public class Disciplina implements Serializable{
 	private int codigo;
 	
 	private String nome;
+	
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "curso_id")
 	private Curso curso;
 	private String semestre;
 	
@@ -35,13 +31,13 @@ public class Disciplina implements Serializable{
 	@JoinColumn(name = "professor_id")
 	private Professor professor;
 	
-	@ManyToMany
+	/*@ManyToMany
 	@JoinTable(name = "alunos_disciplinas", joinColumns = {
 			@JoinColumn(name = "aluno_id")
 	}, inverseJoinColumns = {
 			@JoinColumn(name = "disciplina_id")
 	})
-	private List<Aluno> alunos;	
+	private List<Aluno> alunos;*/	
 	
 	public int getCodigo() {
 		return codigo;
@@ -60,8 +56,6 @@ public class Disciplina implements Serializable{
 		this.nome = nome;
 	}
 	
-	@ManyToOne(optional = false)
-	@JoinColumn(name = "curso_id")
 	public Curso getCurso() {
 		return curso;
 	}
@@ -70,11 +64,11 @@ public class Disciplina implements Serializable{
 		this.curso = curso;
 	}
 	
-	@OneToOne
+	/*@OneToOne
 	@Column(name = "professor", nullable = false)
 	public Professor getProfessor() {
 		return professor;
-	}
+	}*/
 
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
@@ -89,7 +83,7 @@ public class Disciplina implements Serializable{
 		this.semestre = semestre;
 	}
 	
-	@OneToMany(mappedBy = "disciplinas", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	/*@OneToMany(mappedBy = "disciplinas", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "aluno_id")
 	public List<Aluno> getAlunos() {
 		return alunos;
@@ -97,6 +91,6 @@ public class Disciplina implements Serializable{
 
 	public void setAlunos(List<Aluno> alunos) {
 		this.alunos = alunos;
-	}
+	}*/
 
 }
