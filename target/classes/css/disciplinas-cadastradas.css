@@ -1,0 +1,25 @@
+@CHARSET "UTF-8";
+
+/* Esconde a barra de rolagem horizontal */
+
+body {
+	overflow-x: hidden;
+}
+
+nav.navbar-inverse {
+	height: 60px;
+	background: #000;
+}
+
+li a.navbar-brand {
+	text-decoration: none;
+	padding: 0;
+	color: #999999;
+	font-size: 17px;
+	font-weight: bold;
+}
+
+ul.nav li a {
+	font-weight: bold;
+	margin: -45px 20px;
+}
