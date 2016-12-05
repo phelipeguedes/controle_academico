@@ -22,12 +22,12 @@
 	<h5>Dados da Disciplina</h5>
 	
 		<div class="formulario">
-			<form class="form-horizontal" role="form"> 
+			<form action="disciplinas_sistemas" method="post" class="form-horizontal" role="form"> 
 				<span id="info_pessoal">Informações Gerais</span>
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Código:</label>
 					<div class="col-sm-6 col-md-5">
-						<input type="text" class="form-control" name="" placeholder="Apenas números" required />	
+						<input type="text" class="form-control" name="codigo" placeholder="Apenas números" required />	
 					</div>					
 				</div>
 				
@@ -55,7 +55,7 @@
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Docente:</label>
 					<div class="col-sm-5 col-md-5">
-						<select class="form-control" name="docente">
+						<select class="form-control" name="professor">
 							<optgroup label="Gradua��o">
 								<option value="1">Professor 1</option>
 								<option value="2">Professor 2</option>
@@ -69,7 +69,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2 col-md-4">Semestre:</label>	
 					<div class="col-sm-5 col-md-5">
-						<select class="form-control">
+						<select class="form-control" name="semestre">
 							<option selected>Selecione o semestre</option>
 							<option value="primeiro semestre">1º</option>
 							<option value="segundo semeste">2º</option>
@@ -86,7 +86,7 @@
 				<div class="form-group">
 					<div class="row">
 						<div class="col-sm-offset-4 col-md-1">
-							<button class="btn btn-primary" id="btn-matricula">Cadastrar</button>		
+							<button type="submit" class="btn btn-primary" id="btn-matricula">Cadastrar</button>		
 						</div>							
 
 						<div class="col-sm-offset-6">

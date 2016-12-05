@@ -25,9 +25,24 @@ public class Disciplina implements Serializable{
 	@Id
 	@Column(name = "id_disciplina")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	
+	@Column
 	private int codigo;
 	
+	@Column
 	private String nome;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "curso_id")
 	private Curso curso;
 	private String semestre;
 	
@@ -60,8 +75,6 @@ public class Disciplina implements Serializable{
 		this.nome = nome;
 	}
 	
-	@ManyToOne(optional = false)
-	@JoinColumn(name = "curso_id")
 	public Curso getCurso() {
 		return curso;
 	}

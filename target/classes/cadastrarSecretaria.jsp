@@ -121,7 +121,7 @@
 					<label class="control-label col-sm-2 col-md-4">Escolaridade:</label>	
 					<div class="col-sm-5 col-md-5">
 						<select class="form-control"  name="escolaridade">
-							<option value="nivel medio">Nível Médio</option>
+							<option value="N�vel M�dio">Nível Médio</option>
 							<option value="nivel técnico">Nível Técnico</option>
 							<option value="nivel superior incompleto">Nível Superior Incompleto</option>
 							<option value="nivel superior completo">Nível Superior Completo</option>
@@ -134,12 +134,12 @@
 					<div class="col-sm-6 col-md-6">
 						<div class="col-md-2">
 							<label class="radio-inline">
-								<input type="radio" name="experiencia" id="femaleRadio" value="sim">Sim
+								<input type="radio" name="experiencia" id="femaleRadio" value="Sim">Sim
 							</label>
 						</div>
 						<div class="col-md-2">
 							<label class="radio-inline">
-								<input type="radio" name="experiencia" id="maleRadio" value="nao">Não
+								<input type="radio" name="experiencia" id="maleRadio" value="Nao">Não
 							</label>
 						</div>
 

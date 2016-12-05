@@ -27,12 +27,12 @@
 
 			<div class="collapse navbar-collapse" id="navBar">
 				<ul class="nav navbar-nav" id="nav">
-					<li class="current"><a href="home.html">HOME</a></li>
+					<li class="current"><a href="home.jsp">HOME</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ALUNO<span class="caret"></span></a>
 						<ul class="dropdown-menu">							
 							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALENDÁRIO</a></li>
 							<li><a href="arquivos/manual-do-aluno.pdf" target="_blank">MANUAL DO ALUNO</a></li>
-							<li><a href="matricula-online.html" target="_blank">MATRÍCULA</a></li>
+							<li><a href="matriculaOnline.jsp" target="_blank">MATRÍCULA</a></li>
 							<li><a href="#">PROCESSO SELETIVO</a></li>
 						</ul>
 					</li>
@@ -58,7 +58,7 @@
 						</ul>
 					</li>					
 					
-					<li><a href="ead.html" target="_blank">EAD</a></li>
+					<li><a href="ead.jsp" target="_blank">EAD</a></li>
 
 					<li><a href="#">CONTATO</a></li>									
 				</ul>
@@ -74,37 +74,35 @@
 	</div>	
 
 	<div class="container">
-		<form action="#" method="post" class="form-horizontal" role="form">
+		<form action="pre_matricula_sistemas" method="post" class="form-horizontal" role="form">
 			<span>Dados Pessoais</span>
 			<div class="form-group">					
 				<label class="control-label col-md-4">Nome:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control" placeholder="Nome completo">
+					<input type="text" name="nome_aluno" class="form-control" placeholder="Nome completo">
 				</div>
 			</div>	
 			<div class="form-group">					
 				<label class="control-label col-md-4">Sexo:</label>
 				<div class="col-md-4">
-					<select class="form-control">
-						<option value="masculino">Masculino</option>
-						<option value="feminino">Feminino</option>
+					<select class="form-control" name="sexo">
+						<option value="Masculino">Masculino</option>
+						<option value="Feminino">Feminino</option>
 					</select>
 				</div>
-			</div>	
+			</div>
+			
+			<!-- 	
 			<div class="form-group">					
 				<label class="control-label col-md-4">Nascimento:</label>
 				<div class="col-md-4">						
 					<input type="date" class="form-control" name="nascimento">			
 				</div>
-			</div>	
+			</div>
+			-->	
 
 			<span>Endereço Residencial</span>
-			<div class="form-group">					
-				<label class="control-label col-md-4">Cep:</label>
-				<div class="col-md-4">
-					<input type="text" class="form-control" placeholder="Somente números">
-				</div>					
-			</div>	
+			
 			<div class="form-group">
 				<label class="control-label col-md-4">Cidade:</label>
 				<div class="col-md-4">
@@ -112,10 +110,17 @@
 				</div>						
 			</div>
 			
+			<div class="form-group">					
+				<label class="control-label col-md-4">Cep:</label>
+				<div class="col-md-4">
+					<input type="text" name="cep" class="form-control" placeholder="Somente números">
+				</div>					
+			</div>	
+			
 			<div class="form-group">
 				<label class="control-label col-md-4">Endereço:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="cidade" placeholder="Rua, Nº, Bairro">
+					<input type="text" class="form-control " name="logradouro" placeholder="Rua, Nº, Bairro">
 				</div>						
 			</div>
 			
@@ -123,9 +128,9 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Curso:</label>
 				<div class="col-md-4">
-					<select class="form-control">
+					<select class="form-control" name="curso">
 						<option>Selecione o curso</option>						
-						<option value="Sistemas de Informacao">Sistemas de Informação</option>
+						<option value="4">Sistemas de Informação</option>
 					</select>
 				</div>
 			</div>	
@@ -133,7 +138,7 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Turno:</label>
 				<div class="col-md-4">
-					<select class="form-control">
+					<select class="form-control" name="turno">
 						<option>Selecione um turno</option>
 						<option value="Diurno">Diurno</option>
 						<option value="Noturno">Noturno</option>
@@ -145,14 +150,14 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Telefone:</label>
 				<div class="col-md-4">
-					<input type="tel" class="form-control" placeholder="Somente números" required>
+					<input type="tel" name="telefone" class="form-control" placeholder="Somente números" required>
 				</div>					
 			</div>	
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Email:</label>
 				<div class="col-md-4">
-					<input type="email" class="form-control" placeholder="Insira um email para contato" required>
+					<input type="email" name="email" class="form-control" placeholder="Insira um email para contato" required>
 				</div>					
 			</div>	
 
@@ -163,7 +168,7 @@
 					</div>							
 
 					<div class="col-sm-offset-6">
-						<button type="reset" class="btn btn-primary" id="btn-cancela">Cancelar</button>		
+						<button class="btn btn-primary" type="reset" id="btn-cancela">Cancelar</button>		
 					</div>							
 				</div>						
 			</div>

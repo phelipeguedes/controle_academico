@@ -65,8 +65,8 @@
 
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">DISCIPLINAS<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="cadastrar-disciplina.jsp" target="_blank">CADASTRO</a></li>
-						<li><a href="disciplinas-cadastradas.jsp" target="_blank">CONSULTA</a></li>
+						<li><a href="cadastrarDisciplina.jsp" target="_blank">CADASTRO</a></li>
+						<li><a href="disciplinasCadastradas.jsp" target="_blank">CONSULTA</a></li>
 					</ul>
 					</li>
 				</ul>

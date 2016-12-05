@@ -176,9 +176,9 @@
 					<label for="" class="control-label col-sm-2 col-md-4">Turno:</label>
 					<div class="col-sm-6 col-md-5">
 						<select class="form-control" name="turno">
-							<option value="diurno">Diurno</option>	
-							<option value="noturno">Noturno</option>
-							<option value="diurno e noturno">Diurno e Noturno</option>
+							<option value="Diurno">Diurno</option>	
+							<option value="Noturno">Noturno</option>
+							<option value="Diurno e Noturno">Diurno e Noturno</option>
 						</select>
 					</div>
 
@@ -188,11 +188,11 @@
 					<label for="" class="control-label col-sm-2 col-md-4">T√≠tulo:</label>
 					<dv class="col-sm-6 col-md-5">
 						<select class="form-control" name="titulo">
-							<option value="bacharel">Gradua√ß√£o</option>
-							<option value="especializaÁ„o">Especializa√ß√£o</option>
-							<option value="mestre">Mestrado</option>
-							<option value="doutor">Doutorado</option>
-							<option value="pÛs-doutorado">P√≥s-Doutorado</option>
+							<option value="Bacharel">Gradua√ß√£o</option>
+							<option value="EspecializaÁ„o">Especializa√ß√£o</option>
+							<option value="Mestre">Mestrado</option>
+							<option value="Doutor">Doutorado</option>
+							<option value="PÛs-Doutorado">P√≥s-Doutorado</option>
 						</select>	
 					</dv>
 

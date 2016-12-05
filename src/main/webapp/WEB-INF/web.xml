@@ -59,4 +59,14 @@
     <servlet-name>ProfessorController</servlet-name>
     <url-pattern>/ProfessorController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PreMatriculaSistemasController</display-name>
+    <servlet-name>PreMatriculaSistemasController</servlet-name>
+    <servlet-class>br.com.fca.controller.PreMatriculaSistemasController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PreMatriculaSistemasController</servlet-name>
+    <url-pattern>/PreMatriculaSistemasController</url-pattern>
+  </servlet-mapping>
 </web-app>

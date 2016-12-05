@@ -23,11 +23,11 @@ public static boolean cadastrarDisciplina(Disciplina disciplina){
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static List<Disciplina> listarDiscipinas(){
+	public static List<Disciplina> listarDisciplinas(){
 		
 		EntityManager em = ConexaoJPA.getEntityManager();
 		
-		Query consulta = em.createQuery("SELECT d FROM Disciplina");
+		Query consulta = em.createQuery("SELECT d FROM Disciplina d");
 		List<Disciplina> disciplinas = consulta.getResultList();
 		em.close();
 		

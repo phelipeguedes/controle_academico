@@ -1,6 +1,7 @@
 package br.com.fca.controller;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -10,24 +11,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.fca.dao.DisciplinaDao;
-import br.com.fca.dao.SecretariaDao;
 import br.com.fca.models.Curso;
 import br.com.fca.models.Disciplina;
 import br.com.fca.models.Professor;
-import br.com.fca.models.Secretaria;
 
-@WebServlet(name = "DisciplinaController", urlPatterns = {"disciplinas"})
-public class DisciplinaController extends HttpServlet{
+@WebServlet(name = "DisciplinaSistemaController", urlPatterns = {"/disciplinas_sistemas"})
+public class DisciplinaSistemaController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	public DisciplinaController() {
+	public DisciplinaSistemaController() {
 	
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	
-    	List<Disciplina> disciplinas = DisciplinaDao.listarDiscipinas();
+    	List<Disciplina> disciplinas = DisciplinaDao.listarDisciplinas();
     	request.getSession().setAttribute("disciplinas", disciplinas);
     	response.sendRedirect("disciplinasCadastradas.jsp");
     }
@@ -39,11 +38,11 @@ public class DisciplinaController extends HttpServlet{
 		disciplina.setNome(request.getParameter("nome"));
 		disciplina.setCodigo(Integer.parseInt(request.getParameter("codigo")));
 		Curso curso = new Curso();
-		int codigoDoCurso = Integer.parseInt("curso");
+		int codigoDoCurso = Integer.parseInt(request.getParameter("curso"));
 		curso.setCodigo(codigoDoCurso);
 		disciplina.setCurso(curso);
 		Professor professor = new Professor();
-		int codigoDoProfessor = Integer.parseInt(request.getParameter("docente"));
+		int codigoDoProfessor = Integer.parseInt(request.getParameter("professor"));
 		professor.setId(codigoDoProfessor);
 		disciplina.setProfessor(professor);
 		disciplina.setSemestre(request.getParameter("semestre"));

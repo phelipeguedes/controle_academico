@@ -10,6 +10,9 @@
 		<class>br.com.fca.models.CoordenadorSistemas</class>
 		<class>br.com.fca.models.Secretaria</class>
 		<class>br.com.fca.models.Professor</class>
+		<class>br.com.fca.models.Disciplina</class>
+		<class>br.com.fca.models.Curso</class>
+		<class>br.com.fca.pre_matricula.PreMatricula</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/faculdade_fca" />
 			<property name="javax.persistence.jdbc.user" value="root" />

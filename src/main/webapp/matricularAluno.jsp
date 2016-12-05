@@ -184,8 +184,8 @@
 					<label for="" class="control-label col-sm-2 col-md-4">Turno:</label>
 					<div class="col-sm-6 col-md-5">
 						<select class="form-control" name="turno">
-							<option value="diurno">Diurno</option>	
-							<option value="noturno">Noturno</option>
+							<option value="Diurno">Diurno</option>	
+							<option value="Noturno">Noturno</option>
 						</select>
 					</div>
 

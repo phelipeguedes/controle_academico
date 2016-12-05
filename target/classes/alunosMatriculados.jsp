@@ -61,6 +61,10 @@
 			</c:forEach>
 		</table>
 	</div>
-
+	
+	<div class="container-fluid">
+		<a href="matricularAluno.jsp"><button class="btn btn-default">Retornar</button></a>
+	</div>
+	
 </body>
 </html>

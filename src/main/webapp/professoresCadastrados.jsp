@@ -65,5 +65,9 @@
 		</table>
 	</div>
 	
+	<div class="container-fluid">
+		<a href="cadastrarProfessor.jsp"><button class="btn btn-default">Retornar</button></a>
+	</div>
+	
 </body>
 </html>

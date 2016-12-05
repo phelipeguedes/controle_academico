@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="pt_br">
 
@@ -40,13 +42,15 @@
 				</tr>				
 			</thead>
 			
+			<c:forEach var="disciplina" items='${sessionScope["disciplinas"] }'>
+			
 			<tbody>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>${disciplina.codigo}</td>
+					<td>${disciplina.nome}</td>
+					<td>${disciplina.curso.nome}</td>
+					<td>${disciplina.semestre}</td>
+					<td>${disciplina.professor.id}</td>
 					<td>
 						<a href="">ver</a>
 						<a href="">editar</a>
@@ -56,7 +60,13 @@
 				</tr>
 			</tbody>
 			
+			</c:forEach>
+			
 		</table>
+	</div>
+	
+	<div class="container-fluid">
+		<a href="cadastrarDisciplina.jsp"><button class="btn btn-default">Retornar</button></a>
 	</div>
 	
 </body>

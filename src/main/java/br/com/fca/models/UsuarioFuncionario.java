@@ -2,7 +2,6 @@ package br.com.fca.models;
 
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Calendar;
 import java.util.HashMap;
 
 import javax.persistence.Column;
@@ -12,9 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
 import org.apache.commons.beanutils.BeanUtilsBean;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.converters.SqlDateConverter;

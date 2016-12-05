@@ -2,6 +2,7 @@ package br.com.fca.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -40,14 +41,6 @@ public class AlunoController extends HttpServlet {
 		PrintWriter out = response.getWriter();
 
 		Aluno aluno = new Aluno();
-		/*
-		 * try { BeanUtils.populate(aluno, request.getParameterMap());
-		 * AlunoDao.matricular(aluno);
-		 * //response.sendRedirect("alunosMatriculados.jsp"); doGet(request,
-		 * response); } catch (Exception e) {
-		 * //response.sendRedirect("alunosMatriculados.jsp"); doGet(request,
-		 * response); }
-		 */
 
 		aluno.setNome(request.getParameter("nome"));
 		aluno.setSexo(request.getParameter("sexo"));
@@ -55,12 +48,10 @@ public class AlunoController extends HttpServlet {
 		aluno.setBairro(request.getParameter("bairro"));
 		aluno.setEndereco(request.getParameter("logradouro"));
 		aluno.setCep(request.getParameter("cep"));
-		int codigoDoCurso = Integer.parseInt(request.getParameter("curso")); //Integer.parseInt(request.getParameter("curso"));
+		int codigoDoCurso = Integer.parseInt(request.getParameter("curso")); 
 		Curso curso = new Curso();
 		curso.setCodigo(codigoDoCurso);
 		aluno.setCurso(curso);
-		//request.setAttribute("curso", nomeDoCurso);  
-		//aluno.setCurso((Curso) request.getAttribute("curso"));
 		aluno.setTurno(request.getParameter("turno"));
 		aluno.setFinanciamento(request.getParameter("financiamento"));
 		aluno.setTelefone(request.getParameter("telefone"));
@@ -70,7 +61,7 @@ public class AlunoController extends HttpServlet {
 
 		dao.matricular(aluno);
 
-		doGet(request, response);
+		//doGet(request, response);
 		/*String dataEmTexto = request.getParameter("dataDeNascimento");
 		Calendar dataDeNascimento = Calendar.getInstance();
 

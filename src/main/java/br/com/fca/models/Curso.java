@@ -16,6 +16,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
+import br.com.fca.pre_matricula.PreMatricula;
+
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) // somente as classes concretas (que herdam) serão geradas no banco
 public class Curso implements Serializable {
@@ -24,8 +26,8 @@ public class Curso implements Serializable {
 
 	@Id
 	@Column(name = "cod_curso")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer codigo;
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int codigo;
 	
 	@Column(nullable = false)
 	private String nome;
@@ -43,12 +45,14 @@ public class Curso implements Serializable {
 	@OneToMany(mappedBy = "curso")
 	private List <Disciplina> disciplinas;
 	
+	@OneToMany(mappedBy = "curso")
+	private List<PreMatricula> preMatriculas;
 	
-	public Integer getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 	
-	public void setCodigo(Integer codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 	
@@ -95,6 +99,14 @@ public class Curso implements Serializable {
 	
 	public void setDisciplinas(List<Disciplina> disciplinas) {
 		this.disciplinas = disciplinas;
+	}
+
+	public List<PreMatricula> getPreMatriculas() {
+		return preMatriculas;
+	}
+
+	public void setPreMatriculas(List<PreMatricula> preMatriculas) {
+		this.preMatriculas = preMatriculas;
 	}
 	
 }

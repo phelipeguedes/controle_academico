@@ -24,7 +24,8 @@ public abstract class Administrador implements Serializable{
 	@Column(nullable = false)
 	private Integer id;
 	
-	@Column(name="curso_id")
+	//@Column(name="curso_id")
+	@OneToOne(mappedBy="administrador")
 	private Curso curso;
 	
 	private String login;
@@ -38,7 +39,7 @@ public abstract class Administrador implements Serializable{
 		this.id = id;
 	}
 	
-	@OneToOne(mappedBy="administrador")
+	//@OneToOne(mappedBy="administrador")
 	public Curso getCurso() {
 		return curso;
 	}

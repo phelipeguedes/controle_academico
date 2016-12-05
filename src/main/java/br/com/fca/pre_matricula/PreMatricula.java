@@ -1,8 +1,6 @@
 package br.com.fca.pre_matricula;
 
 import java.io.Serializable;
-import java.util.Calendar;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,6 +8,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+import br.com.fca.models.Curso;
 
 @Entity
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)	// somente as classes concretas (que herdam) serão geradas no banco
@@ -22,11 +24,14 @@ public abstract class PreMatricula implements Serializable {
 	private Integer id_pre_matricula;
 	private String nome_aluno;
 	private String sexo;
-	private Calendar nascimento;
 	private String cep;
 	private String cidade;
 	private String logradouro;
-	private String curso;
+	
+	@ManyToOne
+	@JoinColumn(name="curso_id")
+	private Curso curso;
+	
 	private String turno;
 	private String telefone;
 	private String email;
@@ -58,15 +63,6 @@ public abstract class PreMatricula implements Serializable {
 	}
 	
 	@Column(nullable = false)
-	public Calendar getNascimento() {
-		return nascimento;
-	}
-	
-	public void setNascimento(Calendar nascimento) {
-		this.nascimento = nascimento;
-	}
-	
-	@Column(nullable = false)
 	public String getCep() {
 		return cep;
 	}
@@ -94,11 +90,11 @@ public abstract class PreMatricula implements Serializable {
 	}
 	
 	@Column(nullable = false)
-	public String getCurso() {
+	public Curso getCurso() {
 		return curso;
 	}
 
-	public void setCurso(String curso) {
+	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
 	
