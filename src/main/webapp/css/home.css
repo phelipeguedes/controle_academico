@@ -60,6 +60,28 @@ label#colaborador{
 	margin-left: 22px;
 }
 
+// login coordenador
+
+a#log_coord{
+	font-size: 8px;
+	color: black;
+	text-align: center;
+	margin-left: 22px;		
+}
+
+.modal-header, h4, .close{
+			//background: #000;
+			text:align-center;
+			//font-size: 30px; 
+		}
+		.modal-content {
+			width: 300px;
+		}
+		.modal-footer {
+			background: #f9f9f9;
+		}
+}
+
 /* tela maior ou igual a 1500 pixels */
 
 @media screen and (min-width: 1900px){

@@ -8,7 +8,34 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/home.css">
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<style>
+		a#login_coordenador {
+			font-size: 8px;
+			color: red;
+			text-align: center;
+			margin-left: 22px;		
+		}
+
+		.modal-header, .close{
+			background: #000;
+			text-align: center;
+			font-size: 30px; 
+		}
+		.modal-content {
+			width: 400px;
+		}
+		.modal-footer {
+			background: #f9f9f9;
+		}
+		h4#login {
+			color: #fff;
+			text-align: center;
+		}
+		
+	</style>
+		
 </head>
 
 <body>
@@ -32,7 +59,7 @@
 						<ul class="dropdown-menu">							
 							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALEND¡RIO</a></li>
 							<li><a href="arquivos/manual-do-aluno.pdf" target="_blank">MANUAL DO ALUNO</a></li>
-							<li><a href="matricula-online.jsp" target="blank">MATRÕçCULA</a></li>
+							<li><a href="matriculaOnline.jsp">MATRÕçCULA</a></li>
 							<li><a href="#">PROCESSO SELETIVO</a></li>
 						</ul>
 					</li>
@@ -92,7 +119,9 @@
 						</div>
 					</li>
 				</ul>
-
+				
+				<%-- Login coordenador --%>
+				
 			</div>	<!-- collapse navbar-collapse -->	
 		</div> 	<!-- container-fluid -->
 	</nav>	
@@ -195,31 +224,31 @@
 				<div class="row">			
 
 					<div class="col-lg-3 col-md-3" id="cor1">
-						<h4>SEMANA DA COMPUTA√á√ÉO</h4>
+						<h4>SEMANA DA COMPUTA«√O</h4>
 						<p>
-							XX Semana da computa√ß√£o.<br/>
-							Cursos, semin√°rios, palestras, visita de <br/> 
+							XX Semana da computaÁ„o.<br/>
+							Cursos, semin·rios, palestras, visita de <br/> 
 							profissionais e muito mais!
 						</p>	
 					</div>
 
 					<div class="col-lg-3 col-md-3">
-						<h4>CARREIRA E EST√ÅGIO</h4>	
+						<h4>CARREIRA E EST¡GIO</h4>	
 						<p>
-							O Centro de est√°gio do Cear√° est√° com vagas
-							abertas para diversas √°reas. <br/>
+							O Centro de est·gio do Cear· est„o com vagas
+							abertas para diversas ¡reas. <br/>
 							<a href="#">Saiba Mais</a> 
 						</p>
 					</div>			
 
 					<div class="col-lg-3 col-md-3" id="cor2">
-						<h4>CURSOS DE EXTENS√ÉO</h4>
-						<p>Confira a programa√ß√£o <a href="#">aqui</a></p>
+						<h4>CURSOS DE EXTENS√O</h4>
+						<p>Confira a programaÁ„o <a href="#">aqui</a></p>
 					</div>
 
 					<div class="col-lg-3 col-md-3">
 						<h4>VESTIBULAR</h4>
-						<p>Inscri√ß√µes abertas. Prova 31/02/2050</p>
+						<p>InscriÁıes abertas. Prova 31/02/2050</p>
 						<p>Estude na maior particular de Fortaleza</p>
 					</div>
 
@@ -234,5 +263,20 @@
 			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acad√™mico - All Rights Reserved</p>
 		</div>
 	</footer>
+	
+	<script>
+		$(document).ready(function(){
+			$("#login_coordenador").click(function(){
+				$("#modal").modal();
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#login_professor").click(function(){
+				$("#modalProfessor").modal();
+			});
+		});
+	</script>
+	
 </body>
 </html>

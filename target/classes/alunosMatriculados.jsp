@@ -16,13 +16,14 @@
 
 <body>
 
+	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoSistemasDao" />
+
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
 			<ul class="title-area large-3 medium-4 columns">
 				<li class="name">
 				<li><a href="" class="navbar-brand">FCA - Alunos
-						Matriculados</a>
-				</li>
+						Matriculados</a></li>
 			</ul>
 			<div class="top-bar-section">
 				<ul class="nav navbar-nav navbar-right">
@@ -44,8 +45,9 @@
 				</tr>
 			</thead>
 
-			<c:forEach var="aluno" items='${sessionScope["alunos"] }'>
+			<%-- <c:forEach var="aluno" items='${sessionScope["alunos"] }'> --%>
 
+			<c:forEach var="aluno" items="${dao.listaTodos}">
 				<tbody>
 
 					<tr>
@@ -53,18 +55,22 @@
 						<td>${aluno.nome}</td>
 						<td>${aluno.curso.nome}</td>
 						<td>${aluno.turno}</td>
-						<td><a href="">ver</a><a href="">editar</a> <a href="">atualizar</a>
-							<a href="">excluir</a></td>
+						<td><a
+							href="painelNotasAluno.jsp?action=getMatricula&&matricula=${aluno.matricula}">ver</a><a
+							href=""> editar</a> <a href="">atualizar</a> <a
+							href="removerAluno.jsp?action=removerAluno&&matricula=${aluno.matricula}"
+							onclick="return confirm('Tem Certeza que Deseja excluir os registros deste aluno?');">
+								excluir</a></td>
 					</tr>
 				</tbody>
-				
+
 			</c:forEach>
 		</table>
 	</div>
-	
+
 	<div class="container-fluid">
 		<a href="matricularAluno.jsp"><button class="btn btn-default">Retornar</button></a>
 	</div>
-	
+
 </body>
 </html>

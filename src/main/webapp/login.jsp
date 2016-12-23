@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="br.com.fca.models.Aluno"%>
 <html lang="pt_br">
 
 <head>
@@ -6,10 +7,12 @@
 	<title>Login - Controle Acadêmico</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/login.css">	
 </head>
 
-<body>
+<body>		
 	
 	<div class="container">
 		<form class="form-login" action="forward.jsp" method="post">
@@ -25,10 +28,10 @@
 		</form>		
 	</div>
 
-	<!-- RodapÃ© -->
+	<!-- Rodapé -->
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">FACULDADE CONTROLE ACADÃŠMICO</p>
+			<p class="text-muted">FACULDADE CONTROLE ACADÊMICO</p>
 		</div>		
 	</footer>
 	

@@ -3,7 +3,7 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Administra√ß√£o | Pr√©-Matr√≠cula</title>
+<title>AdministraÁ„o | PrÈ-MatrÌcula</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css"
 	href="bootstrap/css/bootstrap.min.css">
@@ -28,24 +28,24 @@
 
 			<div class="collapse navbar-collapse" id="navBar">
 				<ul class="nav navbar-nav" id="nav">
-					<li class="current"><a href="home.html">HOME</a></li>
+					<li class="current"><a href="home.jsp">HOME</a></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">ALUNO<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="arquivos/calendario-academico.pdf"
-								target="_blank">CALEND√ÅRIO</a></li>
+								target="_blank">CALEND¡RIO</a></li>
 							<li><a href="arquivos/manual-do-aluno.pdf" target="_blank">MANUAL
 									DO ALUNO</a></li>
-							<li><a href="matricula-online.html" target="blank">MATR√çCULA</a></li>
+							<li><a href="matricula-online.jsp" target="blank">MATRÕçCULA</a></li>
 							<li><a href="#">PROCESSO SELETIVO</a></li>
 						</ul></li>
 
 					<li><a href="login.html" target="_blank">CONTROLE
-							ACAD√äMICO</a></li>
+							ACAD MICO</a></li>
 					<li class="dropdown"><a class="dropdown-toggle"
 						data-toggle="dropdown" href="#">CURSOS<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">GRADUA√á√ÉO</a></li>
+							<li><a href="#">GRADUA«√ÉO</a></li>
 							<li><a href="#">EXTENS√ÉO</a></li>
 						</ul></li>
 
@@ -60,10 +60,10 @@
 						data-toggle="dropdown" href="#">INSTITUCIONAL<span
 							class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">HIST√ìRIA</a></li>
+							<li><a href="#">HIST”ìRIA</a></li>
 						</ul></li>
 
-					<li><a href="ead.html" target="_blank">EAD</a></li>
+					<li><a href="ead.jsp" target="_blank">EAD</a></li>
 
 					<li><a href="#">CONTATO</a></li>
 				</ul>
@@ -75,10 +75,10 @@
 	</nav>
 
 	<div class="container-fluid">
-		<h3>Sistema de Pr√©-Matr√≠cula</h3>
+		<h3>Sistema de PrÈ-MatrÌcula</h3>
 		<hr>
-		<p>Preencha os dados abaixo e a FCA entrar√° em contato para
-			finalizar sua matr√≠cula.
+		<p>Preencha os dados abaixo e a FCA entrar· em contato para
+			finalizar sua matrÌcula.
 		</p>
 	</div>
 
@@ -89,22 +89,22 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Nome:</label>
 				<div class="col-md-4">
-					<input type="text" name="nome_aluno" class="form-control" placeholder="Nome completo" required>
+					<input type="text" name="nomeAluno" class="form-control" placeholder="Nome completo" required>
 				</div>
 			</div>
 			
 			<div class="form-group">
 				<label class="control-label col-md-4">Sexo:</label>
 				<div class="col-md-4">
-					<select class="form-control" required>
+					<select class="form-control" name="sexo" required>
 						<option>Selecione o sexo</option>
-						<option value="masculino">Masculino</option>
-						<option value="feminino">Feminino</option>
+						<option value="Masculino">Masculino</option>
+						<option value="Feminino">Feminino</option>
 					</select>
 				</div>
 			</div>
 
-			<span>Endere√ßo Residencial</span>
+			<span>EndereÁo Residencial</span>
 			
 			<div class="form-group">
 				<label class="control-label col-md-4">Cidade:</label>
@@ -116,14 +116,14 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Cep:</label>
 				<div class="col-md-4">
-					<input type="text" name="cep" class="form-control"	placeholder="Somente n√∫meros" required>
+					<input type="text" name="cep" class="form-control"	placeholder="Somente n˙meros" required>
 				</div>
 			</div>
 			
 			<div class="form-group">
-				<label class="control-label col-md-4">Endere√ßo:</label>
+				<label class="control-label col-md-4">EndereÁo:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="logradouro" placeholder="Rua, N¬∫, Bairro" required>
+					<input type="text" class="form-control " name="logradouro" placeholder="Rua, N∫, Bairro" required>
 				</div>
 			</div>
 
@@ -131,9 +131,9 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Curso:</label>
 				<div class="col-md-4">
-					<select class="form-control" required>
+					<select class="form-control" name="curso" required>
 						<option>Selecione o curso</option>
-						<option value="1">Administra√ß√£o</option>
+						<option value="1">AdministraÁ„o</option>
 					</select>
 				</div>
 			</div>
@@ -141,7 +141,7 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Turno:</label>
 				<div class="col-md-4">
-					<select class="form-control" required>
+					<select name="turno" class="form-control" required>
 						<option>Selecione um turno</option>
 						<option value="Diurno">Diurno</option>
 						<option value="Noturno">Noturno</option>
@@ -153,7 +153,7 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Telefone:</label>
 				<div class="col-md-4">
-					<input type="tel" name="telefone" class="form-control" placeholder="Somente n√∫meros" required>
+					<input type="tel" name="telefone" class="form-control" placeholder="Somente n˙meros" required>
 				</div>					
 			</div>	
 			
@@ -182,7 +182,7 @@
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">2016 | Fortaleza | Faculdade Controle
-				Acad√™mico - All Rights Reserved</p>
+				AcadÍmico - All Rights Reserved</p>
 		</div>
 	</footer>
 

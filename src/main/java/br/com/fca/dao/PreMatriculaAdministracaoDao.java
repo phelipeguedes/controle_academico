@@ -7,8 +7,8 @@ import javax.persistence.Query;
 
 import br.com.fca.conexao.ConexaoJPA;
 import br.com.fca.models.Aluno;
-import br.com.fca.pre_matricula.PreMatricula;
-import br.com.fca.pre_matricula.PreMatriculaAdministracao;
+import br.com.fca.models.PreMatricula;
+import br.com.fca.preMatricula.PreMatriculaAdministracao;
 
 public class PreMatriculaAdministracaoDao {
 	
@@ -23,7 +23,7 @@ public class PreMatriculaAdministracaoDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static List<PreMatriculaAdministracao> listarPreMatriculas() {
+	public List<PreMatriculaAdministracao> getlistarPreMatriculasAdm() {
 		EntityManager em = ConexaoJPA.getEntityManager();
 		
 		Query consulta = em.createQuery("SELECT pma FROM PreMatriculaAdministracao pma ");

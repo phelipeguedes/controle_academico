@@ -9,7 +9,7 @@
 	
 	<%-- JSP responsável pelo login. Recebe requisições do 'login.jsp' e repassa, pela session, p/ servletlogin  --%>	
 
-	<jsp:useBean id="aluno" class="br.com.fca.models.Aluno" scope="session"></jsp:useBean>
+	<jsp:useBean id="aluno" class="br.com.fca.aluno.AlunoSistemas" scope="session"></jsp:useBean>
 	
 	<jsp:setProperty property="*" name="aluno"/>
 	

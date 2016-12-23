@@ -15,7 +15,7 @@ public class CoordenadorSistemasDao implements AutenticaAdministrador {
 
 	//private EntityManager em = emf.createEntityManager();
 
-	public static Administrador autenticar(String login, String senha){		
+	public CoordenadorSistemas autenticar(String login, String senha){		
 		EntityManager em = ConexaoJPA.getEntityManager();
 		
 		try {

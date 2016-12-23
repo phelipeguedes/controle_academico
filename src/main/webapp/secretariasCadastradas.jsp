@@ -14,16 +14,18 @@
 
 <body>
 	
+	<jsp:useBean id="dao" class="br.com.fca.dao.SecretariaDao"></jsp:useBean>
+	
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
 			<ul class="title-area large-3 medium-4 columns">
 				<li class="name">
-					<li><a href="" class="navbar-brand">FCA - Secretarias Cadastradas</a>
+					<li><a href="" class="navbar-brand">Faculdade Controle Acad�mico - FCA</a>
 				</li>				
 			</ul> 
 			<div class="top-bar-section">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Sistemas de Informação</a></li>
+					<li><a href="#">Secretarias Cadastradas</a></li>
 				</ul>
 			</div>
 		</nav>					
@@ -42,25 +44,25 @@
 				</tr>				
 			</thead>
 			
-			<c:forEach var="secretaria" items='${sessionScope["secretarias"] }'>
+			
+			
+			<c:forEach var="secretaria" items="${dao.listaSecretarias}"/>
 			
 			<tbody>
 				<tr>
 					<td>${secretaria.id}</td>
-					<td>${secretaria.nome}</td>					
-					<td>${secretaria.turno}</td>
+					<td>${secretaria.nome}</td>										
+					<td>${secretaria.turno }</td>
 					<td>${secretaria.escolaridade}</td>
 					<td>${secretaria.experiencia}</td>
 					<td>
-						<a href="">ver</a>
-						<a href="">editar</a>
-						<a href="">atualizar</a>
-						<a href="">excluir</a>
+						<a href="#">ver</a>
+						<a href="#">editar</a>
+						<a href="#">atualizar</a>
+						<a href="#">excluir</a>
 					</td>
 				</tr>
 			</tbody>
-			
-			</c:forEach>
 			
 		</table>
 	</div>

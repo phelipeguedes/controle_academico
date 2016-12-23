@@ -3,6 +3,7 @@ package br.com.fca.controller;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,9 +25,9 @@ public class SecretariaController extends HttpServlet {
 		
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	    	
-	    	List<Secretaria> secretarias = SecretariaDao.listarSecretarias();
-	    	request.getSession().setAttribute("secretarias", secretarias);
-	    	response.sendRedirect("secretariasCadastradas.jsp");
+			//SecretariaDao secretariaDao = new SecretariaDao();
+	    	//List<Secretaria> secretarias = secretariaDao.getListaSecretarias();
+	    	
 	    }
 
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -48,7 +49,11 @@ public class SecretariaController extends HttpServlet {
 			
 			SecretariaDao.cadastrarSecretaria(secretaria);
 			
-			doGet(request, response);
+			//doGet(request, response);
+			
+			request.getSession().setAttribute("secretaria", secretaria);
+	    	RequestDispatcher rd = request.getRequestDispatcher("secretariasCadastradas.jsp");
+	    	rd.forward(request, response);
 			
 			/*
 			try {

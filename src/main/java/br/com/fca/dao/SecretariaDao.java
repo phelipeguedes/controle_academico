@@ -48,7 +48,7 @@ public class SecretariaDao {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public static List<Secretaria> listarSecretarias(){
+	public List<Secretaria> getListaSecretarias(){
 		
 		EntityManager em = ConexaoJPA.getEntityManager();
 		

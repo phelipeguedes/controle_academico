@@ -12,7 +12,9 @@
 		<class>br.com.fca.models.Professor</class>
 		<class>br.com.fca.models.Disciplina</class>
 		<class>br.com.fca.models.Curso</class>
-		<class>br.com.fca.pre_matricula.PreMatricula</class>
+		<class>br.com.fca.models.Mensalidade</class>
+		<class>br.com.fca.models.Nota</class>
+		<class>br.com.fca.preMatricula.PreMatricula</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/faculdade_fca" />
 			<property name="javax.persistence.jdbc.user" value="root" />

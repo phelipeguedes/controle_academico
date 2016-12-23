@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Sistemas | Pr√©-Matr√≠cula</title>
+	<title>Sistemas | PrÈ-MatrÌcula</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/pre-matricula.css"/>
@@ -30,17 +30,17 @@
 					<li class="current"><a href="home.jsp">HOME</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ALUNO<span class="caret"></span></a>
 						<ul class="dropdown-menu">							
-							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALEND√ÅRIO</a></li>
+							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALEND¡ÅRIO</a></li>
 							<li><a href="arquivos/manual-do-aluno.pdf" target="_blank">MANUAL DO ALUNO</a></li>
-							<li><a href="matriculaOnline.jsp" target="_blank">MATR√çCULA</a></li>
+							<li><a href="matriculaOnline.jsp" target="_blank">MATRIçCULA</a></li>
 							<li><a href="#">PROCESSO SELETIVO</a></li>
 						</ul>
 					</li>
 
-					<li><a href="login.html" target="_blank">CONTROLE ACAD√äMICO</a></li>
+					<li><a href="login.html" target="_blank">CONTROLE ACAD MICO</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CURSOS<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">GRADUA√á√ÉO</a></li>
+							<li><a href="#">GRADUA«√O</a></li>
 							<li><a href="#">EXTENS√ÉO</a></li>
 						</ul>
 					</li>
@@ -54,7 +54,7 @@
 
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">INSTITUCIONAL<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">HIST√ìRIA</a></li>
+							<li><a href="#">HIST”ìRIA</a></li>
 						</ul>
 					</li>					
 					
@@ -68,20 +68,22 @@
 	</nav>	
 
 	<div class="container-fluid">
-		<h3>Sistema de Pr√©-Matr√≠cula</h3>
+		<h3>Sistema de PrÈ-MatrÌcula</h3>
 		<hr>
-		<p>Preencha os dados abaixo e a FCA entrar√° em contato para finalizar  sua matr√≠cula.</p>
+		<p>Preencha os dados abaixo e a FCA entrar· em contato para finalizar  sua matrÌcula.</p>
 	</div>	
 
 	<div class="container">
-		<form action="pre_matricula_sistemas" method="post" class="form-horizontal" role="form">
+		<form action="pre_matricula_sistemas_2" method="post" class="form-horizontal" role="form">
 			<span>Dados Pessoais</span>
+			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Nome:</label>
 				<div class="col-md-4">
-					<input type="text" name="nome_aluno" class="form-control" placeholder="Nome completo">
+					<input type="text" name="nomeAluno" class="form-control" placeholder="Nome completo">
 				</div>
 			</div>	
+			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Sexo:</label>
 				<div class="col-md-4">
@@ -101,7 +103,7 @@
 			</div>
 			-->	
 
-			<span>Endere√ßo Residencial</span>
+			<span>EndereÁo Residencial</span>
 			
 			<div class="form-group">
 				<label class="control-label col-md-4">Cidade:</label>
@@ -113,14 +115,14 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Cep:</label>
 				<div class="col-md-4">
-					<input type="text" name="cep" class="form-control" placeholder="Somente n√∫meros">
+					<input type="text" name="cep" class="form-control" placeholder="Somente n˙meros">
 				</div>					
 			</div>	
 			
 			<div class="form-group">
-				<label class="control-label col-md-4">Endere√ßo:</label>
+				<label class="control-label col-md-4">EndereÁo:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="logradouro" placeholder="Rua, N¬∫, Bairro">
+					<input type="text" class="form-control " name="logradouro" placeholder="Rua, N∫, Bairro">
 				</div>						
 			</div>
 			
@@ -130,7 +132,7 @@
 				<div class="col-md-4">
 					<select class="form-control" name="curso">
 						<option>Selecione o curso</option>						
-						<option value="4">Sistemas de Informa√ß√£o</option>
+						<option value="4">Sistemas de InformaÁ„o</option>
 					</select>
 				</div>
 			</div>	
@@ -150,7 +152,7 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Telefone:</label>
 				<div class="col-md-4">
-					<input type="tel" name="telefone" class="form-control" placeholder="Somente n√∫meros" required>
+					<input type="tel" name="telefone" class="form-control" placeholder="Somente n˙meros" required>
 				</div>					
 			</div>	
 			
@@ -164,7 +166,7 @@
 			<div class="form-group">
 				<div class="row">
 					<div class="col-sm-offset-4 col-md-1">
-						<button class="btn btn-primary" type="submit" id="btn-envia">Enviar</button>		
+						<button type="submit" class="btn btn-primary" id="btn-envia">Enviar</button>		
 					</div>							
 
 					<div class="col-sm-offset-6">
@@ -178,7 +180,7 @@
 	<!--  Rodap√©-->
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acad√™mico - All Rights Reserved</p>
+			<p class="text-muted">2016 | Fortaleza | Faculdade Controle AcadÍmico - All Rights Reserved</p>
 		</div>
 	</footer>
 	

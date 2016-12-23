@@ -37,7 +37,7 @@ public class SecretariaLoginController extends HttpServlet {
 			if(secretaria != null){
 				contexto.setAttribute("secretariaLogada", secretaria);
 				//request.getRequestDispatcher("painel_secretaria.jsp").forward(request, response);;
-				response.sendRedirect("painel_secretaria.jsp");
+				response.sendRedirect("painelSecretaria.jsp");
 			} else {
 				response.sendRedirect("loginErrado.jsp");
 			}

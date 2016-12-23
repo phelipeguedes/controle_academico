@@ -69,4 +69,24 @@
     <servlet-name>PreMatriculaSistemasController</servlet-name>
     <url-pattern>/PreMatriculaSistemasController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CoordenadorLoginController</display-name>
+    <servlet-name>CoordenadorLoginController</servlet-name>
+    <servlet-class>br.com.fca.controller.CoordenadorLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CoordenadorLoginController</servlet-name>
+    <url-pattern>/CoordenadorLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PreMatriculaSistemasController2</display-name>
+    <servlet-name>PreMatriculaSistemasController2</servlet-name>
+    <servlet-class>br.com.fca.controller.PreMatriculaSistemasController2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PreMatriculaSistemasController2</servlet-name>
+    <url-pattern>/PreMatriculaSistemasController2</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -24,7 +24,7 @@
 	<div class="container" id="conteudoPagina">
 		
 		<div class="formulario">
-			<form action="alunos" method="post" class="form-horizontal" role="form"> 
+			<form action="aluno" method="post" class="form-horizontal" role="form"> 
 
 			 	<!-- divide em grupos os campos do formulÃ¡rio -->
 
@@ -52,12 +52,12 @@
 						
 						<div class="col-md-3">
 							<label class="radio-inline">
-								<input type="radio" name="sexo" id="femaleRadio" value="Female">Feminino
+								<input type="radio" name="sexo" id="femaleRadio" value="Feminino">Feminino
 							</label>
 						</div>
 						<div class="col-md-3">
 							<label class="radio-inline">
-								<input type="radio" name="sexo" id="maleRadio" value="Male">Masculino
+								<input type="radio" name="sexo" id="maleRadio" value="Masculino">Masculino
 							</label>
 						</div>
 
@@ -81,7 +81,7 @@
 					<div class="col-sm-5 col-md-5">
 						<select class="form-control" name="bairro">		
 							<option value="outro">Outro</option>					
-							<option value="Aerolândia" selected>AerolÃ¢ndia</option>
+							<option value="Aerolândia" selected>Aerolândia</option>
 							<option value="Aeroporto">Aeroporto</option>
 							<option value="Alagadiço Novo">Alagadiço Novo</option>
 							<option value="Aldeota">Aldeota</option>

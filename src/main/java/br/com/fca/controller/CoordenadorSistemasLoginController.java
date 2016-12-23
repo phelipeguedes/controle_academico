@@ -31,14 +31,15 @@ public class CoordenadorSistemasLoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
 		
-		CoordenadorSistemas coordenadorSistemas = (CoordenadorSistemas) request.getSession().getAttribute("coordenador_sistemas");
+		CoordenadorSistemas cs = (CoordenadorSistemas) request.getSession().getAttribute("coordenador_sistemas");
+		CoordenadorSistemasDao csDao = new CoordenadorSistemasDao();
 		
 		try {
-			coordenadorSistemas = (CoordenadorSistemas) CoordenadorSistemasDao.autenticar(coordenadorSistemas.getLogin(), coordenadorSistemas.getSenha());
+			cs = (CoordenadorSistemas) csDao.autenticar(cs.getLogin(), cs.getSenha());
 			
-			if(coordenadorSistemas != null){
-				contexto.setAttribute("coordenadorSistemasLogado", coordenadorSistemas);
-				response.sendRedirect("painel-coordenacao-sistemas.jsp");
+			if(cs != null){
+				contexto.setAttribute("coordenadorSistemasLogado", cs);
+				response.sendRedirect("painelCoordenacaoSistemas.jsp");
 				//request.getRequestDispatcher("deu.jsp").forward(request, response);
 			} else {
 				response.sendRedirect("loginIncorreto.jsp");

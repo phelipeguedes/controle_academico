@@ -1,11 +1,8 @@
 package br.com.fca.autenticacao;
 
-import br.com.fca.models.Administrador;
+import br.com.fca.models.CoordenadorSistemas;
 
 public interface AutenticaAdministrador {
-	Administrador Administrador = null;
 
-	public static Administrador autenticar(String nomeDeUsuario, String senha) {
-		return Administrador;
-	}
+	public CoordenadorSistemas autenticar(String nomeDeUsuario, String senha);
 }

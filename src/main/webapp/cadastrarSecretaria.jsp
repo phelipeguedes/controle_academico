@@ -22,7 +22,7 @@
 	<div class="container" id="conteudoPagina">
 		<div class="formulario">
 			<form action="secretarias" method="post" class="form-horizontal" role="form"> 
-				<span id="info_pessoal">InformaÃ§Ãµes Pessoais</span>
+				<span id="info_pessoal">Informações Pessoais</span>
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Nome:</label>
 					<div class="col-sm-6 col-md-5">
@@ -41,7 +41,7 @@
 				
 				<!-- divide em grupos os campos do formulÃ¡rio -->
 
-				<span id="info_logradouro">InformaÃ§Ãµes do Logradouro</span>
+				<span id="info_logradouro">Informações do Logradouro</span>
 
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Cidade</label>
@@ -57,9 +57,9 @@
 					<div class="col-sm-5 col-md-5">
 						<select class="form-control" name="bairro">
 							<option>Outro</option>							
-							<option selected>AerolÃ¢ndia</option>
+							<option selected>Aerolândia</option>
 							<option>Aeroporto</option>
-							<option>AlagadiÃ§o Novo</option>
+							<option>Alagadiço Novo</option>
 							<option>Aldeota</option>
 							<option>Alvaro Wayne</option>
 							<option>Amadeu Furtado</option>
@@ -100,46 +100,46 @@
 				</div>					
 
 				<div class="form-group">
-					<label class="control-label col-md-4">EndereÃ§o:</label>
+					<label class="control-label col-md-4">Endereço:</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="text" name="endereco" class="form-control" placeholder="Rua, NÂº">
+						<input type="text" name="endereco" class="form-control" placeholder="Rua, Nº">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="control-label col-md-4">Cep:</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="text" name="cep" class="form-control" placeholder="Apenas nÃºmeros">
+						<input type="text" name="cep" class="form-control" placeholder="Apenas números">
 					</div>
 				</div>											
 				
 				<!-- divide em grupos os campos do formulÃ¡rio -->
 				
-				<span id="info_profissionais">InformaÃ§Ãµes Profissionais</span>							
+				<span id="info_profissionais">Informações Profissionais</span>							
 
 				<div class="form-group">
 					<label class="control-label col-sm-2 col-md-4">Escolaridade:</label>	
 					<div class="col-sm-5 col-md-5">
 						<select class="form-control"  name="escolaridade">
-							<option value="Nível Médio">NÃ­vel MÃ©dio</option>
-							<option value="nivel tÃ©cnico">NÃ­vel TÃ©cnico</option>
-							<option value="nivel superior incompleto">NÃ­vel Superior Incompleto</option>
-							<option value="nivel superior completo">NÃ­vel Superior Completo</option>
+							<option value="Nível Médio">Nível Médio</option>
+							<option value="Nível Técnico">Nível Técnico</option>
+							<option value="Nível Superior Incompleto">Nível Superior Incompleto</option>
+							<option value="Nível Superior Completo">Nível Superior Completo</option>
 						</select>
 					</div>
 				</div> <!-- form-group -->
 
 				<div class="form-group">
-					<label class="control-label col-sm-2 col-md-4">ExperiÃªncia na FunÃ§Ã£o:</label>
+					<label class="control-label col-sm-2 col-md-4">Experiência na Função:</label>
 					<div class="col-sm-6 col-md-6">
 						<div class="col-md-2">
 							<label class="radio-inline">
-								<input type="radio" name="experiencia" id="femaleRadio" value="Sim">Sim
+								<input type="radio" name="experiencia" id="expSim" value="Sim">Sim
 							</label>
 						</div>
 						<div class="col-md-2">
 							<label class="radio-inline">
-								<input type="radio" name="experiencia" id="maleRadio" value="Nao">NÃ£o
+								<input type="radio" name="experiencia" id="expNao" value="Nao">Não
 							</label>
 						</div>
 
@@ -150,20 +150,20 @@
 					<label class="control-label col-md-4">Turno:</label>
 					<div class="col-sm-5 col-md-5">
 						<select class="form-control" name="turno">
-							<option value="diurno">Diurno</option>
-							<option value="noturno">Noturno</option>
+							<option value="Diurno">Diurno</option>
+							<option value="Noturno">Noturno</option>
 						</select>
 					</div>
 				</div>
 				
 				<!-- divide em grupos os campos do formulÃ¡rio -->
 
-				<span id="info_contato">InformaÃ§Ãµes da Conta e de Contato</span>
+				<span id="info_contato">Informaçõs da Conta e de Contato</span>
 
 				<div class="form-group">
 					<label class="control-label col-md-4">Telefone:</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="tel" name="telefone" class="form-control" maxlength="14" placeholder="Apenas nÃºmeros">
+						<input type="tel" name="telefone" class="form-control" maxlength="14" placeholder="Apenas números">
 					</div>
 				</div>
 
@@ -192,7 +192,7 @@
 					<div class="col-sm5 col-md-6 col-sm-offset-4">
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="termo" required>Li e estou de acordo com os <a href="#">termos</a> desta instituiÃ§Ã£o.
+								<input type="checkbox" name="termo" required>Li e estou de acordo com os <a href="#">termos</a> desta instituição.
 							</label>
 						</div>
 					</div>

@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.fca.dao.PreMatriculaSistemasDao;
 import br.com.fca.models.Curso;
-import br.com.fca.pre_matricula.PreMatriculaSistemas;
+import br.com.fca.preMatricula.PreMatriculaSistemas;
 
 @WebServlet(name = "PreMatriculaSistemasController", urlPatterns = {"/pre_matricula_sistemas"})
 public class PreMatriculaSistemasController extends HttpServlet {
@@ -22,36 +22,37 @@ public class PreMatriculaSistemasController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		/*
 		PreMatriculaSistemasDao pmsDao = new PreMatriculaSistemasDao();
 		List<PreMatriculaSistemas> pms = pmsDao.listarTudo();
 		request.getSession().setAttribute("preMatriculasSistemas", pms);
 		response.sendRedirect("preMatriculasSistemasRealizadas.jsp");
+		*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PreMatriculaSistemas pms = new PreMatriculaSistemas();
 		
-		pms.setNome_aluno(request.getParameter("nome_aluno"));
+		pms.setNomeAluno(request.getParameter("nomeAluno"));
 		pms.setSexo(request.getParameter("sexo"));
 		pms.setCep(request.getParameter("cep"));
 		pms.setCidade(request.getParameter("cidade"));
 		pms.setLogradouro(request.getParameter("logradouro"));
-		
+			
 		Curso curso = new Curso();		
 		int codigoDoCurso = Integer.parseInt(request.getParameter("curso"));
 		curso.setCodigo(codigoDoCurso);
 		pms.setCurso(curso);
-		
+			
 		pms.setTurno(request.getParameter("turno"));
 		pms.setTelefone(request.getParameter("telefone"));
 		pms.setEmail(request.getParameter("email"));
-		
-		PreMatriculaSistemasDao pmsDao = new PreMatriculaSistemasDao();
-		pmsDao.salvar(pms);
-		
-		doGet(request, response);
+			
+		PreMatriculaSistemasDao.cadastrar(pms);
+			
+		response.sendRedirect("preMatriculaRealizadaComSucesso.jsp");
+			
 	}
 
 }

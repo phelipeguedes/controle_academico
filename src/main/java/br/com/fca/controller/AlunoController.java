@@ -2,22 +2,25 @@ package br.com.fca.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Serializable;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import br.com.fca.dao.AlunoDao;
+import br.com.fca.aluno.AlunoSistemas;
+import br.com.fca.dao.AlunoSistemasDao;
 import br.com.fca.models.Aluno;
 import br.com.fca.models.Curso;
+import br.com.fca.models.Mensalidade;
 
-@WebServlet(name = "/AlunoController", urlPatterns = { "/alunos" })
+@WebServlet(name = "/AlunoController", urlPatterns = { "/aluno" })
 public class AlunoController extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 1L;
 
 	public AlunoController() {
@@ -29,18 +32,29 @@ public class AlunoController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		List<Aluno> alunos = AlunoDao.listarAlunos();
-		request.getSession().setAttribute("alunos", alunos);
-		response.sendRedirect("alunosMatriculados.jsp");
+		Aluno aluno = new AlunoSistemas();
+		AlunoSistemasDao alunoDao = new AlunoSistemasDao();
+		//int matricula = Integer.valueOf(request.getParameter("matricula"));
+		int matricula = Integer.parseInt(request.getParameter("matricula"));
+		aluno = alunoDao.getMatricula(matricula);
+		HttpSession session = request.getSession();
+		session.setAttribute("alunoPesquisado", aluno);
+		Mensalidade mensalidade = new Mensalidade();
+
+		RequestDispatcher rd = request.getRequestDispatcher("painelAlunoSecretaria.jsp");
+		rd.forward(request, response);
+		
+		//List<Aluno> alunos = adao.getListaSistemas();
+		//request.getSession().setAttribute("alunos", alunos);
+		//request.getRequestDispatcher("alunoSistemasMatriculados.jsp").forward(request, response);
+
 	}
 
-	@SuppressWarnings({ "static-access" })
+	@SuppressWarnings({ })
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		PrintWriter out = response.getWriter();
-
-		Aluno aluno = new Aluno();
+		AlunoSistemas aluno = new AlunoSistemas();
 
 		aluno.setNome(request.getParameter("nome"));
 		aluno.setSexo(request.getParameter("sexo"));
@@ -48,7 +62,7 @@ public class AlunoController extends HttpServlet {
 		aluno.setBairro(request.getParameter("bairro"));
 		aluno.setEndereco(request.getParameter("logradouro"));
 		aluno.setCep(request.getParameter("cep"));
-		int codigoDoCurso = Integer.parseInt(request.getParameter("curso")); 
+		int codigoDoCurso = Integer.parseInt(request.getParameter("curso"));
 		Curso curso = new Curso();
 		curso.setCodigo(codigoDoCurso);
 		aluno.setCurso(curso);
@@ -56,38 +70,18 @@ public class AlunoController extends HttpServlet {
 		aluno.setFinanciamento(request.getParameter("financiamento"));
 		aluno.setTelefone(request.getParameter("telefone"));
 		aluno.setEmail(request.getParameter("email"));
+		aluno.setSenha(request.getParameter("senha"));
 
-		AlunoDao dao = new AlunoDao();
+		AlunoSistemasDao.matricular(aluno);
 
-		dao.matricular(aluno);
+		HttpSession session = request.getSession();
+		session.setAttribute("aluno", aluno);
 
-		//doGet(request, response);
-		/*String dataEmTexto = request.getParameter("dataDeNascimento");
-		Calendar dataDeNascimento = Calendar.getInstance();
+		RequestDispatcher rd = request.getRequestDispatcher("alunosMatriculados.jsp");
+		rd.forward(request, response);
 
-		try {
-			Date data = new SimpleDateFormat("dd/MM/yyyy").parse(dataEmTexto);
-			dataDeNascimento = Calendar.getInstance();
-			dataDeNascimento.setTime(data);
-		} catch (ParseException e) {
-			System.out.println("Erro na conversão da data");
-			return;
-		}
+		doGet(request, response);
 
-		// Conversão da data
-
-		/*
-		 * try {
-		 * 
-		 * //String dia = dataNascimento.split("/")[0];
-		 * 
-		 * //nascimentoCalendar.set(Calendar.DAY_OF_MONTH,
-		 * Integer.parseInt(dia));
-		 * 
-		 */
-
-		
-		
 	}
 
 }

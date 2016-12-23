@@ -9,10 +9,10 @@
 </head>
 <body>
 	<div class="container">
-		<form class="form-login">
-			<h4 class="form-signin-heading">FaÃ§a o login</h4>
+		<form class="form-login" action="forwardEad.jsp" method="post">
+			<h4 class="form-signin-heading">Faça o login</h4>
 			<label for="email" class="sr-only">Email:</label>
-			<input type="email" class="form-control" name="email" id="email" placeholder="UsuÃ¡rio ou email" required /><br/>
+			<input type="email" class="form-control" name="email" id="email" placeholder="Usuário ou email" required /><br/>
 			<label for="senha" class="sr-only">Senha:</label>
 			<input type="password" class="form-control" name="senha" id="senha" placeholder="Digite a sua senha" required /><br/>
 			<button type="submit" class="btn btn-default">Acessar</button>
@@ -24,7 +24,7 @@
 	<!-- RodapÃ© -->
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">FACULDADE CONTROLE ACADÃŠMICO - EAD</p>
+			<p class="text-muted">FACULDADE CONTROLE ACADÊMICO - EAD</p>
 		</div>		
 	</footer>
 </body>

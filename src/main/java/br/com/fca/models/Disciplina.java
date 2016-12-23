@@ -3,36 +3,67 @@ package br.com.fca.models;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 
 @Entity
-public class Disciplina implements Serializable{
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) // somente as classes concretas (que herdam) serão geradas no banco
+public abstract class Disciplina implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@Column(name = "id_disciplina")
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.TABLE)
 	private int id;
 	
 	@Column
-	private int codigo;
+	private String sigla;
 	
 	@Column
 	private String nome;
+
+	@ManyToOne(optional = false)
+	@JoinColumn(name = "curso_id")
+	private Curso curso;
 	
+	private String semestre;
+	
+	@ManyToOne
+	@JoinColumn(name = "professor_id")
+	private Professor professor;
+	
+	@OneToMany(mappedBy = "disciplina")
+	private List<Nota> notas;
+	
+	/*@ManyToMany
+	@JoinTable(name = "alunos_disciplinas", joinColumns = {
+			@JoinColumn(name = "aluno_id")
+	}, inverseJoinColumns = {
+			@JoinColumn(name = "disciplina_id")
+	})
+	private List<Aluno> alunos;*/	
+	
+	public List<Nota> getNotas() {
+		return notas;
+	}
+
+	public void setNotas(List<Nota> notas) {
+		this.notas = notas;
+	}
+
+	public Professor getProfessor() {
+		return professor;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -40,30 +71,13 @@ public class Disciplina implements Serializable{
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	@ManyToOne
-	@JoinColumn(name = "curso_id")
-	private Curso curso;
-	private String semestre;
 	
-	@ManyToOne
-	@JoinColumn(name = "professor_id")
-	private Professor professor;
-	
-	@ManyToMany
-	@JoinTable(name = "alunos_disciplinas", joinColumns = {
-			@JoinColumn(name = "aluno_id")
-	}, inverseJoinColumns = {
-			@JoinColumn(name = "disciplina_id")
-	})
-	private List<Aluno> alunos;	
-	
-	public int getCodigo() {
-		return codigo;
+	public String getSigla() {
+		return sigla;
 	}
 
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
+	public void setSigla(String sigla) {
+		this.sigla = sigla;
 	}
 	
 	@Column(nullable = false)
@@ -83,11 +97,11 @@ public class Disciplina implements Serializable{
 		this.curso = curso;
 	}
 	
-	@OneToOne
+	/*@OneToOne
 	@Column(name = "professor", nullable = false)
 	public Professor getProfessor() {
 		return professor;
-	}
+	}*/
 
 	public void setProfessor(Professor professor) {
 		this.professor = professor;
@@ -102,7 +116,7 @@ public class Disciplina implements Serializable{
 		this.semestre = semestre;
 	}
 	
-	@OneToMany(mappedBy = "disciplinas", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	/*@OneToMany(mappedBy = "disciplinas", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "aluno_id")
 	public List<Aluno> getAlunos() {
 		return alunos;
@@ -110,6 +124,6 @@ public class Disciplina implements Serializable{
 
 	public void setAlunos(List<Aluno> alunos) {
 		this.alunos = alunos;
-	}
+	}*/
 
 }

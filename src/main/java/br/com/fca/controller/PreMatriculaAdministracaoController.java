@@ -1,8 +1,6 @@
 package br.com.fca.controller;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,10 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.fca.dao.PreMatriculaAdministracaoDao;
-import br.com.fca.dao.PreMatriculaSistemasDao;
 import br.com.fca.models.Curso;
-import br.com.fca.pre_matricula.PreMatriculaAdministracao;
-import br.com.fca.pre_matricula.PreMatriculaSistemas;
+import br.com.fca.preMatricula.PreMatriculaAdministracao;
 
 @WebServlet(name = "PreMatriculaAdministracaoController", urlPatterns = {"/pre_matricula_administracao"})
 public class PreMatriculaAdministracaoController extends HttpServlet {
@@ -24,17 +20,18 @@ public class PreMatriculaAdministracaoController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		/*
 		List<PreMatriculaAdministracao> pma = PreMatriculaAdministracaoDao.listarPreMatriculas();
 		request.getSession().setAttribute("pma", pma);
 		response.sendRedirect("preMatriculasAdministracaoRealizadas.jsp");
+		*/
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		PreMatriculaAdministracao pma = new PreMatriculaAdministracao();
 		
-		pma.setNome_aluno(request.getParameter("nome_aluno"));
+		pma.setNomeAluno(request.getParameter("nomeAluno"));
 		pma.setSexo(request.getParameter("sexo"));
 		pma.setCep(request.getParameter("cep"));
 		pma.setCidade(request.getParameter("cidade"));
@@ -51,7 +48,7 @@ public class PreMatriculaAdministracaoController extends HttpServlet {
 		
 		PreMatriculaAdministracaoDao.matricular(pma);
 		
-		doGet(request, response);
+		response.sendRedirect("preMatriculaRealizadaComSucesso.jsp");
 	}
 
 }
