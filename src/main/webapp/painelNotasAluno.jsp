@@ -1,3 +1,5 @@
+<%@page import="br.com.fca.dao.AlunoDao"%>
+<%@page import="br.com.fca.models.Aluno"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <%@ page language="java"%>
@@ -9,66 +11,76 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/matricula-online.css">
+	<link rel="stylesheet" type="text/css" href="css/painelNotasAlunos.css">
 </head>
 <body>
 
-	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoSistemasDao" />
-	
-	<jsp:useBean id="aluno" class="br.com.fca.aluno.AlunoSistemas" />
-	
+	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoDao" />
+
+	<jsp:useBean id="aluno" class="br.com.fca.models.Aluno" />
+
 	<header>
 		<!-- Barra do topo -->
-		<nav class="navbar navbar-inverse" brand="Faculdade" fixed="top">
+		<nav class="top-bar expanded" brand="Faculdade" fixed="top">
 			<div class="container-fluid">
-				<div class="navbar-header">
-					<a href="#" class="navbar-brand">FCA</a> 					
-				</div>	
-					
-				<ul class="nav navbar-nav">
-					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACADÃŠMICO</span></a></li>
-				</ul>				
-
-				<ul class="nav navbar-nav navbar-right">					
-					<li><a href="#">CADASTAR NOTAS</a></li>
-				</ul>			
-			</div>	
+				
+				
+			</div>
 		</nav>
 	</header>
-	
-	<div class="container clearfix">
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>Matrícula</th>
-					<th>Nome</th>
-					<th>Curso</th>
-					<th>Turno</th>
-					<th>Ação</th>
-				</tr>
-			</thead>
-			
-			<%-- <c:forEach var="aluno" items='${sessionScope["alunos"] }'> --%>
-			
-			<%-- <c:forEach var="aluno" items="${dao.matricula}"> --%>	
-			
-			
-			
-				<tbody>
 
-					<tr>
-						<td>${aluno.email}</td>
-						<td>${aluno.nome}</td>
-						<td>${aluno.curso.nome}</td>
-						<td>${aluno.turno}</td>
-					</tr>
-				</tbody>
-				
-				
-				
-			<%-- </c:forEach> --%>	
-		</table>
+	<div id="conteudo-barra_lateral">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#navBar">
+				<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="navBar">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="home.jsp">Faculdade FCA</a></li>
+				<li class="heading">Ações</li>	
+				<li><a href="#">Excluir Aluno(a)</a></li>
+				<li><a href="#">Editar Aluno(a)</a></li>
+				<li><a href="alunosMatriculadosSistemas.jsp">Listar Alunos</a></li>				
+			</ul>
+		</div>
 	</div>
-	
+	<!-- conteudo_barra-lateral -->
+
+	<%
+		AlunoDao alunoDao = new AlunoDao();
+		Aluno alunoSelecionado = alunoDao.getMatricula(Integer.parseInt(request.getParameter("matricula")));
+	%>
+
+	<div id="conteudo_principal">
+		<div class="container-fluid">
+			<table class="table vertical-table table-hover">
+				
+					<tr>
+						<th scope="row">Matrícula</th>
+						<td><%=alunoSelecionado.getMatricula()%></td>
+					</tr>
+					<tr>
+						<th scope="row">Nome</th>
+						<td><%=alunoSelecionado.getNome()%></td>
+					</tr>
+					<tr>
+						<th scope="row">Curso</th>
+						<td><%=alunoSelecionado.getCurso().getNome()%></td>
+					</tr>
+					<tr>
+						<th scope="row">Semestre</th>
+						<td><%=alunoSelecionado.getSemestre()%></td>
+					</tr>
+					<tr>
+						<th scope="row">Turno</th>
+						<td><%=alunoSelecionado.getTurno()%></td>
+					</tr>
+					
+			</table>
+		</div>
+	</div>	
 </body>
 </html>

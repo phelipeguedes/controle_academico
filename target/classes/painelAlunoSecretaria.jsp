@@ -119,11 +119,11 @@ th, tr {
 
 				<%-- <p class="text-center">Olá, ${alunoPesquisado.nome}</p> --%>
 
-				<jsp:useBean id="dao" class="br.com.fca.dao.AlunoSistemasDao"></jsp:useBean>
+				<jsp:useBean id="dao" class="br.com.fca.dao.AlunoDao"></jsp:useBean>
 
 				<div class="table-responsive">
 					<h4>Dados do Aluno</h4>
-					<table class="table table-hover table-condensed">
+					<table class="table vertical-table table-hover table-condensed">
 						<thead>
 							<tr>
 								<th>Matrícula</th>
@@ -132,9 +132,9 @@ th, tr {
 								<th>Telefone</th>
 								<th>Email</th>
 								<th>Curso</th>
-								<th>Financiamento</th>
+								<th>Semestre</th>
 								<th>Turno</th>
-								<th>Mensalidade</th>
+								<th>Financiamento</th>								
 							</tr>
 						</thead>
 
@@ -148,9 +148,9 @@ th, tr {
 									<td>${alunoPesquisado.telefone}</td>
 									<td>${alunoPesquisado.email}</td>
 									<td>${alunoPesquisado.curso.nome}</td>
+									<td>${alunoPesquisado.semestre}</td>
+									<td>${alunoPesquisado.turno}</td>									
 									<td>${alunoPesquisado.financiamento}</td>
-									<td>${alunoPesquisado.turno}</td>
-									<td>${alunoPesquisado.mensalidades}</td>
 								</tr>
 							</tbody>
 						</c:forEach>

@@ -38,7 +38,7 @@ public class PreMatriculaContabeisController extends HttpServlet {
 		
 		PreMatriculaContabeis pmc = new PreMatriculaContabeis();
 		
-		pmc.setNomeAluno(request.getParameter("nomeAluno"));
+		pmc.setNomeAluno(request.getParameter("nome"));
 		pmc.setSexo(request.getParameter("sexo"));
 		pmc.setCep(request.getParameter("cep"));
 		pmc.setCidade(request.getParameter("cidade"));

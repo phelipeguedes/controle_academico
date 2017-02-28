@@ -31,7 +31,7 @@ public class PreMatriculaAdministracaoController extends HttpServlet {
 		
 		PreMatriculaAdministracao pma = new PreMatriculaAdministracao();
 		
-		pma.setNomeAluno(request.getParameter("nomeAluno"));
+		pma.setNomeAluno(request.getParameter("nome"));
 		pma.setSexo(request.getParameter("sexo"));
 		pma.setCep(request.getParameter("cep"));
 		pma.setCidade(request.getParameter("cidade"));

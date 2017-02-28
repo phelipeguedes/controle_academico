@@ -17,12 +17,13 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 import org.eclipse.persistence.jpa.config.Cascade;
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS) 
-public abstract class Aluno implements Serializable {
+@Table(name = "alunos")
+public class Aluno implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -67,8 +68,9 @@ public abstract class Aluno implements Serializable {
 			@JoinColumn(name = "disciplina_id")
 		}
 	)
+	
 	private List<Disciplina> disciplinas;
-
+	private String semestre;
 	private String turno;
 	private String financiamento;
 	private String telefone;
@@ -179,6 +181,15 @@ public abstract class Aluno implements Serializable {
 
 	public void setCurso(Curso curso) {
 		this.curso = curso;
+	}
+	
+	@Column(nullable = false)
+	public String getSemestre(){
+		return semestre;
+	}
+	
+	public void setSemestre(String semestre){
+		this.semestre = semestre;
 	}
 
 	@Column(nullable = false)

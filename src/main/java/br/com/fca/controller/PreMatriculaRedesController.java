@@ -8,10 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.fca.dao.PreMatriculaAdministracaoDao;
 import br.com.fca.dao.PreMatriculaRedesDao;
 import br.com.fca.models.Curso;
-import br.com.fca.preMatricula.PreMatriculaAdministracao;
 import br.com.fca.preMatricula.PreMatriculaRedes;
 
 @WebServlet(name = "PreMatriculaRedesController", urlPatterns = {"/pre_matricula_redes"})
@@ -34,7 +32,7 @@ public class PreMatriculaRedesController extends HttpServlet {
 		
 		PreMatriculaRedes pmr = new PreMatriculaRedes();
 		
-		pmr.setNomeAluno(request.getParameter("nomeAluno"));
+		pmr.setNomeAluno(request.getParameter("nome"));
 		pmr.setSexo(request.getParameter("sexo"));
 		pmr.setCep(request.getParameter("cep"));
 		pmr.setCidade(request.getParameter("cidade"));

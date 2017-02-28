@@ -6,14 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
-@Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)	// somente as classes concretas (que herdam) serão geradas no banco
-public abstract class PreMatricula implements Serializable {
+@Table(name = "pre_matriculas")
+public class PreMatricula implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	
@@ -21,6 +20,7 @@ public abstract class PreMatricula implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name = "id_pre_matricula")
 	private Integer idPreMatricula;
+	@Column(name = "nome_aluno")
 	private String nomeAluno;
 	private String sexo;
 	private String cep;

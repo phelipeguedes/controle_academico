@@ -24,6 +24,9 @@ public abstract class Administrador implements Serializable{
 	@Column(nullable = false)
 	private Integer id;
 	
+	@Column
+	private String nome;
+	
 	//@Column(name="curso_id")
 	@OneToOne(mappedBy="administrador")
 	private Curso curso;
@@ -66,10 +69,16 @@ public abstract class Administrador implements Serializable{
 		this.senha = senha;
 	}
 	
-	public abstract void cadastrarProfessor(Professor professor);
+	public void cadastrarProfessor(Professor professor){
+		//
+	}
 	
-	public abstract void cadastarDisciplina(Disciplina disciplina);
+	public void cadastarDisciplina(Disciplina disciplina){
+		//
+	}
 	
-	public abstract void matricularAluno(Aluno aluno);
+	public void matricularAluno(Aluno aluno){
+		//
+	}
 
 }

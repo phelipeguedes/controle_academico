@@ -14,14 +14,13 @@
 
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoSistemasDao" />
+	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoDao" /> 
 	
 	<header>
-		<nav class="nav navbar-inverse " data-topbar role="navigation">
+		<nav class="nav navbar-inverse top-bar expanded" data-topbar role="navigation">
 			<ul class="title-area large-3 medium-4 columns">
 				<li class="name">
-				<li><a href="" class="navbar-brand">FCA - Alunos
-						Matriculados</a>
+				<li><a href="" class="navbar-brand">FCA - Alunos Matriculados</a>
 				</li>
 			</ul>
 			<div class="top-bar-section">
@@ -31,7 +30,7 @@
 			</div>
 		</nav>
 	</header>
-
+	
 	<div class="container clearfix">
 		<table class="table table-hover">
 			<thead>
@@ -39,22 +38,22 @@
 					<th>Matrícula</th>
 					<th>Nome</th>
 					<th>Curso</th>
-					<th>Turno</th>
+					<th>Semestre</th>
 					<th>Ação</th>
 				</tr>
 			</thead>
 			
 			<%-- <c:forEach var="aluno" items='${sessionScope["alunos"] }'> --%>
 			
-			<c:forEach var="aluno" items="${dao.listaSistemas}">	
+			<c:forEach var="aluno" items="${dao.listaAlunosSistemas}">	
 				<tbody>
 
 					<tr>
 						<td>${aluno.matricula}</td>
 						<td>${aluno.nome}</td>
 						<td>${aluno.curso.nome}</td>
-						<td>${aluno.turno}</td>
-						<td><a href="painelNotasAluno.jsp?action=getMatricula&&matricula=${aluno.matricula}">ver</a><a href=""> editar</a> <a href="">atualizar</a>
+						<td>${aluno.semestre}</td>
+						<td><a href="painelNotasAluno.jsp?matricula=${aluno.matricula}">ver</a><a href=""> editar</a> <a href="">atualizar</a>
 							<a href="removerAluno.jsp?action=removerAluno&&matricula=${aluno.matricula}" 
 							onclick="return confirm('Tem Certeza que Deseja excluir os registros deste aluno?');">
 							excluir</a>

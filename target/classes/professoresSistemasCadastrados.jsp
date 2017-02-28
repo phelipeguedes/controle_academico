@@ -14,7 +14,7 @@
 
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorSistemasDao" ></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
 	
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
@@ -39,7 +39,7 @@
 					<th>Nome</th>
 					<th>Título</th>
 					<th>Curso</th>	
-					<th>Disciplina</th>				
+					<!-- <th>Disciplina</th>-->				
 					<th>Turno</th>					
 					<th>Ação</th>	
 				</tr>				
@@ -47,7 +47,7 @@
 			
 			<%-- <c:forEach var="professor" items='${sessionScope["professores"]}'> --%>
 			
-			<c:forEach var="professor" items="${dao.lista}">
+			<c:forEach var="professor" items="${dao.listaProfessoresSistemas}">
 			
 			<tbody>
 				<tr>
@@ -55,6 +55,7 @@
 					<td>${professor.nome}</td>
 					<td>${professor.titulo}</td>
 					<td>${professor.curso.nome}</td>
+					<%--<td>${professor.disciplina.nome}</td>--%>
 					<td>${professor.turno}</td>
 					<td>
 						<a href="">ver</a>

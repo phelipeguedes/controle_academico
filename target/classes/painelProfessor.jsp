@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<title>Painel Professor</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/painel_professor.css">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/painel_coordenacao.css">
+	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>	
 </head>
 
 <body>
+	
 	<div id="container">
 		<div class="conteudo_topbar">
 			<div class="container-fluid">
@@ -19,8 +20,8 @@
 					<div class="topbar-inner">
 						<div class="container">
 							<h3>Controle Acadêmico</h3>
-							<h5>Professor</h5>
-						</div>
+							<h5>Professor(a)</h5>	
+						</div>				
 					</div>
 				</div>
 			</div>
@@ -34,30 +35,59 @@
 					<span class="icon-bar"></span>
 				</button>
 			</div>
-			<div class="collapse navbar-collapse" id="#navBar">
+			<div class="collapse navbar-collapse" id="navBar">
 				<ul class="sidebar-nav">
-					<li class="sidebar-brand"><a href="#">Faculdade FCA</a></li>
-					<li class=""><a href="#">ARQUIVOS</a></li>
-					<li class=""><a href="#">LANÇAR NOTAS</a></li>
-					<li class=""><a href="#">LANÇAR FREQUÊNCIAS</a></li>					
+					<li class="sidebar-brand"><a href="home.jsp">Faculdade FCA</a></li>
+					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">ALUNO<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">LANÇAR FREQUENCIA</a></li>
+							<li><a href="matricularAluno.jsp" target="_blank">LANÇAR NOTAS</a></li>														
+							<li><a href="alunosMatriculadosSistemas.jsp" target="blank">LISTA DE ALUNOS</a></li>							
+							<li><a href="painelAlunoSecretaria.jsp" target="_blank">PAINEL</a></li>
+						</ul>
+					</li>
+					
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">MATERIAIS<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="disciplinasSistemasCadastradas.jsp" target="_blank">SUBIR ARQUIVO</a></li>
+						</ul>
+					</li>					
+					
+					<li><a href="home.jsp">SAIR</a></li>				
 				</ul>
-			</div>
-		</div>		
+			</div>	
+		</div> <!-- conteudo_barra-lateral -->
 
 		<div id="conteudo_principal">
 			<section>
 				<div class="container-fluid">
-					<div class="row">
+					
+					<div class="row"> <!-- row: mantÃ©m os elementos na mesma linha -->
 						<div class="col-lg-12 col-md-12">
-							<h2>Olá, professor(a) ${professorLogado}!</h2>
-							<p>Seja bem-vindo(a)!</p>
-							<p>Nesta sessão você tem acesso privilegiado a notas, frequências e demais atividades dos alunos.</p>
-						</div>
-					</div>
-				</div>
+							<h4>Olá, professor(a) ${professorLogado}!</h4>			
+
+							<p>
+								Seja bem-vindo(a)!
+
+								Nesta sessão você tem acesso privilegiado a notas, frequências e demais atividades dos alunos.
+							</p>							
+							
+						</div>	<!-- col-lg-12 col-md-12 -->				
+
+					</div> <!-- row -->
+
+				</div> <!--- container-fluid -->			
+
 			</section>
-		</div>
-	</div>
-	
+					
+					
+				</div> <!-- container-fluid -->
+			</section>
+
+		</div> <!-- conteudo-principal -->
+
+	</div> <!-- container -->
+
 </body>
 </html>

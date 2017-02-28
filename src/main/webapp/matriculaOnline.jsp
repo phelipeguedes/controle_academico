@@ -12,7 +12,7 @@
 	
 	<header>
 		<!-- Barra do topo -->
-		<nav class="navbar navbar-inverse" brand="Faculdade" fixed="top">
+		<nav class="navbar navbar-inverse" fixed="top">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="#" class="navbar-brand">FCA</a> 					

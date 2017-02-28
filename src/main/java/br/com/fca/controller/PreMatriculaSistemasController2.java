@@ -11,7 +11,7 @@ import br.com.fca.dao.PreMatriculaSistemasDao;
 import br.com.fca.models.Curso;
 import br.com.fca.preMatricula.PreMatriculaSistemas;
 
-@WebServlet(name = "PreMatriculaSistemasController", urlPatterns = {"/pre_matricula_sistemas_2"})
+@WebServlet(name = "PreMatriculaSistemasController2", urlPatterns = {"/prematricula_sistemas_2"})
 public class PreMatriculaSistemasController2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,7 +24,7 @@ public class PreMatriculaSistemasController2 extends HttpServlet {
 
 		PreMatriculaSistemas pms = new PreMatriculaSistemas();
 
-		pms.setNomeAluno(request.getParameter("nomeAluno"));
+		pms.setNomeAluno(request.getParameter("nome"));
 		pms.setSexo(request.getParameter("sexo"));
 		pms.setCep(request.getParameter("cep"));
 		pms.setCidade(request.getParameter("cidade"));

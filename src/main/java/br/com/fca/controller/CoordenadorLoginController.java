@@ -10,10 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.fca.dao.CoordenadorSistemasDao;
-import br.com.fca.models.CoordenadorSistemas;
+import br.com.fca.dao.CoordenadorDao;
+import br.com.fca.models.Coordenador;
 
-@WebServlet(name = "/CoordenadorLoginController", urlPatterns = {"/login_coordenador"})
+@WebServlet(name = "/CoordenadorLoginController", urlPatterns = {"/loginCoordenador"})
 public class CoordenadorLoginController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -24,20 +24,24 @@ public class CoordenadorLoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		CoordenadorSistemas cs = (CoordenadorSistemas) request.getSession().getAttribute("coordenador_sistemas");
-		CoordenadorSistemasDao csDao = new CoordenadorSistemasDao();
+		//Coordenador cs = (Coordenador) request.getSession().getAttribute("coordenador_sistemas");
+		Coordenador coordenador = new Coordenador();
+		coordenador.setLogin(request.getParameter("login"));
+		coordenador.setSenha(request.getParameter("senha"));
+		CoordenadorDao coordenadorDao = new CoordenadorDao();
 		
 		try {			
 			
-			cs = csDao.autenticar(cs.getLogin(), cs.getSenha());
+			//cs = ((CoordenadorDao) csDao).autenticar(cs.getLogin(), cs.getSenha());
+			coordenador = coordenadorDao.autenticar(coordenador.getLogin(), coordenador.getSenha()); 
 			
-			if(cs != null){
-				request.setAttribute("coordenadorLogado", cs);
+			if(coordenador != null){
+				request.setAttribute("coordenadorLogado", coordenador.getLogin());
 				request.getRequestDispatcher("painelCoordenacaoSistemas.jsp").forward(request, response);
-				System.out.println(cs.getLogin());
-				System.out.println(cs.getSenha());
+				//System.out.println(cs.getLogin());
+				//System.out.println(cs.getSenha());
 			} else {
-				response.sendRedirect("loginErrado.jsp");
+				response.sendRedirect("loginCoordenador.jsp");
 			}
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());

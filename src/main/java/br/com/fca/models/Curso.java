@@ -26,7 +26,7 @@ public class Curso implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int codigo;
 	
-	@Column(nullable = false)
+	@Column(nullable = false, name = "nome_curso")
 	private String nome;
 	
 	@OneToOne

@@ -89,4 +89,34 @@
     <servlet-name>PreMatriculaSistemasController2</servlet-name>
     <url-pattern>/PreMatriculaSistemasController2</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>JsonServlet</display-name>
+    <servlet-name>JsonServlet</servlet-name>
+    <servlet-class>br.com.fca.controller.JsonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>JsonServlet</servlet-name>
+    <url-pattern>/JsonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AlunoLoginController</display-name>
+    <servlet-name>AlunoLoginController</servlet-name>
+    <servlet-class>br.com.fca.controller.AlunoLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlunoLoginController</servlet-name>
+    <url-pattern>/AlunoLoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AlunosLoginController</display-name>
+    <servlet-name>AlunosLoginController</servlet-name>
+    <servlet-class>br.com.fca.controller.AlunoLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AlunosLoginController</servlet-name>
+    <url-pattern>/AlunosLoginController</url-pattern>
+  </servlet-mapping>
 </web-app>

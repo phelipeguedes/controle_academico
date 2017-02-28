@@ -64,7 +64,7 @@
 						</ul>
 					</li>
 
-					<li><a href="login.jsp" target="blank">CONTROLE ACADÊMICO</a></li>
+					<li><a href="loginAluno.jsp" target="blank">CONTROLE ACADÊMICO</a></li>
 					
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CURSOS<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -102,6 +102,11 @@
 						
 						<div class="dropdown-menu">
 							<label id="colaborador">RESTRITO AOS COLABORADORES</label>
+							
+							<div class="row">
+								<a href="loginProfessor.jsp">professor</a> |
+								<a href="loginCoordenador.jsp">coordenador</a>
+							</div>
 							
 							<form action="forwardSecretaria.jsp" method="post" style="margin: 0px">
 								
@@ -205,11 +210,11 @@
 					<!-- Imagens das setas da direita e esquerda (slides) -->
 
 					<a href="#meuCarrossel" class="left carousel-control" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
 					</a>
 
 					<a href="#meuCarrossel" class="right carousel-control" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
 					</a>
 
 				</div> <!-- banner carousel slide -->

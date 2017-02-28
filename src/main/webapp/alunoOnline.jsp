@@ -9,6 +9,7 @@
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>	
 </head>
+
 <body>	
 	<div id="container">
 		<div class="conteudo_topbar">
@@ -26,7 +27,7 @@
 
 		<div id="conteudo-barra_lateral">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navBar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -49,7 +50,7 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">TESOURARIA<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">2ª VIA BOLETO</a></li>
-							<li><a href="#">CONSULTA FINANCEIRA</a></li>
+							<li><a href="consultaFinanceira.jsp">CONSULTA FINANCEIRA</a></li>
 						</ul>
 					</li>	
 					
@@ -68,7 +69,7 @@
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
-							<h4>Olá, ${alunoLogado}!</h4>
+							<h4>Olá, ${nomeAlunoLogado}!</h4>
 
 							<p>
 								O portal da FCA conta com este espaço exclusivo para os estudantes. <br/><br/> 

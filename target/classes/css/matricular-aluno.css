@@ -4,6 +4,15 @@
 	margin-bottom: 50px;
 }
 
+nav.navbar{
+	border-radius:0px;
+	height:55px;
+}
+
+nav.navbar-inverse{
+	background: #000;
+}
+
 /* container do formulário */
 
 div.formulario{
@@ -29,11 +38,11 @@ form .form-control{
 
 /* link presente na barra 'FCA - Cdastro...' */
 
-li a.navbar-brand{
+a.navbar-brand, li{
 	text-decoration: none;
 	color: #999;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 /* Ao passar o mouse os links ficarão brancos */
@@ -75,7 +84,7 @@ div.container#barraTopo{
 
 .container-fluid{
 	position: relative;
-	margin: 1%;
+	//margin: 1%;
 }
 
 label{

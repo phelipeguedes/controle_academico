@@ -7,19 +7,12 @@
 	<title>Pré-Matriculas Administração</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/alunos-matriculados.css">
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	
-	<style>
-		tr, th {
-			text-align: center;
-		}
-	</style>
-	
+	<link rel="stylesheet" type="text/css" href="css/alunos-matriculados.css"/>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>	
 </head>
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.PreMatriculaAdministracaoDao"></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.PreMatriculaDao"></jsp:useBean>
 	
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">

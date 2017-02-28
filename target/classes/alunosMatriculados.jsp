@@ -16,7 +16,7 @@
 
 <body>
 
-	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoSistemasDao" />
+	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoDao" />
 
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
@@ -47,7 +47,7 @@
 
 			<%-- <c:forEach var="aluno" items='${sessionScope["alunos"] }'> --%>
 
-			<c:forEach var="aluno" items="${dao.listaTodos}">
+			<c:forEach var="aluno" items="${dao.listaTodosAlunos}">
 				<tbody>
 
 					<tr>

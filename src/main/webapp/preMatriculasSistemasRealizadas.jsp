@@ -1,3 +1,6 @@
+<%@page import="java.util.List"%>
+<%@page import="br.com.fca.preMatricula.PreMatriculaSistemas"%>
+<%@page import="br.com.fca.dao.PreMatriculaSistemasDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -13,7 +16,7 @@
 </head>
 <body>
 
-	<jsp:useBean id="pms" class="br.com.fca.preMatricula.PreMatriculaSistemas"></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.PreMatriculaDao"></jsp:useBean>
 	
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
@@ -42,17 +45,19 @@
 				</tr>				
 			</thead>
 			
-			<c:forEach var="pms" items='${sessionScope["preMatriculasSistemas"]}'>
+			<c:forEach var="pm" items='${dao.listarPreMatriculasSistemas}'>
 			
 			<tbody>
 				<tr>
-					<td>${pms.id }</td>
-					<td>${pms.nome}</td>
-					<td>${pms.sexo}</td>
-					<td>${professor.curso.nome}</td>
-					<td>${professor.turno}</td>
+					<td>${pm.idPreMatricula }</td>
+					<td>${pm.nomeAluno}</td>
+					<td>${pm.sexo}</td>
+					<td>${pm.curso.nome}</td>
+					<td>${pm.turno}</td>
+					<% //PreMatriculaSistemas pm = new PreMatriculaSistemas(); %>
 					<td>
-						<a href="">ver</a>
+						<%--<a href="preMatriculasSistemasRealizadas.jsp?id=" ${pm.idPreMatricula}">ver</a>--%>
+						<a href="preMatriculasSistemasRealizadas.jsp?id=" <% //pm.getIdPreMatricula() %> ">ver</a>
 						<a href="">editar</a>
 						<a href="">atualizar</a>
 						<a href="">excluir</a>

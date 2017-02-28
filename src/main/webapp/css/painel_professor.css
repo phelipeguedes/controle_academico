@@ -1,4 +1,6 @@
-@charset="utf-8";
+@CHARSET "UTF-8";
+
+/* remove a barra de rolagem horizontal do conteúdo dentro do 'body',  se este conteúdo transbordar  a área do body  */
 
 body{
 	overflow-x: hidden;
@@ -9,17 +11,25 @@ body{
 }
 
 .topbar{
-	background: #F5F5F5;
-	margin-left: -13px;
+	background: #000;
+	margin-left: -13px;  
 }
 
 .conteudo_topbar{
 	width: 100%;
 }
 
-h5{
+h3, h5{
+	font-weight: bold;
+	color: #999;
+}
+
+h4#nome{
+	color: #000;
 	font-weight: bold;
 }
+
+/* z-index: um elemento com ordem de pilha maior sobrepõe outro com ordem de pilha inferior ; */
 
 div#conteudo-barra_lateral{
 	z-index: 1000;
@@ -28,12 +38,14 @@ div#conteudo-barra_lateral{
 	position: fixed;
 	left: 250px;
 	margin-left: -250px;
-	background: #000;
-	transition: all 0.5s ease; 
+	background: #F5F5F5;
+	//background: #F3F3F3;
+	transition: all 0.5s ease;  /* duração da velocidade da transição ao passar o mouse */
 }
 
 header.navbar{
-	background: #ddd;
+	//background: #dcdcdc;
+	background: #000;
 }
 
 ul{
@@ -47,14 +59,17 @@ div.row nav li{
 }
 
 nav ul li a{
-	color: #8C8C8C;
 	margin-top: 5px;
 }
+
+/* sub-menu */
 
 ul.dropdown-menu li a{
 	color: #696969;
 	font-weight: bold;
 }
+
+/* barra lateral */
 
 .sidebar-nav{
 	position: absolute;
@@ -62,38 +77,51 @@ ul.dropdown-menu li a{
 	padding: 0;
 	margin: 0;
 	width: 250px;
-	list-style: none;	
+	list-style: none;
 }
+
+/* menus da barra lateral */
 
 .sidebar-nav li{
 	text-indent: 20px;
-	padding-top: 10px;
+	margin-top: 10px;
 	line-height: 40px;
 }
 
+/* links da barra lateral */
+
 .sidebar-nav li a{
 	text-decoration: none;
-	color: #999;
+	//color: #a9a9a9;
+	color: #000;
 	display: block;
 }
 
+/* mudança de cor nos links da barra lateral ao passar o mouse */
+
 .sidebar-nav li a:hover{
 	background: rgba(255, 255, 255, 0.2);
-	color: #fff;
+	color: #000;
 }
 
-.sidebar-nav .sidebar-brand{
+/* link: 'Faculdade FCA' na barra lateral */
+
+.sidebar-nav .sidebar-brand{			
 	font-size: 15px;
 }
 
+/* mudança no link 'Faculdade FCA'. Ao passar o mouse, o link não será sublinhado */
+
 .sidebar-nav .sidebar-brand a:hover{
-	background: none;
+	background: none;			
 }
 
 li.dropdown ul.dropdown-menu li a{
-	margin:0px;
-	padding:0px;
+	margin: 0px;
+	padding: 0px;
 }
+
+/* mudança de cor ao passar o mouse nos sub-menus */
 
 ul.dropdown-menu li a:hover{
 	color: #000;
@@ -103,8 +131,7 @@ ul.dropdown-menu li a:hover{
 div#conteudo_principal{
 	width: 100%;
 	position: absolute;
-	padding: 10px;
-	margin-top: 90px;
+	padding: 15px;
 }
 
 div.container-fluid{
@@ -113,11 +140,26 @@ div.container-fluid{
 	position: fixed;
 }
 
+div.container-fluid > .row > .col-sm-4 {
+	margin: 90px auto; 
+	text-align: center;
+	left: 2%;	
+}
+
+div.container-fluid > .row > .col-md-12 {
+	margin: 100px auto; 
+	//text-align: center;
+	//left: 0%;	
+}
+
 .container h3, h5{
 	margin-left: 8px;
 }
 
-h2, h5{
+h4{
 	color: #A52A2A;
 }
+
+
+
 

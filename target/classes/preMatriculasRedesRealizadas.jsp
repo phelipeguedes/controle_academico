@@ -18,7 +18,7 @@
 </head>
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.PreMatriculaRedesDao"></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.PreMatriculaDao"></jsp:useBean>
 	
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">

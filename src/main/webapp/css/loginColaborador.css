@@ -1,0 +1,42 @@
+@charset="UTF-8";
+
+body{
+	background-color: #dedede;
+	padding-top: 80px;
+}
+
+/* Container da página. Centraliza os campos do login */
+
+.container .form-login{
+	margin: auto;
+	max-width: 350px;	
+}
+
+/* Largura dos campos de usuário e senha */
+
+.form-control{
+	width: 350px;	
+}
+
+/* Classe do botão */
+
+.btn{
+	padding: 6px;
+	width: 350px;
+	background: #000;
+	color: #fff;
+}
+
+/* Ao passar o mouse, o botão e a palavra 'acessar' permanecem com as mesmas cores */
+
+.btn:hover{
+	background: #000;
+	color: #fff;
+}
+
+/*  Rodapé */
+
+footer p.text-muted{
+	margin: 50px;
+	text-align: center;
+}

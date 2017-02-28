@@ -24,6 +24,11 @@ h3, h5{
 	color: #999;
 }
 
+h4#nome{
+	color: #000;
+	font-weight: bold;
+}
+
 /* z-index: um elemento com ordem de pilha maior sobrepõe outro com ordem de pilha inferior ; */
 
 div#conteudo-barra_lateral{
@@ -33,8 +38,8 @@ div#conteudo-barra_lateral{
 	position: fixed;
 	left: 250px;
 	margin-left: -250px;
-	//background: #F5F5F5;
-	background: #F3F3F3;
+	background: #F5F5F5;
+	//background: #F3F3F3;
 	transition: all 0.5s ease;  /* duração da velocidade da transição ao passar o mouse */
 }
 

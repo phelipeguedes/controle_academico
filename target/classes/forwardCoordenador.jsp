@@ -8,7 +8,7 @@
 </head>
 <body>
 	
-	<jsp:useBean id="coordenador_sistemas" class="br.com.fca.models.CoordenadorSistemas" scope="session"></jsp:useBean>
+	<jsp:useBean id="coordenador_sistemas" class="br.com.fca.models.Coordenador" scope="session"></jsp:useBean>
 	
 	<jsp:setProperty property="*" name="coordenador_sistemas"/>
 	

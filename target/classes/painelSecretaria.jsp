@@ -29,7 +29,7 @@
 
 		<div id="conteudo-barra_lateral">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navBar">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>

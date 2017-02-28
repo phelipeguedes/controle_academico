@@ -8,15 +8,52 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/matricular-aluno.css">
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
 </head>
 
 <body>
 	
 	<header>
+		<%-- 
 		<!-- barra do topo -->
 		<div class="container" id="barraTopo">		
 			<li><a href="#" class="navbar-brand">FCA - Matricula de Alunos</a></li>
 		</div>
+		
+		<script>
+			$(document).ready(function() {
+			$('#semestre').change(function(event) {
+				var semestre = $("select#semestre").val();
+				$.get('JsonServlet', {
+					semestreEscolhido : semestre
+				}, function(response) {
+	
+					var select = $('#disciplinas');
+					select.find('option').remove();
+					$.each(response, function(index, value) {
+						$('<option>').val(value).text(value).appendTo(select);
+					});
+				});
+			  });
+			});
+		</script>
+		--%>		
+		
+		<!-- Barra do topo -->
+		
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">FCA</a>					
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">MATRICULAR ALUNO(A)</span></a></li>
+				</ul>				
+			</div>
+		</nav>
+	
+		
 	</header>
 
 	<h5>Dados do Aluno(a)</h5>
@@ -26,25 +63,16 @@
 		<div class="formulario">
 			<form action="aluno" method="post" class="form-horizontal" role="form"> 
 
-			 	<!-- divide em grupos os campos do formulÃ¡rio -->
+			 	<!-- divide em grupos os campos do formulário -->
 
 				<span id="info_pessoal">Informações Pessoais</span>
 				
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Nome:</label>
 					<div class="col-sm-6 col-md-5">
-						<input type="text" class="form-control" name="nome" placeholder="Nome completo" required />	
+						<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome completo" required />	
 					</div>					
 				</div>
-				
-				<!-- 
-				<div class="form-group">
-					<label for="" class="control-label col-sm-2 col-md-4">Nascimento:</label>
-					<div class="col-sm-6 col-md-5">
-						<input type="text" name="dataDeNascimento" class="form-control" placeholder="Apenas NÃºmeros">	
-					</div>					
-				</div>
-				-->
 				
 				<div class="form-group">
 					<label class="control-label col-sm-2 col-md-4">Sexo:</label>
@@ -52,19 +80,19 @@
 						
 						<div class="col-md-3">
 							<label class="radio-inline">
-								<input type="radio" name="sexo" id="femaleRadio" value="Feminino">Feminino
+								<input type="radio" name="sexo" id="radio" value="Feminino">Feminino
 							</label>
 						</div>
 						<div class="col-md-3">
 							<label class="radio-inline">
-								<input type="radio" name="sexo" id="maleRadio" value="Masculino">Masculino
+								<input type="radio" name="sexo" id="radio" value="Masculino">Masculino
 							</label>
 						</div>
 
 					</div>
 				</div> <!-- form-group -->				
 				
-				<!-- divide em grupos os campos do formulÃ¡rio -->
+				<!-- divide em grupos os campos do formulário -->
 
 				<span id="info_logradouro">Informações do Endereço</span>
 
@@ -72,14 +100,14 @@
 					
 					<label for="" class="control-label col-sm-2 col-md-4">Cidade</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="text" class="form-control" name="cidade">
+						<input type="text" class="form-control" name="cidade" id="cidade">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Bairro</label>
 					<div class="col-sm-5 col-md-5">
-						<select class="form-control" name="bairro">		
+						<select class="form-control" name="bairro" id="bairro">		
 							<option value="outro">Outro</option>					
 							<option value="Aerolândia" selected>Aerolândia</option>
 							<option value="Aeroporto">Aeroporto</option>
@@ -128,7 +156,7 @@
 					
 					<label class="control-label col-md-4">Endereço:</label>					
 					<div class="col-sm-5 col-md-5">
-						<input type="text" name="endereco" class="form-control" placeholder="Rua, NÂº">
+						<input type="text" name="endereco" id="endereco" class="form-control" placeholder="Rua, Nº">
 					</div>
 				</div>
 
@@ -136,7 +164,7 @@
 					
 					<label class="control-label col-md-4">Cep:</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="text" name="cep" class="form-control" placeholder="Apenas Números">
+						<input type="text" name="cep" id="cep" class="form-control" maxlength="9" placeholder="Apenas Números">
 					</div>
 				</div>
 				
@@ -147,10 +175,11 @@
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Curso:</label>
 					<div class="col-sm-6 col-md-5">
-						<select class="form-control" name="curso">
+						<select class="form-control" name="curso" id="curso">
+							<option selected>Selecione o curso</option>
 							<optgroup label="Graduação">
-								<option value="1">Administração</option>
-								<option value="2">Contabilidade</option>
+								<option value="1">Administração de Empresas</option>
+								<option value="2">Ciências Contábeis</option>
 								<option value="3">Redes de Computadores</option>
 								<option value="4">Sistemas de Informação</option>
 							</optgroup>
@@ -179,24 +208,51 @@
 						</select>							
 					</div>					
 				</div>
-
+				
+				<div class="form-group">
+					<label for="" class="control-label col-sm-2 col-md-4">Semestre:</label>
+					<div class="col-sm-6 col-md-5">
+						<select name="semestre" class="form-control" id="semestre">
+							<option selected>Selecione o semestre</option>
+							<option value="1º">1º Semestre</option>	
+							<option value="2º">2º Semestre</option>
+							<option value="3º">3º Semestre</option>
+							<option value="4º">4º Semestre</option>
+							<option value="5º">5º Semestre</option>
+							<option value="6º">6º Semestre</option>
+							<option value="7º">7º Semestre</option>
+							<option value="8º">8º Semestre</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="" class="control-label col-sm-2 col-md-4">Disciplinas:</label>
+					<div class="col-sm-6 col-md-5">
+						<select class="form-control" id="disciplinas">
+							<option>Selecione as Disciplinas</option>						
+						</select>
+					</div>
+				</div>
+				
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Turno:</label>
 					<div class="col-sm-6 col-md-5">
-						<select class="form-control" name="turno">
+						<select class="form-control" name="turno" id="turno">
+							<option selected>Selecione o turno</option>
 							<option value="Diurno">Diurno</option>	
 							<option value="Noturno">Noturno</option>
 						</select>
 					</div>
-
 				</div>
 
 				<div class="form-group">
 					<label class="control-label col-sm-2 col-md-4">Financiamento:</label>
-					<div class="col-sm-6 col-md-5">
-						<select class="form-control" name="financiamento">
+					<div class="col-sm-6 col-md-5">						
+						<select class="form-control" name="financiamento" id="financiamento">							
+							<option selected>Selecione o financiamento</option>
 							<option value="Educa Mais">Educa Mais</option>
-							<option value="Fies" selected>Fies</option>
+							<option value="Fies">Fies</option>
 							<option value="Prouni">Prouni</option>
 							<option value="Pra Valer">Pra Valer</option>							
 							<option value="Não Possui">Não possui</option>
@@ -211,14 +267,14 @@
 				<div class="form-group">
 					<label class="control-label col-md-4">Telefone:</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="tel" name="telefone" class="form-control" maxlength="14" placeholder="Apenas Números">
+						<input type="tel" name="telefone" id="telefone" class="form-control" maxlength="14" placeholder="Apenas Números">
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="control-label col-md-4">Email:</label>
 					<div class="col-sm-5 col-md-5">
-						<input type="email" name="email" class="form-control">
+						<input type="email" name="email" id="email" class="form-control">
 					</div>
 				</div>
 				
@@ -233,7 +289,7 @@
 					<div class="col-sm5 col-md-6 col-sm-offset-4">
 						<div class="checkbox">
 							<label>
-								<input type="checkbox" name="termo" required>Li e estou de acordo com os <a href="#">termos</a> desta instituiÃ§Ã£o.
+								<input type="checkbox" name="termo" required>Li e estou de acordo com os <a href="#">termos</a> desta instituição.
 							</label>
 						</div>
 					</div>
@@ -258,7 +314,7 @@
 	<!--  RodapÃ©-->
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">2016 | Fortaleza | Faculdade Controle AcadÃªmico - All Rights Reserved</p>
+			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acadêmico - All Rights Reserved</p>
 		</div>
 	</footer>
 	

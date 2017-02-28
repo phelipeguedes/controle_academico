@@ -26,15 +26,18 @@ img{
 /* Tirando o arredondamento das bordas */
 
 nav.navbar{
-	border-radius: none;
+	border-radius: 0px;
 }
 
 nav.navbar-inverse{
 	background: #000;
 }
 
-a.navbar-brand{
+a.navbar-brand, li{
 	font-weight: bold;
+	font-size: 15px;
+	top: -5px;
+	
 }
 
 /* O link 'Matricula Online' flutua à direita*/
@@ -50,6 +53,103 @@ hr{
 ul{
 	font-weight: bold;
 }
+
+// sidebar
+
+div#conteudo-barra_lateral{
+	z-index: 1000;
+	width: 250px;
+	height: 100%;
+	position: fixed;
+	left: 250px;
+	margin-left: -250px;
+	background: #000;
+	transition: all 0.5s ease;  /* duração da velocidade da transição ao passar o mouse */
+}
+
+header.navbar{
+	background-color: #ddd; 			
+}
+
+ul{
+	font-weight: bold;
+}
+
+div.row nav li{
+	display: inline;
+	margin-top: 5px;
+	padding-left: 3%;
+}
+
+nav ul li a{
+	margin-top: 5px;
+}
+
+/* sub-menu */
+
+ul.dropdown-menu li a{
+	color: #696969;
+	font-weight: bold;
+}
+
+/* barra lateral */
+
+.sidebar-nav{
+	position: absolute;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	width: 250px;
+	list-style: none;
+}
+
+/* menus da barra lateral */
+
+.sidebar-nav li{
+	text-indent: 20px;
+	margin-top: 10px;
+	line-height: 40px;
+}
+
+/* links da barra lateral */
+
+.sidebar-nav li a{
+	text-decoration: none;
+	color: #999;
+	display: block;
+}
+
+/* mudança de cor nos links da barra lateral ao passar o mouse */
+
+.sidebar-nav li a:hover{
+	background: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+
+/* link: 'Faculdade FCA' na barra lateral */
+
+.sidebar-nav .sidebar-brand{			
+	font-size: 15px;
+}
+
+/* mudança no link 'Faculdade FCA'. Ao passar o mouse, o link não será sublinhado */
+
+.sidebar-nav .sidebar-brand a:hover{
+	background: none;			
+}
+
+li.dropdown ul.dropdown-menu li a{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* mudança de cor ao passar o mouse nos sub=menus */
+
+ul.dropdown-menu li a:hover{
+	color: #000;
+	background: #F5F5F5;
+}
+
 
 a#centro{
 	top:50%;

@@ -8,7 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/pre-matricula.css"/>
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>		
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>		
 </head>
 
 <body>
@@ -74,56 +76,47 @@
 	</div>	
 
 	<div class="container">
-		<form action="pre_matricula_contabeis" method="post" class="form-horizontal" role="form">
+		<form action="pre_matricula" method="post" class="form-horizontal" role="form">
 			<span>Dados Pessoais</span>
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Nome:</label>
 				<div class="col-md-4">
-					<input type="text" name="nomeAluno" class="form-control" placeholder="Nome completo" required>
+					<input type="text" name="nome" id="nome" class="form-control" placeholder="Nome completo" required>
 				</div>
 			</div>	
 
 			<div class="form-group">					
 				<label class="control-label col-md-4">Sexo:</label>
 				<div class="col-md-4">
-					<select name="sexo" required class="form-control">
+					<select name="sexo" id="sexo" required class="form-control">
 						<option>Selecione o sexo</option>
 						<option value="Masculino">Masculino</option>
 						<option value="Feminino">Feminino</option>
 					</select>
 				</div>
 			</div>	
-			
-			<!-- 
-			<div class="form-group">					
-				<label class="control-label col-md-4">Nascimento:</label>
-				<div class="col-md-4">						
-					<input type="date" class="form-control" name="nascimento" required>			
-				</div>
-			</div>	
-			-->
-			
+						
 			<span>Endereço Residencial</span>
 			
 			<div class="form-group">
 				<label class="control-label col-md-4">Cidade:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="cidade" placeholder="Informe o nome de sua cidade" required>
+					<input type="text" class="form-control " name="cidade" id="cidade" placeholder="Informe o nome de sua cidade" required>
 				</div>						
 			</div>
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Cep:</label>
 				<div class="col-md-4">
-					<input type="text" name="cep" class="form-control" placeholder="Somente números" required>
+					<input type="text" name="cep" id="cep" class="form-control" maxlength="9" placeholder="Somente números" required>
 				</div>					
 			</div>			
 			
 			<div class="form-group">
 				<label class="control-label col-md-4">Endereço:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="logradouro" placeholder="Rua, Nº, Bairro" required>
+					<input type="text" class="form-control " name="logradouro" id="endereco" placeholder="Rua, Nº, Bairro" required>
 				</div>						
 			</div>
 			
@@ -131,7 +124,7 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Curso:</label>
 				<div class="col-md-4">
-					<select name="curso" class="form-control" required>
+					<select name="curso" id="curso" class="form-control" required>
 						<option>Selecione o curso</option>						
 						<option value="2">Ciências Contábeis</option>
 					</select>
@@ -141,7 +134,7 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Turno:</label>
 				<div class="col-md-4">
-					<select name="turno" class="form-control" required>
+					<select name="turno" id="turno" class="form-control" required>
 						<option>Selecione um turno</option>
 						<option value="Diurno">Diurno</option>
 						<option value="Noturno">Noturno</option>
@@ -153,14 +146,14 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Telefone:</label>
 				<div class="col-md-4">
-					<input name="telefone" type="tel" class="form-control" placeholder="Somente Números" required>
+					<input name="telefone" id="telefone" type="tel" class="form-control" maxlength="14" placeholder="Somente Números" required>
 				</div>					
 			</div>	
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Email:</label>
 				<div class="col-md-4">
-					<input name="email" type="email" class="form-control" placeholder="Insira um email para contato" required>
+					<input name="email" id="email" type="email" class="form-control" placeholder="Insira um email para contato" required>
 				</div>					
 			</div>	
 

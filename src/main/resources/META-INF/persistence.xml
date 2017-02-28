@@ -7,7 +7,6 @@
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		<class>br.com.fca.models.Aluno</class>
 		<class>br.com.fca.models.Administrador</class>
-		<class>br.com.fca.models.CoordenadorSistemas</class>
 		<class>br.com.fca.models.Secretaria</class>
 		<class>br.com.fca.models.Professor</class>
 		<class>br.com.fca.models.Disciplina</class>

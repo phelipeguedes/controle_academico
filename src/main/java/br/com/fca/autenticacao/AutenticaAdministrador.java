@@ -1,8 +1,8 @@
 package br.com.fca.autenticacao;
 
-import br.com.fca.models.CoordenadorSistemas;
+import br.com.fca.models.Coordenador;
 
 public interface AutenticaAdministrador {
 
-	public CoordenadorSistemas autenticar(String nomeDeUsuario, String senha);
+	public Coordenador autenticar(String nomeDeUsuario, String senha);
 }

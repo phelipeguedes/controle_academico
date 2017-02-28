@@ -9,6 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/pre-matricula.css"/>
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
 </head>
 
 <body>
@@ -74,13 +76,13 @@
 	</div>	
 
 	<div class="container">
-		<form action="pre_matricula_sistemas_2" method="post" class="form-horizontal" role="form">
+		<form action="pre_matricula" method="post" class="form-horizontal" role="form">
 			<span>Dados Pessoais</span>
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Nome:</label>
 				<div class="col-md-4">
-					<input type="text" name="nomeAluno" class="form-control" placeholder="Nome completo">
+					<input type="text" name="nome" id="nome" class="form-control" placeholder="Nome completo">
 				</div>
 			</div>	
 			
@@ -108,21 +110,21 @@
 			<div class="form-group">
 				<label class="control-label col-md-4">Cidade:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="cidade" placeholder="Informe o nome de sua cidade">
+					<input type="text" class="form-control " name="cidade" id="cidade" placeholder="Informe o nome de sua cidade">
 				</div>						
 			</div>
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Cep:</label>
 				<div class="col-md-4">
-					<input type="text" name="cep" class="form-control" placeholder="Somente números">
+					<input type="text" name="cep" id="cep" class="form-control" maxlength="9" placeholder="Somente números">
 				</div>					
 			</div>	
 			
 			<div class="form-group">
 				<label class="control-label col-md-4">Endereço:</label>
 				<div class="col-md-4">
-					<input type="text" class="form-control " name="logradouro" placeholder="Rua, Nº, Bairro">
+					<input type="text" class="form-control " name="logradouro" id="endereco" placeholder="Rua, Nº, Bairro">
 				</div>						
 			</div>
 			
@@ -152,21 +154,21 @@
 			<div class="form-group">					
 				<label class="control-label col-md-4">Telefone:</label>
 				<div class="col-md-4">
-					<input type="tel" name="telefone" class="form-control" placeholder="Somente números" required>
+					<input type="tel" name="telefone" id="telefone" class="form-control" maxlength="14" placeholder="Somente números" required>
 				</div>					
 			</div>	
 			
 			<div class="form-group">					
 				<label class="control-label col-md-4">Email:</label>
 				<div class="col-md-4">
-					<input type="email" name="email" class="form-control" placeholder="Insira um email para contato" required>
+					<input type="email" name="email" id="email" class="form-control" placeholder="Insira um email para contato" required>
 				</div>					
 			</div>	
 
 			<div class="form-group">
 				<div class="row">
 					<div class="col-sm-offset-4 col-md-1">
-						<button type="submit" class="btn btn-primary" id="btn-envia">Enviar</button>		
+						<button class="btn btn-primary" type="submit" id="btn-envia">Enviar</button>		
 					</div>							
 
 					<div class="col-sm-offset-6">

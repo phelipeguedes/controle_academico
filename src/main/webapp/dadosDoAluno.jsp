@@ -63,7 +63,7 @@
 						data-toggle="dropdown">TESOURARIA<span class="caret"></span></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">2ª VIA BOLETO</a></li>
-							<li><a href="posicaoFinanceira.jsp">CONSULTA FINANCEIRA</a></li>
+							<li><a href="consultaFinanceira.jsp">CONSULTA FINANCEIRA</a></li>
 						</ul></li>
 
 					<li><a href="#">MENSAGENS</a></li>
@@ -73,8 +73,7 @@
 					<li><a href="home.jsp">SAIR</a></li>
 				</ul>
 			</div>
-		</div>
-		<!-- conteudo_barra-lateral -->
+		</div>	<!-- #conteudo_barra-lateral -->
 
 		<div id="conteudo_principal">
 			<section>
@@ -84,54 +83,50 @@
 						<div class="col-lg-12 col-md-12">
 							<div class="table-responsive">
 								<h4>Dados do Aluno</h4>
-								-----
-								<p>${aluno.matricula} / ${aluno.nome} - ${aluno.curso.nome}</p>
-								<table class="table table-hover table-condensed">
-									<thead>
-										<tr>											
-											<th>Logradouro</th>
-											<th>Bairro</th>
-											<th>Cidade</th>											
-											<th>Telefone</th>
-											<th>Email</th>
-											<th>Curso</th>
-											<th>Turno</th>
-											<th>Financiamento</th>																					
-										</tr>
-									</thead>
+								----------------------------------------------------------------------------------------------
+								<p>${alunoLogado.matricula} / ${alunoLogado.nome} - ${alunoLogado.curso.nome}</p>
+								<table class="table vertical-table table-hover table-condensed">
 									
-									<%--<c:forEach var="aluno" items="dao.listaSistemas">--%>
-									
-									<tbody>
 										<tr>
-											<td>${aluno.endereco}</td>
-											<td>${aluno.bairro}</td>
-											<td>${aluno.cidade}</td>											
-											<td>${aluno.telefone}</td>
-											<td>${aluno.email}</td>										
-											<td>${aluno.curso.nome}</td>
-											<td>${aluno.turno}</td>
-											<td>${aluno.financiamento}</td>											
+											<th scope="row">Cidade</th>
+											<td>${alunoLogado.cidade}</td>
 										</tr>
-									</tbody>
+										<tr>											
+											<th scope="row">Logradouro</th>
+											<td>${alunoLogado.endereco}</td>
+										</tr>	
+										<tr>
+											<th scope="row">Bairro</th>
+											<td>${alunoLogado.bairro}</td>
+										</tr>										
+										<tr>
+											<th scope="row">Telefone</th>
+											<td>${alunoLogado.telefone}</td>
+										</tr>	
+										<tr>
+											<th scope="row">Email</th>
+											<td>${alunoLogado.email}</td>
+										</tr>																						
+										<tr>
+											<th scope="row">Turno</th>
+											<td>${alunoLogado.turno}</td>
+										</tr>	
+										<tr>
+											<th scope="row">Financiamento</th>
+											<td>${alunoLogado.financiamento}</td>
+										</tr>									
 									
 								</table>
-							</div>	
-						</div>
-					</div>
-				</div>
+							</div> <!-- .table-responsive -->	
+						</div> <!-- .col-lg-12 xol-md-12 -->
+					</div> <!-- .row -->
+				</div> <!-- .container-fluid -->
 
 			</section>
 
-		</div>
-		<!-- conteudo-principal -->
+		</div>	<!-- #conteudo-principal -->
 
-	</div>
-	<!-- container -->
-
-
-
-
+	</div>	<!-- #container -->
 
 </body>
 </html>
