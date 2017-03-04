@@ -24,7 +24,6 @@ public class CoordenadorLoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//Coordenador cs = (Coordenador) request.getSession().getAttribute("coordenador_sistemas");
 		Coordenador coordenador = new Coordenador();
 		coordenador.setLogin(request.getParameter("login"));
 		coordenador.setSenha(request.getParameter("senha"));
@@ -32,16 +31,14 @@ public class CoordenadorLoginController extends HttpServlet {
 		
 		try {			
 			
-			//cs = ((CoordenadorDao) csDao).autenticar(cs.getLogin(), cs.getSenha());
 			coordenador = coordenadorDao.autenticar(coordenador.getLogin(), coordenador.getSenha()); 
 			
 			if(coordenador != null){
 				request.setAttribute("coordenadorLogado", coordenador.getLogin());
 				request.getRequestDispatcher("painelCoordenacaoSistemas.jsp").forward(request, response);
-				//System.out.println(cs.getLogin());
-				//System.out.println(cs.getSenha());
 			} else {
-				response.sendRedirect("loginCoordenador.jsp");
+				request.setAttribute("coordenadorLogado", coordenador);
+				request.getRequestDispatcher("loginCoordenador.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());

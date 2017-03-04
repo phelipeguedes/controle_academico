@@ -57,5 +57,13 @@ $(document).ready(function() {
 		});
 
 	});
+	
+	$("#nome_disciplina").keyup(function() {
+		$("#nome_disciplina").val($(this).val().toUpperCase());
+	});
+	
+	$("#sigla").keyup(function(){
+		$("#sigla").val($(this).val().toUpperCase());
+	});
 
 });

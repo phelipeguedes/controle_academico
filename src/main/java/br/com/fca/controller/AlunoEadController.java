@@ -29,14 +29,12 @@ public class AlunoEadController extends HttpServlet {
 		try {
 			aluno = AlunoDao.autenticar(aluno.getEmail(), aluno.getSenha());
 			if(aluno != null){								
-				//request.getSession().setAttribute("alunoLogado", aluno);
-				//request.getRequestDispatcher("eadOnline.jsp").forward(request, response);
 				HttpSession session = request.getSession();
 				session.setAttribute("alunoLogado", aluno);
 				request.getRequestDispatcher("eadOnline.jsp").forward(request, response);
-				//response.sendRedirect("eadOnline.jsp");
 			} else{
-				response.sendRedirect("ead.jsp");
+				request.setAttribute("alunoLogado", aluno);
+				request.getRequestDispatcher("ead.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());

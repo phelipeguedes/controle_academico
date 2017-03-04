@@ -11,15 +11,27 @@ nav.navbar-inverse {
 	background: #000;
 }
 
-li a.navbar-brand {
-	text-decoration: none;
-	padding: 0;
-	color: #999999;
-	font-size: 17px;
+nav.navbar{
+	border-radius: 0px;
+}
+
+a.navbar-brand, li{
 	font-weight: bold;
+	font-size: 15px;
+	top: -5px;
+	color: #999999;
+	
 }
 
 ul.nav li a {
 	font-weight: bold;
 	margin: -45px 20px;
+}
+
+tr, th {
+	text-align: center;
+}
+
+.container {
+	width: 100%;
 }

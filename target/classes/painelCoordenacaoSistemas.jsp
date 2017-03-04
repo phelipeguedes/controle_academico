@@ -52,7 +52,7 @@
 					</li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PROFESSOR<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="cadastrarProfessorSistemas.jsp" target="_blank">CADASTRO</a></li>
+							<li><a href="cadastrarProfessor.jsp" target="_blank">CADASTRO</a></li>
 							<li><a href="professoresSistemasCadastrados.jsp" target="_blank">LISTA DE PROFESSORES</a></li>
 						</ul>
 					</li>
@@ -65,8 +65,8 @@
 
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">DISCIPLINAS<span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="cadastrarDisciplinasSistemas.jsp" target="_blank">CADASTRO</a></li>
-						<li><a href="disciplinasSistemasCadastradas.jsp" target="_blank">CONSULTA</a></li>
+						<li><a href="cadastrarDisciplina.jsp" target="_blank">CADASTRO</a></li>
+						<li><a href="disciplinasCadastradas.jsp" target="_blank">CONSULTA</a></li>
 					</ul>
 					</li>
 					

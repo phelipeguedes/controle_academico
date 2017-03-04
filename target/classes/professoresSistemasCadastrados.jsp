@@ -17,18 +17,23 @@
 	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
 	
 	<header>
-		<nav class="nav navbar-inverse " data-topbar role="navigation">
-			<ul class="title-area large-3 medium-4 columns">
-				<li class="name">
-					<li><a href="" class="navbar-brand">FCA - Docentes</a></li>
-				</li>
-			</ul> 
-			<div class="top-bar-section">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Professores de Sistemas</a></li>
-				</ul>
-			</div>
-		</nav>					
+		
+		<!-- Barra do topo -->
+		<nav class="navbar navbar-inverse" fixed="top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FCA</a> 					
+				</div>	
+					
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACADÊMICO</span></a></li>
+				</ul>				
+
+				<ul class="nav navbar-nav navbar-right">					
+					<li><a href="#">PROFESSORES DE SISTEMAS</a></li>
+				</ul>			
+			</div>	
+		</nav>			
 	</header>
 
 	<div class="container clearfix">

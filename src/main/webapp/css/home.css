@@ -4,6 +4,7 @@
 
 nav.navbar-inverse{
 	background: #000;
+	border-radius:0px;
 }
 
 /* Links contidos na barra */

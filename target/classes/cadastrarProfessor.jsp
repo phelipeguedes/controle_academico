@@ -15,10 +15,22 @@
 <body>
 
 	<header>
-		<!-- barra do topo -->
-		<div class="container" id="barraTopo">		
-			<li><a href="#" class="navbar-brand">FCA - Cadastro de Docentes</a></li>
-		</div>
+		<!-- Barra do topo -->
+		<nav class="navbar navbar-inverse" fixed="top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FCA</a> 					
+				</div>	
+					
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACADÊMICO</span></a></li>
+				</ul>				
+
+				<ul class="nav navbar-nav navbar-right">					
+					<li><a href="#">CADASTRAR PROFESSOR</a></li>
+				</ul>			
+			</div>	
+		</nav>
 	</header>
 
 	<h5>Dados do Professor(a)</h5>
@@ -182,8 +194,8 @@
 							<option value="14">Intro Informática</option>
 							<option value="15">Inglês Técnico</option>
 							<option value="16">Matemática Dscreta</option>
-							<option value="17">POO1</option>
-							<option value="18">POO2</option>							
+							<option value="17">POO</option>
+							<option value="18">PORTUGUÊS</option>							
 							<option value="19">Progamação Estruturada</option>							
 							<option value="20">Redes de Computadores</option>														
 						</select>

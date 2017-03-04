@@ -11,19 +11,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.fca.dao.DisciplinaSistemasDao;
-import br.com.fca.disciplina.DisciplinaSistemas;
+import br.com.fca.dao.DisciplinaDao;
 import br.com.fca.models.Curso;
 import br.com.fca.models.Disciplina;
 import br.com.fca.models.Professor;
 import br.com.fca.professores.ProfessorSistemas;
 
-@WebServlet(name = "DisciplinaSistemaController", urlPatterns = {"/disciplinas_sistemas"})
-public class DisciplinaSistemaController extends HttpServlet {
+@WebServlet(name = "DisciplinaSistemaController", urlPatterns = {"/disciplinas"})
+public class DisciplinaController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
-	public DisciplinaSistemaController() {
+	public DisciplinaController() {
 	
 	}
 	
@@ -38,9 +37,9 @@ public class DisciplinaSistemaController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		Disciplina disciplina = new DisciplinaSistemas(); 
+		Disciplina disciplina = new Disciplina(); 
 		
-		disciplina.setNome(request.getParameter("nome"));
+		disciplina.setNome(request.getParameter("nome_disciplina"));
 		disciplina.setSigla(request.getParameter("sigla"));
 		Curso curso = new Curso();
 		int codigoDoCurso = Integer.parseInt(request.getParameter("curso"));
@@ -52,11 +51,11 @@ public class DisciplinaSistemaController extends HttpServlet {
 		disciplina.setProfessor(professorSistemas);
 		disciplina.setSemestre(request.getParameter("semestre"));
 		
-		DisciplinaSistemasDao.cadastrarDisciplina(disciplina);
+		DisciplinaDao.cadastrarDisciplina(disciplina);
 		
 		request.setAttribute("disciplina", disciplina);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("disciplinasSistemasCadastradas.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("disciplinasCadastradas.jsp");
 		rd.forward(request, response);
 		
 		doGet(request, response);

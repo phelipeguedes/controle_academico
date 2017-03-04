@@ -6,16 +6,29 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="js/funcoes.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/cadastrar-disciplina.css">
 </head>
 <body>
 
 	<header>
-		<!-- barra do topo -->
-		<div class="container" id="barraTopo">		
-			<%--<h3><a href="#" class="navbar-brand">FCA - Cadastro de Disciplina</a></h3>--%>
-			<h4>FCA - Cadastro de Disciplina</h4>
-		</div>
+		<!-- Barra do topo -->
+		<nav class="navbar navbar-inverse" fixed="top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FCA</a> 					
+				</div>	
+					
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACADÊMICO</span></a></li>
+				</ul>				
+
+				<ul class="nav navbar-nav navbar-right">					
+					<li><a href="#">CADASTRAR DISCIPLINA</a></li>
+				</ul>			
+			</div>	
+		</nav>
 	</header>
 
 	<div class="container" id="conteudoPagina">
@@ -23,28 +36,28 @@
 	<h5>Dados da Disciplina</h5>
 	
 		<div class="formulario">
-			<form action="disciplinas_sistemas" method="post" class="form-horizontal" role="form"> 
+			<form action="disciplinas" method="post" class="form-horizontal" role="form"> 
 				<span id="info_pessoal">Informações Gerais</span>
 								
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Disciplina:</label>
 					<div class="col-sm-6 col-md-5">
-						<input  type="text" name="nome" class="form-control" placeholder="Nome da disciplina">	
+						<input  type="text" name="nome_disciplina" id="nome_disciplina" class="form-control" placeholder="Nome da disciplina">	
 					</div>					
 				</div>	
 				
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Sigla:</label>
 					<div class="col-sm-6 col-md-5">
-						<input type="text" class="form-control" name="sigla" placeholder="Escolha uma sigla" required />	
+						<input type="text" class="form-control" name="sigla" id="sigla" placeholder="Escolha uma sigla" required />	
 					</div>					
 				</div>						
 
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Curso:</label>
 					<div class="col-sm-6 col-md-5">
-						<select class="form-control" name="curso">							
-							<option value="4">Sistemas de Informação</option>							
+						<select class="form-control" name="curso" id="curso">							
+							<option value="4">SISTEMAS DE INFORMAÇÃO</option>							
 						</select>	
 					</div>					
 				</div>							
@@ -52,7 +65,7 @@
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Docente:</label>
 					<div class="col-sm-5 col-md-5">
-						<select class="form-control" name="professor">
+						<select class="form-control" name="professor" id="professor">
 							<optgroup label="Graduação">
 								<option value="1">Professor 1</option>
 								<option value="2">Professor 2</option>

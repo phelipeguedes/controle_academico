@@ -8,6 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css">	
 </head>
 <body>
+	
+	<%-- Mensagem de erro quando há falha na tentativa de login --%>
+
+	<%	if((request.getMethod().equals("POST") && request.getAttribute("alunoLogado") == null)){ %>
+			
+			<p style="color:red; text-align:center">Nome de usuário/senha incorretos</p>
+			
+	<% } %>
+
 	<div class="container">
 		<form class="form-login" action="forwardEad.jsp" method="post">
 			<h4 class="form-signin-heading">Faça o login</h4>

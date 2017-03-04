@@ -32,6 +32,7 @@ public abstract class UsuarioFuncionario implements Serializable {
 	private String cep;
 	private String telefone;
 	private String email;
+	@Column(name = "nome_de_usuario", length = 40, nullable = false)
 	private String nomeDeUsuario;
 	private String senha;
 	
@@ -144,7 +145,6 @@ public abstract class UsuarioFuncionario implements Serializable {
 		this.senha = senha;
 	}
 	
-	@Column(name = "nome_de_usuario", length = 40, nullable = false)
 	public String getNomeDeUsuario() {
 		return nomeDeUsuario;
 	}

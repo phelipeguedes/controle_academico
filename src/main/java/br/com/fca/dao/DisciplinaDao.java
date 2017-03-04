@@ -8,7 +8,7 @@ import javax.persistence.Query;
 import br.com.fca.conexao.ConexaoJPA;
 import br.com.fca.models.Disciplina;
 
-public class DisciplinaSistemasDao {
+public class DisciplinaDao {
 	
 public static boolean cadastrarDisciplina(Disciplina disciplina){
 		
@@ -27,7 +27,7 @@ public static boolean cadastrarDisciplina(Disciplina disciplina){
 		
 		EntityManager em = ConexaoJPA.getEntityManager();
 		
-		Query consulta = em.createQuery("SELECT d FROM DisciplinaSistemas d");
+		Query consulta = em.createQuery("SELECT d FROM Disciplina d where curso_id = 4");
 		List<Disciplina> disciplinas = consulta.getResultList();
 		em.close();
 		

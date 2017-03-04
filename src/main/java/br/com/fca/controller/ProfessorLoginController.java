@@ -30,21 +30,18 @@ public class ProfessorLoginController extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		
-		//Professor professor = (Professor) request.getSession().getAttribute("professor");
 		Professor professor = new Professor();
 		professor.setNomeDeUsuario(request.getParameter("nomeDeUsuario"));
 		professor.setSenha(request.getParameter("senha"));		
 		
 		try {
-			//professor = ProfessorDao.autenticar(professor.getNomeDeUsuario(), professor.getSenha());
 			professor = ProfessorDao.autenticar(professor.getNomeDeUsuario(), professor.getSenha());
 			if(professor != null){
-				//contexto.setAttribute("professorLogado", professor.getNome());
 				request.getSession().setAttribute("professorLogado", professor.getNome());
 				response.sendRedirect("painelProfessor.jsp");
 			} else {
-				response.sendRedirect("loginProfessor.jsp");
+				request.setAttribute("professorLogado", professor);
+				request.getRequestDispatcher("loginProfessor.jsp").forward(request, response);;
 			}
 		} catch (Exception e) {
 			System.out.println("Ocorreu um erro: " + e.getMessage());

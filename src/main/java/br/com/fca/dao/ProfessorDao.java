@@ -51,7 +51,7 @@ public static Professor autenticar(String nomeDeUsuario, String senha){
 		
 		EntityManager em = ConexaoJPA.getEntityManager();
 		
-		Query consulta = em.createQuery("SELECT p FROM Professor p where curso_id = 4");
+		Query consulta = em.createQuery("SELECT p FROM Professor p where curso_id = 4 order by nome");
 		List<ProfessorSistemas> professores = consulta.getResultList();
 		em.close();
 		

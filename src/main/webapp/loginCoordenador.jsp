@@ -9,10 +9,18 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/login.css">	
+	<link rel="stylesheet" type="text/css" href="css/loginCoordenador.css">	
 </head>
 
 <body>		
+	
+	<%-- Mensagem de erro quando há falha na tentativa de login --%>
+	
+	<% if(request.getMethod().equalsIgnoreCase("POST") && request.getAttribute("coordenadorLogado") == null){ %>
+			
+			<p style="color:red; text-align:center">Nome de usuário(a)/senha incorretos</p>		
+	
+	<% } %>	
 	
 	<div class="container">
 		<form action="loginCoordenador" class="form-login" method="post">

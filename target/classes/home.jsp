@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page import="br.com.fca.models.Secretaria"%>
 <html lang="pt_br">
 
 <head>
@@ -107,7 +108,7 @@
 								<a href="loginProfessor.jsp">professor</a> |
 								<a href="loginCoordenador.jsp">coordenador</a>
 							</div>
-							
+														
 							<form action="forwardSecretaria.jsp" method="post" style="margin: 0px">
 								
 								<div style="margin:0; padding:0; display:inline">

@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.hibernate.Session;
+
 import br.com.fca.dao.AlunoDao;
 import br.com.fca.models.Aluno;
 
@@ -32,20 +34,17 @@ public class AlunoLoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		Aluno aluno =  (Aluno) request.getSession().getAttribute("aluno");
-		//aluno.setEmail(request.getParameter("email"));
-	    //aluno.setSenha(request.getParameter("senha"));
 		
 		try {
 			aluno = AlunoDao.autenticar(aluno.getEmail(), aluno.getSenha());
 			if(aluno != null){
-				request.getSession().setAttribute("nomeAlunoLogado", aluno.getNome());
 				HttpSession session = request.getSession();
 				session.setAttribute("alunoLogado", aluno);
-				RequestDispatcher rd = request.getRequestDispatcher("alunoOnline.jsp");
-				rd.forward(request, response);
-				//response.sendRedirect("alunoOnline.jsp");				
-			} else {
-				response.sendRedirect("loginAluno.jsp");
+				request.getSession().setAttribute("nomeAlunoLogado", aluno.getNome());
+				request.getRequestDispatcher("alunoOnline.jsp").forward(request, response);				
+			} else {				
+				request.setAttribute("alunoLogado", aluno);
+				request.getRequestDispatcher("loginAluno.jsp").forward(request, response);
 			}
 		} catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());

@@ -8,33 +8,38 @@
 	<title>Disciplinas Cadastradas</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/alunos-matriculados.css">
+	<link rel="stylesheet" type="text/css" href="css/disciplinas-cadastradas.css">
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.DisciplinaSistemasDao"></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.DisciplinaDao"></jsp:useBean>
 	
-	<header>
-		<nav class="nav navbar-inverse " data-topbar role="navigation">
-			<ul class="title-area large-3 medium-4 columns">
-				<li class="name">
-					<li><a href="" class="navbar-brand">FCA - Disciplinas</a>
-				</li>
-			</ul> 
-			<div class="top-bar-section">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Sistemas de Informação</a></li>
-				</ul>
-			</div>
+	<header>		
+		<!-- Barra do topo -->
+		<nav class="navbar navbar-inverse" fixed="top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">FCA</a> 					
+				</div>	
+					
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">DISCIPLINAS</span></a></li>
+				</ul>				
+
+				<ul class="nav navbar-nav navbar-right">					
+					<li><a href="#">SISTEMAS DE INFORMAÇÃO</a></li>
+				</ul>			
+			</div>	
 		</nav>					
 	</header>
 
 	<div class="container clearfix">
 		<table class="table table-hover">
 			<thead>
-				<tr>					
+				<tr>	
+					<th>Código</th>				
 					<th>Disciplina</th>
 					<th>Sigla</th>
 					<th>Professor</th>
@@ -49,7 +54,8 @@
 			<c:forEach var="disciplina" items="${dao.lista}">
 			
 			<tbody>
-				<tr>					
+				<tr>
+					<td>${disciplina.id}</td>					
 					<td>${disciplina.nome}</td>
 					<td>${disciplina.sigla}</td>					
 					<td>${disciplina.professor.nome}</td>					

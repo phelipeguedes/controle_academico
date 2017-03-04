@@ -13,10 +13,11 @@ import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) // somente as classes concretas (que herdam) serão geradas no banco
-public abstract class Disciplina implements Serializable{
+@Table(name = "disciplinas")
+public class Disciplina implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	

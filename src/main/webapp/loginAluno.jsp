@@ -9,11 +9,19 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/login.css">	
+	<link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 
 <body>		
 	
+	<%-- Mensagem de erro quando há falha na tentativa de login --%>
+	
+	<% if(request.getAttribute("alunoLogado") == null && request.getMethod().equalsIgnoreCase("POST")){	%> 
+		
+			<p id="demo" style="color:red; text-align:center">Nome de usuário(a)/senha incorretos</p>
+					
+	<% } %>
+		
 	<div class="container">
 		<form action="forwardAluno.jsp" class="form-login" method="post">
 			<h4 class="form-signin-heading">Faça o login</h4>

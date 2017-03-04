@@ -4,6 +4,19 @@ body{
 	overflow-x: hidden;
 }
 
+nav.navbar{
+	border-radius: 0px;
+}
+
+nav.navbar-inverse{
+	background: #000;
+}
+
+a.navbar-brand, li{
+	font-weight: bold;
+	font-size: 15px;	
+}
+
 .container#barraTopo{
 	margin-bottom: 50px;
 }
@@ -33,12 +46,7 @@ form .form-control{
 
 /* link presente na barra: 'FCA - Cadastro...' */
 
-li a.navbar-brand{
-	text-decoration: none;
-	color: #999;
-	font-weight: bold;
-	font-size: 16px;
-}
+
 
 /* Ao passar o mouse os links ficarão brancos */
 
@@ -84,7 +92,7 @@ div.container#barraTopo{
 
 .container-fluid{
 	position: relative;
-	margin: 1%;
+	//margin: 1%;
 }
 
 label{

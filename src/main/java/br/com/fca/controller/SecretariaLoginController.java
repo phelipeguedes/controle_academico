@@ -1,13 +1,12 @@
 package br.com.fca.controller;
 
 import java.io.IOException;
-import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 
 import br.com.fca.dao.SecretariaDao;
 import br.com.fca.models.Secretaria;
@@ -16,16 +15,10 @@ import br.com.fca.models.Secretaria;
 public class SecretariaLoginController extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-    
-	private ServletContext contexto;
 	
     public SecretariaLoginController() {
         super();
     }
-
-	public void init(ServletConfig config) throws ServletException {
-		contexto = config.getServletContext();
-	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -35,9 +28,10 @@ public class SecretariaLoginController extends HttpServlet {
 			secretaria = SecretariaDao.autenticar(secretaria.getNomeDeUsuario(), secretaria.getSenha());
 			
 			if(secretaria != null){
-				contexto.setAttribute("secretariaLogada", secretaria);
-				response.sendRedirect("painelSecretaria.jsp");
+				request.getSession().setAttribute("secretariaLogada", secretaria);
+				response.sendRedirect("painelSecretaria.jsp");				
 			} else {
+				request.getSession().setAttribute("secretariaLogada", secretaria);
 				response.sendRedirect("home.jsp");
 			}
 		} catch (Exception e) {
