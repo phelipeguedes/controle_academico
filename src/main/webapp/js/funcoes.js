@@ -42,21 +42,6 @@ $(document).ready(function() {
 	$("#email").keyup(function() {
 		$("#email").val($(this).val().toLowerCase());
 	});
-
-	$('#semestre').change(function(event) {
-		var semestre = $("select#semestre").val();
-		$.get('JsonServlet', {
-			semestreEscolhido : semestre
-		}, function(response) {
-
-			var select = $('#disciplinas');
-			select.find('option').remove();
-			$.each(response, function(index, value) {
-				$('<option>').val(value).text(value).appendTo(select);
-			});
-		});
-
-	});
 	
 	$("#nome_disciplina").keyup(function() {
 		$("#nome_disciplina").val($(this).val().toUpperCase());
@@ -65,5 +50,5 @@ $(document).ready(function() {
 	$("#sigla").keyup(function(){
 		$("#sigla").val($(this).val().toUpperCase());
 	});
-
+	
 });

@@ -34,6 +34,22 @@
 		</nav>
 	</header>
 	
+	<nav class="navbar navbar-inverse top=bar expanded data-topbar role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">FCA</a>					
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">Pré-Matrículas Redes de Computadores</span></a></li>
+				</ul>			
+				<div class="top-bar-section">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"></a></li>
+					</ul>
+				</div>	
+			</div>
+		</nav>	
+	
 	<div class="container clearfix">
 		<table class="table table-hover">
 			<thead>

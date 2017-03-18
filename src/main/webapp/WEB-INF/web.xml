@@ -119,4 +119,14 @@
     <servlet-name>AlunosLoginController</servlet-name>
     <url-pattern>/AlunosLoginController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MatriculaSistemasController</display-name>
+    <servlet-name>MatriculaSistemasController</servlet-name>
+    <servlet-class>br.com.fca.controller.MatriculaSistemasController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MatriculaSistemasController</servlet-name>
+    <url-pattern>/MatriculaSistemasController</url-pattern>
+  </servlet-mapping>
 </web-app>

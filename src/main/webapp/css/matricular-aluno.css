@@ -40,12 +40,17 @@ form .form-control{
 
 a.navbar-brand, li{
 	text-decoration: none;
-	color: #999;
+	color: #000;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 14px;
 }
 
 /* Ao passar o mouse os links ficarão brancos */
+
+.navbar-right li span {
+	margin: 50px 0px;
+	color: #777;
+}
 
 li a:hover{
 	color: #fff;
@@ -84,7 +89,6 @@ div.container#barraTopo{
 
 .container-fluid{
 	position: relative;
-	//margin: 1%;
 }
 
 label{

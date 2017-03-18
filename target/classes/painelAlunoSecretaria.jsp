@@ -12,26 +12,30 @@
 <title>Painel do Aluno</title>
 <style>
 
-body{
-	//overflow-y: hidden;
-}
-
 .formulario {
 	margin: 180px auto;
 }
 
 h4{
 	display: block;
-	margin: -100px 200px;
+	margin: -120px 175px;
+}
+
+div.panel{
+	margin: -80px 174px;
+	width:91%;
 }
 
 .table {
-	margin: 10px 150px;
-	width: 80%;
+	margin: 1px;
+}
+
+input#matricula{
+	width: 388px;
 }
 
 button {
-	margin-left: 500px;
+	margin: -5px 420px;
 }
 
 th, tr {
@@ -134,62 +138,48 @@ th, tr {
 
 				<jsp:useBean id="dao" class="br.com.fca.dao.AlunoDao"></jsp:useBean>
 				
-				<div class="table">
-					
-					<table class="table vertical-table table-hover table-responsive">
-						
-						<c:forEach var="aluno" items="dao.listaSistemas">
-							<tr>
-								<th scope="row">Nome</th>
-								<td>${alunoPesquisado.nome}</td>
-							</tr>							
-							<tr>
-								<th scope="row">Matrícula</th>
-								<td>${alunoPesquisado.matricula}</td>
-							</tr>							
-							<tr>
-								<th scope="row">Sexo</th>
-								<td>${alunoPesquisado.sexo}</td>
-							</tr>
-							<tr>
-								<th scope="row">Telefone</th>
-								<td>${alunoPesquisado.telefone}</td>
-							</tr>							
-							<tr>
-								<th scope="row">Email</th>
-								<td>${alunoPesquisado.email}</td>
-							</tr>
-							<tr>
-								<th scope="row">Curso</th>
-								<td>${alunoPesquisado.curso.nome}</td>
-							</tr>
-							<tr>
-								<th scope="row">Semestre</th>
-								<td>${alunoPesquisado.semestre}</td>
-							</tr>
-							<tr>
-								<th scope="row">Turno</th>
-								<td>${alunoPesquisado.turno}</td>
-							</tr>
-							<tr>
-								<th scope="row">Financiamento</th>
-								<td>${alunoPesquisado.financiamento}</td>
-							</tr>
-						</c:forEach>
-
-					</table>
+				<div class="panel panel-primary">
+					<div class="panel-heading">Informações do Aluno(a)</div>
+					<div class="panel-body">						
+												
+						<table class="table table-hover table-responsive">
+							
+							<c:forEach var="aluno" items="dao.listaSistemas">
+								<thead>
+									<tr>
+										<th scope="row">Nome</th>								
+										<th scope="row">Matrícula</th>								
+										<%--<th scope="row">Sexo</th>--%>								
+										<th scope="row">Telefone</th>							
+										<th scope="row">Email</th>		
+										<th scope="row">Curso</th>	
+										<th scope="row">Semestre</th>				
+										<th scope="row">Turno</th>					
+										<th scope="row">Financiamento</th>									
+									</tr>
+								</thead>
+								
+								<tbody>
+									<tr>
+										<td>${alunoPesquisado.nome}</td>
+										<td>${alunoPesquisado.matricula}</td>
+										<%--<td>${alunoPesquisado.sexo}</td>--%>
+										<td>${alunoPesquisado.telefone}</td>
+										<td>${alunoPesquisado.email}</td>
+										<td>${alunoPesquisado.curso.nome}</td>
+										<td>${alunoPesquisado.semestre}</td>
+										<td>${alunoPesquisado.turno}</td>
+										<td>${alunoPesquisado.financiamento}</td>
+									</tr>
+								</tbody>	
+							</c:forEach>
+	
+						</table>
+					</div>					
 				</div>
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
 
 </body>
 </html>

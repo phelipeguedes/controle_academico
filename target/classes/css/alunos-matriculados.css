@@ -7,21 +7,16 @@ body {
 }
 
 nav.navbar-inverse {
-	height: 60px;
+	height: 55px;
 	background: #000;
+	border-radius: 0px;
 }
 
-li a.navbar-brand {
+a.navbar-brand, li {
 	text-decoration: none;
-	padding: 0;
-	color: #999999;
-	font-size: 17px;
+	color: #999;
+	font-size: 14px;
 	font-weight: bold;
-}
-
-ul.nav li a {
-	font-weight: bold;
-	margin: -45px 20px;
 }
 
 tr, th {

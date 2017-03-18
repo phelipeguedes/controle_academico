@@ -17,18 +17,36 @@
 	<jsp:useBean id="dao" class="br.com.fca.dao.AlunoDao" /> 
 	
 	<header>
+		<%--
 		<nav class="nav navbar-inverse top-bar expanded" data-topbar role="navigation">
 			<ul class="title-area large-3 medium-4 columns">
 				<li class="name">
-				<li><a href="" class="navbar-brand">FCA - Alunos Matriculados</a>
+				<li><a href="" class="navbar-brand">FCA - ALUNOS MATRICULADOS</a>
 				</li>
 			</ul>
 			<div class="top-bar-section">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Sistemas de Informação</a></li>
+					<li><a href="#">SISTEMAS DE INFORMAÇÃO</a></li>
 				</ul>
 			</div>
-		</nav>
+		</nav>--%>
+		
+		<nav class="navbar navbar-inverse top=bar expanded data-topbar role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">FCA</a>					
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">ALUNOS MATRICULADOS</span></a></li>
+				</ul>			
+				<div class="top-bar-section">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">SISTEMAS DE INFORMAÇÃO</a></li>
+					</ul>
+				</div>	
+			</div>
+		</nav>	
+		
 	</header>
 	
 	<div class="container clearfix">

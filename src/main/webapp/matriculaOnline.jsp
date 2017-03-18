@@ -15,7 +15,7 @@
 		<nav class="navbar navbar-inverse" fixed="top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a href="#" class="navbar-brand">FCA</a> 					
+					<a href="home.jsp" class="navbar-brand">FCA</a> 					
 				</div>	
 					
 				<ul class="nav navbar-nav">

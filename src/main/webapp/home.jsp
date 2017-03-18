@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="br.com.fca.models.Secretaria"%>
 <html lang="pt_br">
 
@@ -58,19 +59,19 @@
 					<li class="current"><a href="home.jsp">HOME</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">ALUNO<span class="caret"></span></a>
 						<ul class="dropdown-menu">							
-							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALEND�RIO</a></li>
+							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALENDÁRIO</a></li>
 							<li><a href="arquivos/manual-do-aluno.pdf" target="_blank">MANUAL DO ALUNO</a></li>
-							<li><a href="matriculaOnline.jsp">MATR͍CULA</a></li>
+							<li><a href="matriculaOnline.jsp">MATRÍCULA</a></li>
 							<li><a href="#">PROCESSO SELETIVO</a></li>
 						</ul>
 					</li>
 
-					<li><a href="loginAluno.jsp" target="blank">CONTROLE ACAD�MICO</a></li>
+					<li><a href="loginAluno.jsp" target="blank">CONTROLE ACADÊMICO</a></li>
 					
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">CURSOS<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">GRADUA�ÃO</a></li>
-							<li><a href="#">EXTENSÃO</a></li>
+							<li><a href="#">GRADUAÇÃO</a></li>
+							<li><a href="#">EXTENSÃO</a></li>
 						</ul>
 					</li>
 
@@ -83,7 +84,7 @@
 
 					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">INSTITUCIONAL<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">HISTӓRIA</a></li>
+							<li><a href="#">HISTÓRIA</a></li>
 						</ul>
 					</li>					
 					
@@ -92,7 +93,7 @@
 					<li><a href="#">CONTATO</a></li>									
 				</ul>
 
-				<!-- botão de login -->
+				<!-- botÃ£o de login -->
 				<ul class="nav navbar navbar-right">
 					
 					<li class="dropdown" id="login">
@@ -224,37 +225,37 @@
 
 		<br/>
 
-		<!-- notícias --> 
+		<!-- notÃ­cias --> 
 		<div id="noticias">
 			<div class="container-fluid">
 				<div class="row">			
 
 					<div class="col-lg-3 col-md-3" id="cor1">
-						<h4>SEMANA DA COMPUTA��O</h4>
+						<h4>SEMANA DA COMPUTAÇÃO</h4>
 						<p>
-							XX Semana da computa��o.<br/>
-							Cursos, semin�rios, palestras, visita de <br/> 
+							XX Semana da computação.<br/>
+							Cursos, seminários, palestras, visita de <br/> 
 							profissionais e muito mais!
 						</p>	
 					</div>
 
 					<div class="col-lg-3 col-md-3">
-						<h4>CARREIRA E EST�GIO</h4>	
+						<h4>CARREIRA E ESTÁGIO</h4>	
 						<p>
-							O Centro de est�gio do Cear� est�o com vagas
-							abertas para diversas �reas. <br/>
+							O Centro de estágio do Ceará estão com vagas
+							abertas para diversas Áreas. <br/>
 							<a href="#">Saiba Mais</a> 
 						</p>
 					</div>			
 
 					<div class="col-lg-3 col-md-3" id="cor2">
-						<h4>CURSOS DE EXTENS�O</h4>
-						<p>Confira a programa��o <a href="#">aqui</a></p>
+						<h4>CURSOS DE EXTENSÃO</h4>
+						<p>Confira a programação <a href="#">aqui</a></p>
 					</div>
 
 					<div class="col-lg-3 col-md-3">
 						<h4>VESTIBULAR</h4>
-						<p>Inscri��es abertas. Prova 31/02/2050</p>
+						<p>Inscrições abertas. Prova 31/02/2050</p>
 						<p>Estude na maior particular de Fortaleza</p>
 					</div>
 
@@ -263,7 +264,7 @@
 		</div><!-- noticias -->
 	</div><!-- container-fluid -->
 	
-	<!-- rodapé-->
+	<!-- rodapÃ©-->
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acadêmico - All Rights Reserved</p>
