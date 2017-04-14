@@ -73,6 +73,11 @@
 			</c:forEach>
 			
 		</table>
+		
+		<div class="container-fluid">
+			<a href="painelSecretaria.jsp"><button class="btn btn-default">Retornar</button></a>
+		</div>
+		
 	</div>
 	
 </body>

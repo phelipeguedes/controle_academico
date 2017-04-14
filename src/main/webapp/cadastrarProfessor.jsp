@@ -144,32 +144,12 @@
 				<div class="form-group">
 					<label for="" class="control-label col-sm-2 col-md-4">Curso:</label>
 					<div class="col-sm-6 col-md-5">
-						<select class="form-control" name="curso" id="curso">
-							<optgroup label="Graduacao">
-								<option value="4">Sistemas de Informação</option>
-							</optgroup>
-
-							<optgroup label="Extensao">
-								<optgroup label="Administracao">
-									<option>Adm e Desenvolvimento Empresarial</option>
-									<option>Administração Pública</option>	
-								</optgroup>	
-
-								<optgroup label="ContÃ¡beis">
-									<option>Consultoria Empresarial</option>
-									<option>Gestão de Contas Públicas</option>
-								</optgroup>	
-
-								<optgroup label="Redes">
-									<option>Segurança de Redes de Computadores</option>
-									<option>Segurança da Informação</option>
-								</optgroup>
-
-								<optgroup label="Sistemas de Informaco">
-									<option>Desenvolvimento Mobile</option>
-									<option>Design Digital</option>
-								</optgroup>							
-							</optgroup>
+						<select class="form-control" name="curso" id="curso">							
+							<option>Selecione o curso</option>	
+							<option value="1">Administração de Empresas</option>
+							<option value="2">Ciências Contábeis</option>
+							<option value="3">Redes de Computadores</option>
+							<option value="4">Sistemas de Informação</option>							
 						</select>							
 					</div>					
 				</div> <!-- form-group -->

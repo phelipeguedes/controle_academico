@@ -36,8 +36,7 @@ public class PreMatriculaController extends HttpServlet {
 		
 		pm.setTurno(request.getParameter("turno"));
 		pm.setTelefone(request.getParameter("telefone"));
-		pm.setEmail(request.getParameter("email"));
-		
+		pm.setEmail(request.getParameter("email"));		
 		
 		Curso curso = new Curso();
 		int codigoDoCurso = Integer.parseInt(request.getParameter("curso"));

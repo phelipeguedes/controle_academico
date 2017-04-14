@@ -47,6 +47,18 @@ public static Professor autenticar(String nomeDeUsuario, String senha){
 	}
 	
 	@SuppressWarnings("unchecked")
+	public List<ProfessorAdministracao> getListaProfessoresAdministracao(){
+		
+		EntityManager em = ConexaoJPA.getEntityManager();
+		
+		Query consulta = em.createQuery("SELECT p FROM Professor p where curso_id = 1 order by nome");		
+		List<ProfessorAdministracao> professores = consulta.getResultList();
+		em.close();
+		
+		return professores;		
+	}
+	
+	@SuppressWarnings("unchecked")
 	public List<ProfessorSistemas> getListaProfessoresSistemas(){
 		
 		EntityManager em = ConexaoJPA.getEntityManager();

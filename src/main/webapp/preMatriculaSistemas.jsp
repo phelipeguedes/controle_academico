@@ -170,8 +170,8 @@
 					<div class="col-sm-offset-4 col-md-1">
 						<button class="btn btn-primary" type="submit" id="btn-envia">Enviar</button>		
 					</div>							
-
-					<div class="col-sm-offset-6">
+					
+					<div class="col-sm-offset-1">
 						<button class="btn btn-primary" type="reset" id="btn-cancela">Cancelar</button>		
 					</div>							
 				</div>						
@@ -179,7 +179,7 @@
 		</form>	
 	</div>
 	
-	<!--  RodapÃ©-->
+	<!--  Rodapé-->
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acadêmico - All Rights Reserved</p>

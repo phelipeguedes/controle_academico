@@ -44,7 +44,7 @@
 					<th>Nome</th>
 					<th>Título</th>
 					<th>Curso</th>	
-					<th>Disciplina</th>				
+					<!-- <th>Disciplina</th>-->				
 					<th>Turno</th>					
 					<th>Ação</th>	
 				</tr>				
@@ -52,7 +52,7 @@
 			
 			<%-- <c:forEach var="professor" items='${sessionScope["professores"]}'> --%>
 			
-			<c:forEach var="professor" items="${dao.listaProfessoresSistemas}">
+			<c:forEach var="professor" items="${dao.listaProfessoresAdministracao}">
 			
 			<tbody>
 				<tr>

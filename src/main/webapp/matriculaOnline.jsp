@@ -1,8 +1,10 @@
+<%@ page contentType="text/html; charset=ISO-8859-1" language="java" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-	<meta charset="UTF-8">
-	<title>PrÈ-MatrÌcula Online</title>
+	<meta charset="UTF-8"/>
+	<title>Pr√©-Matr√≠cula Online</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
@@ -19,11 +21,11 @@
 				</div>	
 					
 				<ul class="nav navbar-nav">
-					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACAD MICO</span></a></li>
+					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACAD√äMICO</span></a></li>
 				</ul>				
 
 				<ul class="nav navbar-nav navbar-right">					
-					<li><a href="#">MATRÕçCULA ONLINE</a></li>
+					<li><a href="#">MATR√çCULA ONLINE</a></li>
 				</ul>			
 			</div>	
 		</nav>
@@ -33,9 +35,9 @@
 
 		<img class="img img-responsive" src="img/estudantes-laptops-menor.jpg" alt="estudantes">
 		<section>
-			<div class="row"> <!-- row: os elementos contidos nesta classe ficar√£o na mesma linha -->
+			<div class="row"> <!-- row: os elementos contidos nesta classe ficar√É¬£o na mesma linha -->
 				<div class="col-lg-12 col-md-12">
-					<h2>CONHE«A NOSSOS CURSOS</h2>
+					<h2>CONHE√áA NOSSOS CURSOS</h2>
 					<p>Comece a moldar um futuro de sucesso.</p>
 				</div>
 				<hr>
@@ -44,9 +46,9 @@
 			<div class="row">
 				<div class="col-md-3 col-lg-3">
 					<div class="panel panel-default">
-						<div class="panel-heading panel-title"><h5>ADMINISTRA«√O</h5></div>
+						<div class="panel-heading panel-title"><h5>ADMINISTRA√á√ÉO</h5></div>
 						<div class="panel-body">
-							<p>Seja um profissional apto a liderar empresas de qualquer porte, saber atuar na gest„o p˙blica ou ser bem-sucedido no prÛprio negÛcio.</p>
+							<p>Seja um profissional apto a liderar empresas de qualquer porte. Saiba atuar na gest√£o p√∫blica ou seja bem-sucedido no pr√≥prio neg√≥cio.</p>
 
 							<p>Ensinamos a diagnosticar o problema a fim de obter o melhor resultado.</p>
 							<br/>
@@ -57,11 +59,11 @@
 
 				<div class="col-md-3 col-lg-3">
 					<div class="panel panel-default">
-						<div class="panel-heading panel-title"><h5>CI NCIAS CONT¡ÅBEIS</h5></div>
+						<div class="panel-heading panel-title"><h5>CI√äNCIAS CONT√Å¬ÅBEIS</h5></div>
 						<div class="panel-body">
-							<p>Forma profissinais prontos para lidar com aÁıes administrativas nas empresas, em busca de identificar, preparar e realizar informaÁıes de medidas financeiras ou operacionais.</p>
+							<p>Forma profissinais prontos para lidar com a√ß√µes administrativas nas empresas, em busca de identificar, preparar e realizar informa√ß√µes de medidas financeiras ou operacionais.</p>
 							
-							<p>Disciplinas ministradas com uso de softwares.</p>
+							<p>Disciplinas ministradas com a utiliza√ß√£o de softwares.</p>
 							<a href="preMatriculaContabeis.jsp""><button class="btn btn-primary" type="button">INSCREVA-SE</button></a>
 						</div>
 					</div>
@@ -71,10 +73,10 @@
 					<div class="panel panel-default">
 						<div class="panel-heading panel-title"><h5>REDES DE COMPUTADORES</h5></div>
 						<div class="panel-body">
-							<p>Aprenda a utilizar equipamentos multiusu·rios, configurar acesso e disponibilidade para intranet e internet, provedores e roteadores.</p>
+							<p>Aprenda a utilizar equipamentos multiusu√°rios, configurar acesso e disponibilidade para intranet e internet, provedores e roteadores.</p>
 
 							<p>
-								Ademais, trabalhe com gerenciamento de redes, sistemas operacionais e computaÁ„o em nuvem.
+								Ademais, trabalhe com gerenciamento de redes, sistemas operacionais e computa√ß√£o em nuvem.
 							</p>							
 							<a href="preMatriculaRedes.jsp""><button class="btn btn-primary" type="button">INSCREVA-SE</button></a>
 						</div>
@@ -83,11 +85,11 @@
 				
 				<div class="col-md-3 col-lg-3">
 					<div class="panel panel-default">
-						<div class="panel-heading panel-title"><h5>SISTEMAS DE INFORMA«√O</h5></div>
+						<div class="panel-heading panel-title"><h5>SISTEMAS DE INFORMA√á√ÉO</h5></div>
 						<div class="panel-body">
-							<p>O objetivo do curso È capacitar o estudante a desenvolver soluÁıes computacionais para problemas existentes no mundo real.</p>
+							<p>Capacita o estudante a desenvolver solu√ß√µes computacionais para problemas existentes no mundo real.</p>
 
-							<p>Dando-lhe aptidıes para projetar, implantar, desenvolver e gerir sistemas de alta qualidade. </p>
+							<p>Dando-lhe aptid√µes para projetar, implantar, desenvolver e gerir sistemas de alta qualidade. </p>
 							<br/>
 							<a href="preMatriculaSistemas.jsp"><button class="btn btn-primary" type="button">INSCREVA-SE</button></a>
 						</div>
@@ -97,7 +99,7 @@
 		</section>			
 	</div> <!-- Container -->
 	
-	<!--  Rodap√©-->
+	<!--  Rodap√É¬©-->
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acad√™mico - All Rights Reserved</p>

@@ -34,7 +34,7 @@
 						<ul class="dropdown-menu">							
 							<li><a href="arquivos/calendario-academico.pdf" target="_blank">CALEND�RIO</a></li>
 							<li><a href="arquivos/manual-do-aluno.pdf" target="_blank">MANUAL DO ALUNO</a></li>
-							<li><a href="matricula-online.jsp" target="blank">MATR͍CULA</a></li>
+							<li><a href="matriculaOnline.jsp" target="blank">MATR͍CULA</a></li>
 							<li><a href="#">PROCESSO SELETIVO</a></li>
 						</ul>
 					</li>
@@ -163,7 +163,7 @@
 						<button type="submit" class="btn btn-primary" id="btn-matricula">Enviar</button>		
 					</div>							
 
-					<div class="col-sm-offset-6">
+					<div class="col-sm-offset-1">
 						<button type="reset" class="btn btn-primary" id="btn-cancela">Cancelar</button>		
 					</div>							
 				</div>						

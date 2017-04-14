@@ -44,7 +44,7 @@
 					<th>Nome</th>
 					<th>Título</th>
 					<th>Curso</th>	
-					<th>Disciplina</th>				
+					<!-- <th>Disciplina</th>-->				
 					<th>Turno</th>					
 					<th>Ação</th>	
 				</tr>				

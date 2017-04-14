@@ -7,7 +7,7 @@
 	<title>Pré-Matriculas Administração</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/alunos-matriculados.css"/>
+	<link rel="stylesheet" type="text/css" href="css/pre-matricula.css"/>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>	
 </head>
 <body>
@@ -18,11 +18,11 @@
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
 			<ul class="title-area large-3 medium-4 columns">
 				<li class="name">
-				<li><a href="" class="navbar-brand">Pré-Matrículas Administração</a></li>
+				<li><a href="#" class="navbar-brand">Pré-Matrículas Administração</a></li>
 			</ul>
 			<div class="top-bar-section">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Faculdade FCA</a></li>
+					<li><a href="#" class="navbar-brand">Faculdade FCA</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -70,7 +70,7 @@
 	</div>
 	
 	<div class="container-fluid">
-		<a href="preMatriculaAdministracao.jsp"><button class="btn btn-default">Retornar</button></a>
+		<a href="painelSecretaria.jsp"><button class="btn btn-default">Retornar</button></a>
 	</div>
 	
 </body>

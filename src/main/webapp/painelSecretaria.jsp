@@ -50,10 +50,12 @@
 						</ul>
 					</li>
 					
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">CADASTRO<span class="caret"></span></a>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">PROFESSORES<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="disciplinasSistemasCadastradas.jsp" target="_blank">LISTA DE DISCIPLINAS</a></li>
-							<li><a href="professoresSistemasCadastrados.jsp" target="_blank">LISTA DE PROFESSORES</a></li>
+							<li><a href="professoresAdministracaoCadastrados.jsp" target="_blank">ADMINISTRAÇÃO DE EMPRESAS</a></li>
+							<li><a href="professoresContabeisCadastrados.jsp" target="_blank">CIÊNCIAS CONTÁBEIS</a></li>
+							<li><a href="professoresRedesCadastrados.jsp" target="_blank">REDES DE COMPUTADORES</a></li>
+							<li><a href="professoresSistemasCadastrados.jsp" target="_blank">SISTEMAS DE INFORMAÇÃO</a></li>
 						</ul>
 					</li>
 					
