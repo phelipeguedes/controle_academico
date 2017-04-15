@@ -41,6 +41,10 @@ button {
 th, tr {
 	text-align: center;
 }
+
+div#matriculaNaoExiste{
+	margin: 0px auto;
+}
 </style>
 </head>
 <body>
@@ -99,10 +103,20 @@ th, tr {
 			</div>
 		</div>
 		<!-- conteudo_barra-lateral -->
-
+		
 		<div id="conteudo_principal">
-			<section>
-
+			<section>		
+				
+				<div class="container" id="matriculaNaoExiste">
+					<% if(request.getSession().getAttribute("alunoPesquisado") == null && request.getMethod().equalsIgnoreCase("GET")) { %>
+						
+						<script>
+							window.alert("Esta matrícula não existe! :(");
+						</script>
+				
+					<% } %>
+				</div>
+				
 				<div class="container">
 					<div class="formulario">
 						<form class="form-horizontal" action="aluno" method="get">

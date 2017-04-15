@@ -44,6 +44,12 @@ public class AlunoController extends HttpServlet {
 
 			RequestDispatcher rd = request.getRequestDispatcher("painelAlunoSecretaria.jsp");
 			rd.forward(request, response);
+		} else {
+			HttpSession session = request.getSession();
+			session.setAttribute("alunoPesquisado", null);
+			
+			RequestDispatcher rd = request.getRequestDispatcher("painelAlunoSecretaria.jsp");
+			rd.forward(request, response);
 		}
 
 		// String cursoAjax = request.getParameter("cursoAjax");

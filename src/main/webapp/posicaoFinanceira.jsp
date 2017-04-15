@@ -8,8 +8,9 @@
 </head>
 <body>
 	<p style="color:red">Atenção! posição financeira do aluno:</p>
+	
 	<h4>${alunoPesquisado.nome}</h4>
-	<%--${alunoPesquisado.mensalidades }--%>
+	
 	<p>Não foram encontradas pendências financeiras.</p>	
 </body>
 </html>

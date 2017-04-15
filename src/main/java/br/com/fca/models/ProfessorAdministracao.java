@@ -1,6 +1,4 @@
-package br.com.fca.dao;
-
-import br.com.fca.models.Professor;
+package br.com.fca.models;
 
 public class ProfessorAdministracao extends Professor{
 

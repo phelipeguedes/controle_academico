@@ -30,7 +30,7 @@
 				</ul>				
 
 				<ul class="nav navbar-nav navbar-right">					
-					<li><a href="#">PROFESSORES DE SISTEMAS</a></li>
+					<li><a href="#">PROFESSORES DE ADMINISTRAÇÃO DE EMPRESAS</a></li>
 				</ul>			
 			</div>	
 		</nav>			
@@ -43,9 +43,7 @@
 					<th>Id</th>
 					<th>Nome</th>
 					<th>Título</th>
-					<th>Curso</th>	
-					<!-- <th>Disciplina</th>-->				
-					<th>Turno</th>					
+					<th>Curso</th>						
 					<th>Ação</th>	
 				</tr>				
 			</thead>
@@ -60,10 +58,8 @@
 					<td>${professor.nome}</td>
 					<td>${professor.titulo}</td>
 					<td>${professor.curso.nome}</td>
-					<%--<td>${professor.disciplina.nome}</td>--%>
-					<td>${professor.turno}</td>
 					<td>
-						<a href="">ver</a>
+						<a href="verProfessor.jsp?id=${professor.id}">ver</a>
 						<a href="">editar</a>
 						<a href="">atualizar</a>
 						<a href="">excluir</a>

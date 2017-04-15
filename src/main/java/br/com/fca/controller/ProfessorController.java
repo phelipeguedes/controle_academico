@@ -97,6 +97,8 @@ public class ProfessorController extends HttpServlet {
 				curso.setCodigo(2);
 				professor.setCurso(curso);
 				professor.setCurso(curso);
+				
+				response.sendRedirect("professores.ContabeisCadastradados.jsp");
 		} else if (
 				request.getParameter("curso") != null && request.getParameter("curso").equals(3)){
 				

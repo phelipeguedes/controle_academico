@@ -20,14 +20,19 @@
 	
 	<header>
 		<nav class="nav navbar-inverse " data-topbar role="navigation">
-			<ul class="title-area large-3 medium-4 columns">
-				<li class="name">
-				<li><a href="" class="navbar-brand">Pré Matrículas Sistemas de Informação</a></li>
-			</ul>
-			<div class="top-bar-section">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Faculdade FCA</a></li>
-				</ul>
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">FCA</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="#"><span id="nome_faculdade">PRÉ-MATRÍCULAS</span></a></li>
+				</ul>			
+			
+				<div class="top-bar-section">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">SISTEMAS DE INFORMAÇÃO</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
 	</header>
@@ -39,8 +44,7 @@
 					<th>Id Pré Matrícula</th>
 					<th>Nome do Aluno</th>
 					<th>Sexo</th>
-					<th>Curso</th>					
-					<th>Turno</th>					
+					<th>Curso</th>										
 					<th>Ação</th>	
 				</tr>				
 			</thead>
@@ -53,7 +57,7 @@
 					<td>${pm.nomeAluno}</td>
 					<td>${pm.sexo}</td>
 					<td>${pm.curso.nome}</td>
-					<td>${pm.turno}</td>
+					<%--<td>${pm.turno}</td>--%>
 					<% //PreMatriculaSistemas pm = new PreMatriculaSistemas(); %>
 					<td>
 						<%--<a href="preMatriculasSistemasRealizadas.jsp?id=" ${pm.idPreMatricula}">ver</a>--%>
@@ -71,7 +75,7 @@
 	</div>
 	
 	<div class="container-fluid">
-		<a href="cadastrarProfessor.jsp"><button class="btn btn-default">Retornar</button></a>
+		<a href="painelSecretaria.jsp"><button class="btn btn-default">Retornar</button></a>
 	</div>
 	
 </body>

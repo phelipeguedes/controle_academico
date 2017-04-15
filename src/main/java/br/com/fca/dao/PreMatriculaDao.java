@@ -66,9 +66,9 @@ public class PreMatriculaDao {
 		return preMatriculasSistemas;
 	}
 	
-	public static PreMatriculaAdministracao encontrarPeloId(int idPreMatricula){
+	public static PreMatricula encontrarPeloId(int idPreMatricula){
 		EntityManager em = ConexaoJPA.getEntityManager();
-		return em.find(PreMatriculaAdministracao.class, idPreMatricula);
+		return em.find(PreMatricula.class, idPreMatricula);
 	}
 	
 	public static void atualizarAluno(Aluno aluno){

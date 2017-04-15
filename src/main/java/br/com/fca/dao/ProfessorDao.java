@@ -7,6 +7,8 @@ import javax.persistence.Query;
 
 import br.com.fca.conexao.ConexaoJPA;
 import br.com.fca.models.Professor;
+import br.com.fca.models.ProfessorAdministracao;
+import br.com.fca.models.ProfessorContabeis;
 import br.com.fca.professores.ProfessorSistemas;;
 
 public class ProfessorDao {
@@ -53,6 +55,18 @@ public static Professor autenticar(String nomeDeUsuario, String senha){
 		
 		Query consulta = em.createQuery("SELECT p FROM Professor p where curso_id = 1 order by nome");		
 		List<ProfessorAdministracao> professores = consulta.getResultList();
+		em.close();
+		
+		return professores;		
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<ProfessorContabeis> getListaProfessoresContabeis(){
+		
+		EntityManager em = ConexaoJPA.getEntityManager();
+		
+		Query consulta = em.createQuery("SELECT p FROM Professor p where curso_id = 2 order by nome");
+		List<ProfessorContabeis> professores = consulta.getResultList();
 		em.close();
 		
 		return professores;		

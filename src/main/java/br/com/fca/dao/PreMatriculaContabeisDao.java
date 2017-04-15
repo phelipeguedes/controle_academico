@@ -33,9 +33,9 @@ public class PreMatriculaContabeisDao {
 		return preMatriculasContabeis;
 	}
 	
-	public static PreMatriculaAdministracao encontrarPeloId(int idPreMatricula){
+	public static PreMatriculaContabeis encontrarPeloId(int idPreMatricula){
 		EntityManager em = ConexaoJPA.getEntityManager();
-		return em.find(PreMatriculaAdministracao.class, idPreMatricula);
+		return em.find(PreMatriculaContabeis.class, idPreMatricula);
 	}
 	
 	public static void atualizarAluno(Aluno aluno){
