@@ -72,7 +72,7 @@
 					
 					<li><a href="#">PROCESSO SELETIVO</a></li>
 					
-					<li><a href="home.jsp">SAIR</a></li>				
+					<li><a href="logout.jsp">SAIR</a></li>				
 				</ul>
 			</div>	
 		</div> <!-- conteudo_barra-lateral -->

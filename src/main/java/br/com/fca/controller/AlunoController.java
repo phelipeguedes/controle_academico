@@ -34,19 +34,19 @@ public class AlunoController extends HttpServlet {
 
 		Aluno aluno = new Aluno();
 		AlunoDao alunoDao = new AlunoDao();
-		// int matricula = Integer.valueOf(request.getParameter("matricula"));
+
 		if (request.getMethod().equals("GET") && request.getParameter("matricula") != null) {
 			int matricula = Integer.parseInt(request.getParameter("matricula"));
 			aluno = alunoDao.getMatricula(matricula);
 			HttpSession session = request.getSession();
 			session.setAttribute("alunoPesquisado", aluno);
-			Mensalidade mensalidade = new Mensalidade();
 
 			RequestDispatcher rd = request.getRequestDispatcher("painelAlunoSecretaria.jsp");
 			rd.forward(request, response);
-		} else {
+		} else{
+			aluno = null;
 			HttpSession session = request.getSession();
-			session.setAttribute("alunoPesquisado", null);
+			session.setAttribute("alunoPesquisado", aluno);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("painelAlunoSecretaria.jsp");
 			rd.forward(request, response);

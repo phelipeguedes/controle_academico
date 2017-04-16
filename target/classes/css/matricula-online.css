@@ -166,6 +166,10 @@ h5#centro{
 	margin-left: 470px;
 }
 
+div.panel{
+	height: 350px;
+}
+
 .btn{			
 	background: #0075CF;
 	padding: 2px;

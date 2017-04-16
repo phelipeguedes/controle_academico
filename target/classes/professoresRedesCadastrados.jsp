@@ -1,6 +1,3 @@
-<%@page import="br.com.fca.models.Professor"%>
-<%@page import="br.com.fca.models.ProfessorContabeis"%>
-<%@page import="br.com.fca.dao.ProfessorDao"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -17,6 +14,8 @@
 
 <body>
 	
+	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
+	
 	<header>
 		
 		<!-- Barra do topo -->
@@ -31,7 +30,7 @@
 				</ul>				
 
 				<ul class="nav navbar-nav navbar-right">					
-					<li><a href="#">PROFESSORES DE CIÊNCIAS CONTÁBEIS</a></li>
+					<li><a href="#">PROFESSORES DE SISTEMAS</a></li>
 				</ul>			
 			</div>	
 		</nav>			
@@ -44,18 +43,16 @@
 					<th>Id</th>
 					<th>Nome</th>
 					<th>Título</th>
-					<th>Curso</th>						
+					<th>Curso</th>	
+					<!-- <th>Disciplina</th>-->				
+					<th>Turno</th>					
 					<th>Ação</th>	
 				</tr>				
 			</thead>
 			
-			<% 
-			 	ProfessorDao pd = new ProfessorDao();
-				ProfessorContabeis pc = new ProfessorContabeis();				
-			%>
+			<%-- <c:forEach var="professor" items='${sessionScope["professores"]}'> --%>
 			
-			<%--<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao"></jsp:useBean>
-			<c:forEach var="professor" items="${dao.listaProfessoresContabeis}">
+			<c:forEach var="professor" items="${dao.listaProfessoresRedes}">
 			
 			<tbody>
 				<tr>
@@ -63,8 +60,10 @@
 					<td>${professor.nome}</td>
 					<td>${professor.titulo}</td>
 					<td>${professor.curso.nome}</td>
+					<%--<td>${professor.disciplina.nome}</td>--%>
+					<td>${professor.turno}</td>
 					<td>
-						<a href="verProfessor.jsp?id=${professor.id}">ver</a>
+						<a href="">ver</a>
 						<a href="">editar</a>
 						<a href="">atualizar</a>
 						<a href="">excluir</a>
@@ -72,7 +71,7 @@
 				</tr>
 			</tbody>
 			
-			</c:forEach>--%>
+			</c:forEach>
 			
 		</table>
 	</div>

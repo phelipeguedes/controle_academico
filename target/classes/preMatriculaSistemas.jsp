@@ -2,7 +2,7 @@
 <html lang="pt_br">
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"/>
 	<title>Sistemas | Pré-Matrícula</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -170,8 +170,8 @@
 					<div class="col-sm-offset-4 col-md-1">
 						<button class="btn btn-primary" type="submit" id="btn-envia">Enviar</button>		
 					</div>							
-
-					<div class="col-sm-offset-6">
+					
+					<div class="col-sm-offset-1">
 						<button class="btn btn-primary" type="reset" id="btn-cancela">Cancelar</button>		
 					</div>							
 				</div>						
@@ -179,7 +179,7 @@
 		</form>	
 	</div>
 	
-	<!--  RodapÃ©-->
+	<!--  Rodapé-->
 	<footer class="footer">
 		<div class="container">
 			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acadêmico - All Rights Reserved</p>

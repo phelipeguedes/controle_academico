@@ -36,6 +36,7 @@ public class SecretariaLoginController extends HttpServlet {
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
+			response.sendRedirect("erro.jsp");
 		}
 		
 		

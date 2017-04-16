@@ -61,7 +61,7 @@
 					<td>${pmr.sexo}</td>
 					<td>${pmr.curso.nome}</td>
 					<td>
-						<a href="">ver</a>
+						<a href="verPreMatricula.jsp?idPreMatricula=${pmr.idPreMatricula}">ver</a>
 						<a href="">editar</a>
 						<a href="">atualizar</a>
 						<a href="">excluir</a>

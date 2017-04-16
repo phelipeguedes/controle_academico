@@ -2,7 +2,7 @@
 <html lang="pt_br">
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"/>
 	<title>Redes | Pré-Matrícula</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
@@ -162,7 +162,7 @@
 						<button type="submit" class="btn btn-primary" id="btn-evia">Enviar</button>		
 					</div>							
 
-					<div class="col-sm-offset-6">
+					<div class="col-sm-offset-1">
 						<button type="reset" class="btn btn-primary" id="btn-cancela">Cancelar</button>		
 					</div>							
 				</div>						
@@ -174,7 +174,7 @@
 	<!--  Rodapé -->
 	<footer class="footer">
 		<div class="container">
-			<p class="text-muted">2016 | Fortaleza | Faculdade Controle AcadÃªmico - All Rights Reserved</p>
+			<p class="text-muted">2016 | Fortaleza | Faculdade Controle Acadêmico - All Rights Reserved</p>
 		</div>
 	</footer>
 	

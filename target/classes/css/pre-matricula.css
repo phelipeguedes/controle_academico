@@ -1,3 +1,4 @@
+@charset="UTF-8";
 
 body{
 	overflow-x: hidden;
@@ -5,13 +6,16 @@ body{
 
 /* Barra do menu */
 nav.navbar-inverse {
+	height: 55px;
 	background: #000;
+	border-radius: 0px;
 }
 
 /* Links contidos na barra */
 #navBar li a {
 	color: #8C8C8C;
 	font-weight: bold;
+	font-size: 14px; 
 }
 
 /* submenu*/
@@ -37,6 +41,7 @@ tr, th {
 
 .container {
 	width: 100%;
+	margin-top: 50px;
 }
 
 /* Container dos campos de login */
@@ -83,7 +88,6 @@ button.btn {
 	margin-top: 5px;
 	width: 110px;
 	padding: 4px;
-	background: #0075CF;
 }
 
 button#btn-envia {
@@ -91,7 +95,7 @@ button#btn-envia {
 }
 
 button#btn-cancela {
-	margin-left: -600px;
+	margin-left: -450px;
 }
 
 /* tela maior ou igual a 1500 pixels */

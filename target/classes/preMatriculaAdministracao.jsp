@@ -171,7 +171,7 @@
 						<button class="btn btn-primary" type="submit" id="btn-envia">Enviar</button>
 					</div>
 
-					<div class="col-sm-offset-6">
+					<div class="col-sm-offset-1">
 						<button type="reset" class="btn btn-primary" id="btn-cancela">Cancelar</button>
 					</div>
 				</div>

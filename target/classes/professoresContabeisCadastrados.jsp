@@ -1,6 +1,3 @@
-<%@page import="br.com.fca.models.Professor"%>
-<%@page import="br.com.fca.models.ProfessorContabeis"%>
-<%@page import="br.com.fca.dao.ProfessorDao"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -16,6 +13,8 @@
 </head>
 
 <body>
+	
+	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
 	
 	<header>
 		
@@ -49,12 +48,8 @@
 				</tr>				
 			</thead>
 			
-			<% 
-			 	ProfessorDao pd = new ProfessorDao();
-				ProfessorContabeis pc = new ProfessorContabeis();				
-			%>
+			<%-- <c:forEach var="professor" items='${sessionScope["professores"]}'> --%>
 			
-			<%--<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao"></jsp:useBean>
 			<c:forEach var="professor" items="${dao.listaProfessoresContabeis}">
 			
 			<tbody>
@@ -72,7 +67,7 @@
 				</tr>
 			</tbody>
 			
-			</c:forEach>--%>
+			</c:forEach>
 			
 		</table>
 	</div>

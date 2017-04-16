@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 import br.com.fca.aluno.IAlunoDao;
 import br.com.fca.conexao.ConexaoJPA;
 import br.com.fca.models.Aluno;
+import br.com.fca.professores.ProfessorAdministracao;
 
 public class AlunoDao implements IAlunoDao {
 
@@ -25,7 +26,19 @@ public class AlunoDao implements IAlunoDao {
 		}
 		return null;
 	}
-
+	
+	@SuppressWarnings("unchecked")
+	public List<ProfessorAdministracao> getListaProfessoresAdministracao(){
+		
+		EntityManager em = ConexaoJPA.getEntityManager();
+		
+		Query consulta = em.createQuery("SELECT p FROM Professor p where curso_id = 1 order by nome");		
+		List<ProfessorAdministracao> professores = consulta.getResultList();
+		em.close();
+		
+		return professores;		
+	}
+	
 	public static void matricular(Aluno aluno) {
 		EntityManager em = ConexaoJPA.getEntityManager();
 		

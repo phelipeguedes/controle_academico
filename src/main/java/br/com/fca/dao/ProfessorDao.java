@@ -7,8 +7,8 @@ import javax.persistence.Query;
 
 import br.com.fca.conexao.ConexaoJPA;
 import br.com.fca.models.Professor;
-import br.com.fca.models.ProfessorAdministracao;
-import br.com.fca.models.ProfessorContabeis;
+import br.com.fca.professores.ProfessorAdministracao;
+import br.com.fca.professores.ProfessorContabeis;
 import br.com.fca.professores.ProfessorSistemas;;
 
 public class ProfessorDao {
@@ -48,6 +48,7 @@ public static Professor autenticar(String nomeDeUsuario, String senha){
 		return true;
 	}
 	
+	
 	@SuppressWarnings("unchecked")
 	public List<ProfessorAdministracao> getListaProfessoresAdministracao(){
 		
@@ -59,6 +60,7 @@ public static Professor autenticar(String nomeDeUsuario, String senha){
 		
 		return professores;		
 	}
+	
 	
 	@SuppressWarnings("unchecked")
 	public List<ProfessorContabeis> getListaProfessoresContabeis(){
@@ -90,23 +92,4 @@ public static Professor autenticar(String nomeDeUsuario, String senha){
 		return em.find(Professor.class, idProfessor);
 	}
 	
-	public static void atualizarSecretaria(Professor secretaria){
-		
-		EntityManager em = ConexaoJPA.getEntityManager();
-		em.getTransaction().begin();
-		em.merge(secretaria);
-		em.persist(secretaria);
-		em.getTransaction().commit();
-		em.close();
-	}
-	
-	public static void excluirSecretaria(Professor secretaria){
-		
-		EntityManager em = ConexaoJPA.getEntityManager();
-		em.getTransaction().begin();
-		em.merge(secretaria);
-		em.remove(secretaria);
-		em.getTransaction().commit();
-		em.close();
-	}
 }

@@ -19,7 +19,7 @@
 		
 		<!-- Barra do topo -->
 		
-		<nav class="navbar navbar-inverse">
+		<nav class="navbar navbar-inverse" data-topbar role="navigation">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="#">FCA</a>					

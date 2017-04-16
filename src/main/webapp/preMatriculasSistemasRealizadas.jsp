@@ -57,11 +57,8 @@
 					<td>${pm.nomeAluno}</td>
 					<td>${pm.sexo}</td>
 					<td>${pm.curso.nome}</td>
-					<%--<td>${pm.turno}</td>--%>
-					<% //PreMatriculaSistemas pm = new PreMatriculaSistemas(); %>
-					<td>
-						<%--<a href="preMatriculasSistemasRealizadas.jsp?id=" ${pm.idPreMatricula}">ver</a>--%>
-						<a href="preMatriculasSistemasRealizadas.jsp?id=" <% //pm.getIdPreMatricula() %> ">ver</a>
+					<td>					
+						<a href="verPreMatricula.jsp?idPreMatricula=${pm.idPreMatricula}">ver</a>
 						<a href="">editar</a>
 						<a href="">atualizar</a>
 						<a href="">excluir</a>

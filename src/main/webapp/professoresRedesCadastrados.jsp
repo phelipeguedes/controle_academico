@@ -14,8 +14,6 @@
 
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
-	
 	<header>
 		
 		<!-- Barra do topo -->
@@ -52,7 +50,7 @@
 			
 			<%-- <c:forEach var="professor" items='${sessionScope["professores"]}'> --%>
 			
-			<c:forEach var="professor" items="${dao.listaProfessoresSistemas}">
+			<c:forEach var="professor" items="${dao.listaProfessoresRedes}">
 			
 			<tbody>
 				<tr>

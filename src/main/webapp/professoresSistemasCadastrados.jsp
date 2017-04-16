@@ -14,12 +14,12 @@
 
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao"></jsp:useBean>
 	
 	<header>
 		
 		<!-- Barra do topo -->
-		<nav class="navbar navbar-inverse" fixed="top">
+		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="#" class="navbar-brand">FCA</a> 					

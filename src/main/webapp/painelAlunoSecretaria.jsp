@@ -1,3 +1,4 @@
+<%@page import="org.omg.CosNaming.NamingContextPackage.NotEmpty"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
@@ -98,7 +99,7 @@ div#matriculaNaoExiste{
 
 					<li><a href="#">FÓRUM</a></li>
 
-					<li><a href="home.jsp">SAIR</a></li>
+					<li><a href="logout.jsp">SAIR</a></li>
 				</ul>
 			</div>
 		</div>
@@ -108,10 +109,12 @@ div#matriculaNaoExiste{
 			<section>		
 				
 				<div class="container" id="matriculaNaoExiste">
-					<% if(request.getSession().getAttribute("alunoPesquisado") == null && request.getMethod().equalsIgnoreCase("GET")) { %>
+					<% if((request.getSession().getAttribute("alunoPesquisado") == null) && request.getMethod().equalsIgnoreCase("GET")) { %>
 						
 						<script>
+							
 							window.alert("Esta matrícula não existe! :(");
+							
 						</script>
 				
 					<% } %>

@@ -1,4 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html lang="pt_br">
@@ -14,23 +15,23 @@
 
 <body>
 	
-	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao" ></jsp:useBean>
+	<jsp:useBean id="dao" class="br.com.fca.dao.ProfessorDao"></jsp:useBean>
 	
 	<header>
 		
 		<!-- Barra do topo -->
-		<nav class="navbar navbar-inverse" fixed="top">
+		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a href="#" class="navbar-brand">FCA</a> 					
 				</div>	
 					
 				<ul class="nav navbar-nav">
-					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACADÊMICO</span></a></li>
+					<li><a href="#"><span id="nome_faculdade">FACULDADE CONTROLE ACADÃŠMICO</span></a></li>
 				</ul>				
 
 				<ul class="nav navbar-nav navbar-right">					
-					<li><a href="#">PROFESSORES DE ADMINISTRAÇÃO DE EMPRESAS</a></li>
+					<li><a href="#">PROFESSORES DE ADMINISTRAÃ‡ÃƒO DE EMPRESAS</a></li>
 				</ul>			
 			</div>	
 		</nav>			
@@ -42,13 +43,11 @@
 				<tr>
 					<th>Id</th>
 					<th>Nome</th>
-					<th>Título</th>
+					<th>TÃ­tulo</th>
 					<th>Curso</th>						
-					<th>Ação</th>	
+					<th>AÃ§Ã£o</th>	
 				</tr>				
 			</thead>
-			
-			<%-- <c:forEach var="professor" items='${sessionScope["professores"]}'> --%>
 			
 			<c:forEach var="professor" items="${dao.listaProfessoresAdministracao}">
 			
@@ -73,7 +72,7 @@
 	</div>
 	
 	<div class="container-fluid">
-		<a href="cadastrarProfessor.jsp"><button class="btn btn-default">Retornar</button></a>
+		<a href="painelCoordenacaoSistemas.jsp"><button class="btn btn-default">Retornar</button></a>
 	</div>
 	
 </body>

@@ -45,8 +45,6 @@
 				</tr>
 			</thead>
 
-			<%-- <c:forEach var="aluno" items='${sessionScope["alunos"] }'> --%>
-
 			<c:forEach var="aluno" items="${dao.listaTodosAlunos}">
 				<tbody>
 
